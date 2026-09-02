@@ -36,6 +36,12 @@ nav{
   transition:transform .15s,box-shadow .2s;
 }
 .nav-login:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(74,201,226,0.4);}
+.lang-select{
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);
+  color:#fff;font-size:12px;padding:6px 10px;border-radius:6px;
+  font-family:'Inter',sans-serif;cursor:pointer;outline:none;
+}
+.lang-select option{background:#08222e;color:#fff;}
 
 @keyframes kenBurns{
   0%{transform:scale(1) translate(0,0);}
@@ -206,6 +212,16 @@ nav{
 .test-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
 .testimonial blockquote{font-family:'Manrope',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:600;line-height:1.4;color:#111;max-width:780px;margin-bottom:48px;}
 
+.how-it-works{padding:56px 48px;max-width:1100px;margin:0 auto;}
+.how-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#1e6b7f;font-weight:600;margin-bottom:16px;}
+.how-tag::before{content:'●';font-size:7px;color:#4ac9e2;}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:32px;}
+.how-step{position:relative;padding:28px 24px;border:1px solid #e8e8e8;border-radius:14px;transition:border-color .2s,transform .2s;}
+.how-step:hover{border-color:#4ac9e2;transform:translateY(-3px);}
+.how-num{font-family:'Manrope',sans-serif;font-size:13px;font-weight:800;color:#4ac9e2;margin-bottom:12px;}
+.how-step h3{font-size:15px;font-weight:600;color:#111;margin-bottom:8px;}
+.how-step p{font-size:12px;line-height:1.7;color:#666;}
+
 .footer-top-bar{background:#08222e;padding:48px 48px 0;}
 .footer-main-content{display:grid;grid-template-columns:1fr auto;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1);}
 .footer-brand-heading{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;}
@@ -223,6 +239,22 @@ nav{
 
 .ai-bot{position:fixed;right:25px;bottom:25px;width:70px;height:70px;border-radius:50%;overflow:hidden;cursor:pointer;z-index:99999;box-shadow:0 10px 30px rgba(0,0,0,0.35);border:2px solid rgba(255,255,255,0.3);}
 .ai-bot video{width:100%;height:100%;object-fit:cover;}
+
+/* ── MOBILE RESPONSIVE ── */
+@media (max-width:768px){
+  nav{padding:0 20px;}
+  .nav-links{display:none;}
+  .hero,.about-tabs,.who,.features,.testimonial,.how-it-works,.footer-top-bar,.footer-very-bottom{padding-left:20px;padding-right:20px;}
+  .hero-mission{display:none;}
+  .who{flex-direction:column !important;gap:24px !important;}
+  .who-left img{max-width:100% !important;}
+  .stats-row{grid-template-columns:1fr;margin:0 20px;}
+  .feat-grid{grid-template-columns:1fr;}
+  .how-grid{grid-template-columns:1fr;}
+  .footer-main-content{grid-template-columns:1fr;}
+  .hero h1{font-size:28px;}
+  .ai-bot{width:56px;height:56px;right:16px;bottom:16px;}
+}
 </style>
 </head>
 <body>
@@ -237,18 +269,25 @@ nav{
       <span class="logo-text">PR Harvest</span>
     </div>
     <ul class="nav-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="/triage">Check Symptoms</a></li>
-      <li><a href="/find-clinic">Find a Clinic</a></li>
-      <li><a href="/about">About</a></li>
+      <li><a href="/" data-i18n="nav_home">Home</a></li>
+      <li><a href="/triage" data-i18n="nav_triage">Check Symptoms</a></li>
+      <li><a href="/find-clinic" data-i18n="nav_clinic">Find a Clinic</a></li>
+      <li><a href="/about" data-i18n="nav_about">About</a></li>
     </ul>
   </div>
-  <button class="nav-login" onclick="window.location.href='/login'">⊕ Login</button>
+  <div style="display:flex;align-items:center;gap:14px;">
+    <select class="lang-select" id="langSelect">
+      <option value="en">English</option>
+      <option value="hi">हिंदी</option>
+      <option value="mr">मराठी</option>
+    </select>
+    <button class="nav-login" onclick="window.location.href='/login'" data-i18n="nav_login">⊕ Login</button>
+  </div>
 </nav>
 
 <section class="hero">
   <div class="hero-bg">
-    <video autoplay muted loop playsinline>
+    <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1200&q=80">
       <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/doctor-team-doing-surgery-in-hospital-room-animation-gif-download-10967367.mp4" type="video/mp4">
     </video>
   </div>
@@ -256,15 +295,18 @@ nav{
   <div class="hero-wave"></div>
   <div class="hero-particles" id="heroParticles"></div>
   <div class="hero-content">
-    <div class="hero-badge"><span class="badge-dot"></span> AI Rural Healthcare Triage</div>
-    <h1>Know When to <span class="shimmer-word">Seek Help</span><br>in Seconds, Not Hours.</h1>
-    <p class="hero-desc">Describe your symptoms in your own language and get an instant, reliable guide to how urgent your situation is — so you know whether to rest at home, visit a clinic, or head to the hospital.</p>
-    <a href="/triage" class="hero-cta">Check My Symptoms<span class="cta-arrow">→</span></a>
+    <div class="hero-badge"><span class="badge-dot"></span> <span data-i18n="hero_badge">AI Rural Healthcare Triage</span></div>
+    <h1 data-i18n-html="hero_title">Know When to <span class="shimmer-word">Seek Help</span><br>in Seconds, Not Hours.</h1>
+    <p class="hero-desc" data-i18n="hero_desc">Describe your symptoms in your own language and get an instant, reliable guide to how urgent your situation is — so you know whether to rest at home, visit a clinic, or head to the hospital.</p>
+    <a href="/triage" class="hero-cta"><span data-i18n="hero_cta">Check My Symptoms</span><span class="cta-arrow">→</span></a>
+    <p style="font-size:11px;color:rgba(255,255,255,0.45);margin-top:14px;max-width:360px;line-height:1.6;" data-i18n="hero_disclaimer">
+      This tool offers preliminary guidance only and is not a medical diagnosis. Always consult a qualified doctor for serious or worsening symptoms.
+    </p>
   </div>
   <div class="hero-mission">
-    <div class="mission-title"><span class="mission-dot"></span>Our Mission</div>
-    <p class="mission-text">To close the gap between rural communities and timely medical guidance, cutting unnecessary travel and easing pressure on overloaded hospitals.</p>
-    <a href="/about" class="mission-link">Learn More →</a>
+    <div class="mission-title"><span class="mission-dot"></span><span data-i18n="mission_title">Our Mission</span></div>
+    <p class="mission-text" data-i18n="mission_text">To close the gap between rural communities and timely medical guidance, cutting unnecessary travel and easing pressure on overloaded hospitals.</p>
+    <a href="/about" class="mission-link"><span data-i18n="mission_link">Learn More →</span></a>
   </div>
   <div class="scroll-hint">
     <span>Scroll</span>
@@ -287,6 +329,28 @@ nav{
     <p style="color:#1e6b7f;font-weight:600;">→ Why We Built PR Harvest</p>
     <h2>Bringing Primary Care Guidance to Every Village</h2>
     <p>Rural and tier-2 populations often face long travel times, limited primary healthcare access, language barriers, and delayed medical guidance. PR Harvest gives people a preliminary, AI-assisted symptom check so they know whether their situation truly needs urgent professional attention.</p>
+  </div>
+</div>
+
+<div class="how-it-works reveal">
+  <div class="how-tag" data-i18n="how_tag">How It Works</div>
+  <h2 style="font-family:'Manrope',sans-serif;font-size:clamp(20px,2.5vw,30px);font-weight:700;color:#111;max-width:520px;" data-i18n="how_title">Three Steps to Clarity, No Clinic Visit Required</h2>
+  <div class="how-grid">
+    <div class="how-step">
+      <div class="how-num">01</div>
+      <h3 data-i18n="how1_title">Describe Your Symptoms</h3>
+      <p data-i18n="how1_desc">Type or speak what you're feeling, in English, Hindi, or Marathi — no medical terms needed.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">02</div>
+      <h3 data-i18n="how2_title">AI Assesses Urgency</h3>
+      <p data-i18n="how2_desc">Our triage engine matches your symptoms against known patterns to gauge how serious the situation is.</p>
+    </div>
+    <div class="how-step">
+      <div class="how-num">03</div>
+      <h3 data-i18n="how3_title">Get a Clear Next Step</h3>
+      <p data-i18n="how3_desc">Rest at home, visit a nearby clinic, or head to the hospital now — plus the closest option if needed.</p>
+    </div>
   </div>
 </div>
 
@@ -313,28 +377,28 @@ nav{
 
 <section class="features">
   <div class="features-inner">
-    <div class="feat-tag">Core Features</div>
-    <h2 class="reveal">Practical Tools Built for Rural and Tier-2 Healthcare Access</h2>
+    <div class="feat-tag" data-i18n="feat_tag">Core Features</div>
+    <h2 class="reveal" data-i18n="feat_heading">Practical Tools Built for Rural and Tier-2 Healthcare Access</h2>
     <div class="feat-grid">
       <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/triage'">
         <div class="feat-icon">🩺</div>
-        <h3>Symptom Triage</h3>
-        <p>Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.</p>
+        <h3 data-i18n="feat1_title">Symptom Triage</h3>
+        <p data-i18n="feat1_desc">Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.</p>
       </div>
       <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/language'">
         <div class="feat-icon">🗣️</div>
-        <h3>Local Language Support</h3>
-        <p>Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.</p>
+        <h3 data-i18n="feat2_title">Local Language Support</h3>
+        <p data-i18n="feat2_desc">Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.</p>
       </div>
       <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/find-clinic'">
         <div class="feat-icon">📍</div>
-        <h3>Nearby Clinic Locator</h3>
-        <p>Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.</p>
+        <h3 data-i18n="feat3_title">Nearby Clinic Locator</h3>
+        <p data-i18n="feat3_desc">Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.</p>
       </div>
       <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/history'">
         <div class="feat-icon">📋</div>
-        <h3>Symptom History</h3>
-        <p>Keep a simple record of past checks so you and any doctor you visit later have useful context.</p>
+        <h3 data-i18n="feat4_title">Symptom History</h3>
+        <p data-i18n="feat4_desc">Keep a simple record of past checks so you and any doctor you visit later have useful context.</p>
       </div>
     </div>
   </div>
@@ -352,8 +416,8 @@ nav{
 <div class="footer-top-bar">
   <div class="footer-main-content">
     <div>
-      <p class="footer-brand-heading">Bringing fast, reliable, first-step medical guidance to every village — because a two-hour journey shouldn't decide whether someone gets help in time.</p>
-      <a href="/triage" class="footer-contact">Check Symptoms Now<span class="footer-contact-arrow">→</span></a>
+      <p class="footer-brand-heading" data-i18n="footer_heading">Bringing fast, reliable, first-step medical guidance to every village — because a two-hour journey shouldn't decide whether someone gets help in time.</p>
+      <a href="/triage" class="footer-contact"><span data-i18n="footer_cta">Check Symptoms Now</span><span class="footer-contact-arrow">→</span></a>
     </div>
   </div>
 </div>
@@ -425,6 +489,110 @@ const statsObs=new IntersectionObserver(entries=>{
 },{threshold:0.3});
 const statsRow=document.querySelector('.stats-row');
 if(statsRow) statsObs.observe(statsRow);
+
+/* ══════════════════════════════════════════
+   LANGUAGE SWITCHER
+══════════════════════════════════════════ */
+const translations = {
+  en: {
+    nav_home:"Home", nav_triage:"Check Symptoms", nav_clinic:"Find a Clinic", nav_about:"About", nav_login:"⊕ Login",
+    hero_badge:"AI Rural Healthcare Triage",
+    hero_title:'Know When to <span class="shimmer-word">Seek Help</span><br>in Seconds, Not Hours.',
+    hero_desc:"Describe your symptoms in your own language and get an instant, reliable guide to how urgent your situation is — so you know whether to rest at home, visit a clinic, or head to the hospital.",
+    hero_cta:"Check My Symptoms",
+    hero_disclaimer:"This tool offers preliminary guidance only and is not a medical diagnosis. Always consult a qualified doctor for serious or worsening symptoms.",
+    mission_title:"Our Mission",
+    mission_text:"To close the gap between rural communities and timely medical guidance, cutting unnecessary travel and easing pressure on overloaded hospitals.",
+    mission_link:"Learn More →",
+    how_tag:"How It Works",
+    how_title:"Three Steps to Clarity, No Clinic Visit Required",
+    how1_title:"Describe Your Symptoms", how1_desc:"Type or speak what you're feeling, in English, Hindi, or Marathi — no medical terms needed.",
+    how2_title:"AI Assesses Urgency", how2_desc:"Our triage engine matches your symptoms against known patterns to gauge how serious the situation is.",
+    how3_title:"Get a Clear Next Step", how3_desc:"Rest at home, visit a nearby clinic, or head to the hospital now — plus the closest option if needed.",
+    feat_tag:"Core Features",
+    feat_heading:"Practical Tools Built for Rural and Tier-2 Healthcare Access",
+    feat1_title:"Symptom Triage", feat1_desc:"Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.",
+    feat2_title:"Local Language Support", feat2_desc:"Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.",
+    feat3_title:"Nearby Clinic Locator", feat3_desc:"Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.",
+    feat4_title:"Symptom History", feat4_desc:"Keep a simple record of past checks so you and any doctor you visit later have useful context.",
+    footer_heading:"Bringing fast, reliable, first-step medical guidance to every village — because a two-hour journey shouldn't decide whether someone gets help in time.",
+    footer_cta:"Check Symptoms Now"
+  },
+  hi: {
+    nav_home:"होम", nav_triage:"लक्षण जांचें", nav_clinic:"क्लिनिक खोजें", nav_about:"हमारे बारे में", nav_login:"⊕ लॉगिन",
+    hero_badge:"एआई ग्रामीण स्वास्थ्य सेवा त्रिआज",
+    hero_title:'जानें कब लें <span class="shimmer-word">मदद</span><br>सेकंडों में, घंटों में नहीं।',
+    hero_desc:"अपने लक्षण अपनी भाषा में बताएं और तुरंत जानें कि स्थिति कितनी गंभीर है — घर पर आराम करें, क्लिनिक जाएं, या अस्पताल जाएं।",
+    hero_cta:"अपने लक्षण जांचें",
+    hero_disclaimer:"यह उपकरण केवल प्रारंभिक मार्गदर्शन देता है, यह चिकित्सा निदान नहीं है। गंभीर लक्षणों के लिए हमेशा डॉक्टर से सलाह लें।",
+    mission_title:"हमारा लक्ष्य",
+    mission_text:"ग्रामीण समुदायों को समय पर चिकित्सा मार्गदर्शन देकर अनावश्यक यात्रा कम करना और अस्पतालों पर दबाव घटाना।",
+    mission_link:"और जानें →",
+    how_tag:"यह कैसे काम करता है",
+    how_title:"बिना क्लिनिक गए, तीन चरणों में स्पष्टता पाएं",
+    how1_title:"अपने लक्षण बताएं", how1_desc:"अंग्रेज़ी, हिंदी या मराठी में टाइप करें या बोलें — किसी मेडिकल शब्द की जरूरत नहीं।",
+    how2_title:"एआई गंभीरता आंकता है", how2_desc:"हमारा त्रिआज इंजन आपके लक्षणों का मिलान करके स्थिति की गंभीरता बताता है।",
+    how3_title:"स्पष्ट अगला कदम पाएं", how3_desc:"घर पर आराम करें, पास के क्लिनिक जाएं, या अभी अस्पताल जाएं — साथ ही नज़दीकी विकल्प भी मिलेगा।",
+    feat_tag:"मुख्य सुविधाएं",
+    feat_heading:"ग्रामीण और छोटे शहरों के लिए बनाए गए व्यावहारिक उपकरण",
+    feat1_title:"लक्षण त्रिआज", feat1_desc:"टेक्स्ट या आवाज़ से लक्षण बताएं और तुरंत गंभीरता स्तर जानें — कम, मध्यम, या अधिक — स्पष्ट अगले कदम के साथ।",
+    feat2_title:"स्थानीय भाषा सहायता", feat2_desc:"हिंदी, मराठी या अन्य क्षेत्रीय भाषाओं में बोलें या टाइप करें ताकि कुछ भी छूट न जाए।",
+    feat3_title:"नज़दीकी क्लिनिक खोजें", feat3_desc:"अपने त्रिआज परिणाम के आधार पर नज़दीकी क्लिनिक या अस्पताल खोजें, लंबी यात्रा से बचें।",
+    feat4_title:"लक्षण इतिहास", feat4_desc:"पिछली जांचों का रिकॉर्ड रखें ताकि आपको और डॉक्टर को उपयोगी जानकारी मिले।",
+    footer_heading:"हर गांव तक तेज़, भरोसेमंद, पहला-कदम चिकित्सा मार्गदर्शन पहुंचाना — क्योंकि दो घंटे की यात्रा किसी की मदद में देरी की वजह नहीं बननी चाहिए।",
+    footer_cta:"अभी लक्षण जांचें"
+  },
+  mr: {
+    nav_home:"मुख्यपृष्ठ", nav_triage:"लक्षणे तपासा", nav_clinic:"दवाखाना शोधा", nav_about:"आमच्याबद्दल", nav_login:"⊕ लॉगिन",
+    hero_badge:"एआय ग्रामीण आरोग्यसेवा त्रिआज",
+    hero_title:'कधी <span class="shimmer-word">मदत</span> घ्यावी<br>ते सेकंदात जाणून घ्या.',
+    hero_desc:"तुमची लक्षणे तुमच्या भाषेत सांगा आणि परिस्थिती किती गंभीर आहे हे लगेच जाणून घ्या — घरी आराम करा, दवाखान्यात जा किंवा रुग्णालयात जा.",
+    hero_cta:"माझी लक्षणे तपासा",
+    hero_disclaimer:"हे साधन फक्त प्राथमिक मार्गदर्शन देते, हे वैद्यकीय निदान नाही. गंभीर लक्षणांसाठी नेहमी डॉक्टरांचा सल्ला घ्या.",
+    mission_title:"आमचे ध्येय",
+    mission_text:"ग्रामीण समुदायांना वेळेवर वैद्यकीय मार्गदर्शन देऊन अनावश्यक प्रवास कमी करणे आणि रुग्णालयांवरील ताण कमी करणे.",
+    mission_link:"अधिक जाणून घ्या →",
+    how_tag:"हे कसे कार्य करते",
+    how_title:"दवाखान्यात न जाता, तीन टप्प्यांत स्पष्टता मिळवा",
+    how1_title:"तुमची लक्षणे सांगा", how1_desc:"इंग्रजी, हिंदी किंवा मराठीत टाइप करा किंवा बोला — कोणत्याही वैद्यकीय शब्दांची गरज नाही.",
+    how2_title:"एआय गंभीरता तपासते", how2_desc:"आमचे त्रिआज इंजिन तुमच्या लक्षणांची तुलना करून परिस्थिती किती गंभीर आहे हे सांगते.",
+    how3_title:"स्पष्ट पुढचे पाऊल मिळवा", how3_desc:"घरी आराम करा, जवळच्या दवाखान्यात जा किंवा आत्ता रुग्णालयात जा — सोबत जवळचा पर्यायही मिळेल.",
+    feat_tag:"मुख्य वैशिष्ट्ये",
+    feat_heading:"ग्रामीण आणि निमशहरी आरोग्यसेवेसाठी बनवलेली व्यावहारिक साधने",
+    feat1_title:"लक्षण त्रिआज", feat1_desc:"मजकूर किंवा आवाजाने लक्षणे सांगा आणि तातडीने गंभीरता पातळी जाणून घ्या — कमी, मध्यम किंवा जास्त — स्पष्ट पुढील पावलांसह.",
+    feat2_title:"स्थानिक भाषा सहाय्य", feat2_desc:"हिंदी, मराठी किंवा इतर प्रादेशिक भाषांमध्ये बोला किंवा टाइप करा जेणेकरून काहीही हरवणार नाही.",
+    feat3_title:"जवळचा दवाखाना शोधा", feat3_desc:"तुमच्या त्रिआज निकालावर आधारित जवळचा दवाखाना किंवा रुग्णालय शोधा, लांबचा प्रवास टाळा.",
+    feat4_title:"लक्षण इतिहास", feat4_desc:"मागील तपासण्यांची नोंद ठेवा जेणेकरून तुम्हाला आणि डॉक्टरांना उपयुक्त माहिती मिळेल.",
+    footer_heading:"प्रत्येक गावापर्यंत जलद, विश्वासार्ह, पहिले-पाऊल वैद्यकीय मार्गदर्शन पोहोचवणे — कारण दोन तासांचा प्रवास कोणाच्याही मदतीत उशीर करण्याचे कारण बनू नये.",
+    footer_cta:"आत्ता लक्षणे तपासा"
+  }
+};
+
+function applyLanguage(lang){
+  const dict = translations[lang] || translations.en;
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key] !== undefined) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-html');
+    if(dict[key] !== undefined) el.innerHTML = dict[key];
+  });
+  document.documentElement.setAttribute('lang', lang);
+  localStorage.setItem('preferredLang', lang);
+}
+
+const langSelect = document.getElementById('langSelect');
+if(langSelect){
+  const saved = localStorage.getItem('preferredLang');
+  if(saved){
+    langSelect.value = saved;
+    applyLanguage(saved);
+  }
+  langSelect.addEventListener('change', (e)=>{
+    applyLanguage(e.target.value);
+  });
+}
 </script>
 
 </body>
