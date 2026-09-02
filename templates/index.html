@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PR Harvest – AI Rural Healthcare Triage</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1a1a1a;overflow-x:hidden;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:999;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;height:56px;
+  background:rgba(10,20,30,0.88);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+  transform:translateY(-100%);
+  animation:navSlideDown 1.2s ease 0.2s forwards;
+}
+@keyframes navSlideDown{to{transform:translateY(0);}}
+.nav-left{display:flex;align-items:center;gap:32px;}
+.logo{display:flex;align-items:center;gap:7px;}
+.logo-icon{width:22px;height:22px;}
+.logo-text{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:-0.3px;}
+.nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
+.nav-links a{font-size:13px;font-weight:400;color:rgba(255,255,255,0.75);text-decoration:none;transition:color .2s;}
+.nav-links a:hover{color:#fff;}
+.nav-login{
+  background:#4ac9e2;color:#08222e;
+  border:none;padding:7px 18px;border-radius:6px;
+  font-size:12px;font-weight:700;cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:transform .15s,box-shadow .2s;
+}
+.nav-login:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(74,201,226,0.4);}
+
+@keyframes kenBurns{
+  0%{transform:scale(1) translate(0,0);}
+  50%{transform:scale(1.08) translate(-1%,1%);}
+  100%{transform:scale(1) translate(0,0);}
+}
+@keyframes floatParticle{
+  0%{transform:translateY(0) translateX(0);opacity:0;}
+  15%{opacity:0.8;}85%{opacity:0.4;}
+  100%{transform:translateY(-90vh) translateX(-40px);opacity:0;}
+}
+@keyframes lightRay{0%,100%{opacity:0.04;}50%{opacity:0.12;}}
+@keyframes wavePulse{
+  0%,100%{transform:scaleX(1) translateX(0);}
+  50%{transform:scaleX(1.05) translateX(-2%);}
+}
+@keyframes shimmer{
+  0%{background-position:200% center;}
+  100%{background-position:-200% center;}
+}
+@keyframes heroContentIn{
+  from{opacity:0;transform:translateY(40px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes missionIn{
+  from{opacity:0;transform:translateX(40px);}
+  to{opacity:1;transform:translateX(0);}
+}
+@keyframes pulseDot{
+  0%,100%{box-shadow:0 0 0 0 rgba(74,201,226,0.5);}
+  50%{box-shadow:0 0 0 7px rgba(74,201,226,0);}
+}
+@keyframes scrollBounce{
+  0%,100%{transform:translateX(-50%) translateY(0);}
+  50%{transform:translateX(-50%) translateY(8px);}
+}
+
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;align-items:flex-end;
+  padding:0 48px 60px;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  overflow:hidden;
+  animation:kenBurns 30s ease-in-out infinite;
+  transform-origin:center center;
+}
+.hero-bg video{
+  width:100%;height:100%;
+  object-fit:cover;display:block;
+}
+.hero-bg::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(6,14,22,0.65) 0%,rgba(10,22,32,0.35) 50%,rgba(6,14,22,0.68) 100%);
+}
+.hero-rays{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;}
+.hero-rays::before{
+  content:'';position:absolute;top:-20%;left:30%;
+  width:3px;height:160%;
+  background:linear-gradient(180deg,transparent 0%,rgba(74,201,226,0.15) 40%,transparent 100%);
+  transform:rotate(-20deg);animation:lightRay 7s ease-in-out infinite;
+}
+.hero-rays::after{
+  content:'';position:absolute;top:-20%;left:55%;
+  width:2px;height:160%;
+  background:linear-gradient(180deg,transparent 0%,rgba(74,201,226,0.1) 40%,transparent 100%);
+  transform:rotate(-15deg);animation:lightRay 7s ease-in-out 2s infinite;
+}
+.hero-wave{
+  position:absolute;bottom:0;left:0;right:0;z-index:1;
+  height:80px;pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,rgba(6,14,22,0.5) 100%);
+  animation:wavePulse 10s ease-in-out infinite;
+}
+.hero-particles{position:absolute;inset:0;z-index:1;pointer-events:none;}
+.particle{position:absolute;border-radius:50%;background:rgba(74,201,226,0.7);animation:floatParticle linear infinite;}
+.hero h1 .shimmer-word{
+  background:linear-gradient(90deg,#fff 0%,#4ac9e2 30%,#fff 60%,#4ac9e2 80%,#fff 100%);
+  background-size:200% auto;
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 7s linear infinite;
+}
+.hero-content{position:relative;z-index:2;max-width:520px;animation:heroContentIn 1.5s ease 0.5s both;}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.2);
+  color:#fff;font-size:10px;font-weight:500;letter-spacing:1px;text-transform:uppercase;
+  padding:5px 12px;border-radius:4px;margin-bottom:20px;
+}
+.badge-dot{width:6px;height:6px;border-radius:50%;background:#4ac9e2;animation:pulseDot 3s infinite;}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(32px,4.5vw,52px);font-weight:800;line-height:1.08;color:#fff;margin-bottom:16px;letter-spacing:-1px;}
+.hero-desc{font-size:13px;line-height:1.75;color:rgba(255,255,255,0.65);max-width:400px;margin-bottom:32px;}
+.hero-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:#4ac9e2;color:#08222e;padding:11px 22px;border-radius:50px;
+  font-size:13px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .2s;
+}
+.hero-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(74,201,226,0.45);}
+.cta-arrow{width:28px;height:28px;border-radius:50%;background:rgba(8,34,46,0.25);display:flex;align-items:center;justify-content:center;font-size:14px;}
+.hero-mission{
+  position:absolute;right:48px;bottom:60px;z-index:2;
+  background:rgba(255,255,255,0.1);backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.18);
+  border-radius:14px;padding:22px 24px;width:240px;
+  animation:missionIn 1.5s ease 0.8s both;
+}
+.mission-dot{width:7px;height:7px;border-radius:50%;background:#4ac9e2;display:inline-block;margin-right:6px;animation:pulseDot 3s infinite;}
+.mission-title{font-size:11px;font-weight:600;color:#fff;margin-bottom:10px;}
+.mission-text{font-size:12px;line-height:1.65;color:rgba(255,255,255,0.7);margin-bottom:12px;}
+.mission-link{font-size:11px;color:#4ac9e2;text-decoration:none;font-weight:600;}
+.mission-link:hover{text-decoration:underline;}
+.scroll-hint{
+  position:absolute;bottom:16px;left:50%;transform:translateX(-50%);
+  z-index:3;display:flex;flex-direction:column;align-items:center;gap:3px;
+  animation:scrollBounce 3s ease-in-out infinite;
+}
+.scroll-hint span{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1.5px;text-transform:uppercase;}
+.scroll-hint-arrow{font-size:16px;color:rgba(255,255,255,0.3);}
+
+.about-tabs{
+  display:flex;align-items:center;border-bottom:1px solid #e8e8e8;
+  padding:0 48px;background:#fff;position:sticky;top:56px;z-index:100;
+}
+.tab-item{padding:14px 20px;font-size:13px;font-weight:500;color:#666;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;white-space:nowrap;}
+.tab-item.active{color:#1e6b7f;border-bottom-color:#1e6b7f;font-weight:600;}
+.tab-item:hover:not(.active){color:#333;}
+
+.who{display:grid;grid-template-columns:220px 1fr;gap:0;padding:56px 48px;max-width:1100px;margin:0 auto;}
+.who-right h2{font-family:'Manrope',sans-serif;font-size:clamp(20px,2.5vw,30px);font-weight:700;line-height:1.3;color:#111;margin-bottom:18px;}
+.who-right p{font-size:13px;line-height:1.8;color:#555;margin-bottom:10px;}
+
+.stats-row{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 48px 0;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.08);}
+.stat-card{position:relative;min-height:200px;padding:32px 28px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;}
+.stat-card-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease;}
+.stat-card:hover .stat-card-img{transform:scale(1.05);}
+.stat-card-overlay{position:absolute;inset:0;}
+.stat-card.green .stat-card-overlay{background:linear-gradient(160deg,rgba(10,25,35,0.6) 0%,rgba(15,40,55,0.75) 100%);}
+.stat-card.lime{background:#4ac9e2;}
+.stat-card-body{position:relative;z-index:1;}
+.stat-num{font-family:'Manrope',sans-serif;font-size:48px;font-weight:800;line-height:1;}
+.stat-card.green .stat-num{color:#4ac9e2;}
+.stat-card.lime .stat-num{color:#08222e;}
+.stat-name{font-size:14px;font-weight:700;margin-top:4px;}
+.stat-card.green .stat-name{color:#fff;}
+.stat-card.lime .stat-name{color:#08222e;}
+.stat-desc{font-size:12px;line-height:1.6;margin-top:6px;}
+.stat-card.green .stat-desc{color:rgba(255,255,255,0.65);}
+.stat-card.lime .stat-desc{color:rgba(8,34,46,0.7);}
+.stat-arrow{position:absolute;top:20px;right:20px;z-index:1;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;transition:transform .2s;}
+.stat-card:hover .stat-arrow{transform:translate(2px,-2px);}
+.stat-card.green .stat-arrow{background:rgba(255,255,255,0.15);color:#fff;}
+.stat-card.lime .stat-arrow{background:rgba(8,34,46,0.15);color:#08222e;}
+
+.features{background:#0e1a22;padding:72px 48px;margin-top:48px;}
+.features-inner{max-width:1100px;margin:0 auto;}
+.feat-tag{display:inline-flex;align-items:center;gap:6px;font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,0.5);font-weight:500;margin-bottom:20px;}
+.feat-tag::before{content:'●';font-size:7px;color:#4ac9e2;}
+.features h2{font-family:'Manrope',sans-serif;font-size:clamp(20px,2.8vw,32px);font-weight:700;color:#fff;line-height:1.25;max-width:520px;margin-bottom:52px;}
+.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 60px;}
+.feat-icon{width:40px;height:40px;border-radius:10px;background:rgba(74,201,226,0.1);border:1px solid rgba(74,201,226,0.2);display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:14px;transition:background .2s,border-color .2s,transform .2s;}
+.feat-item:hover .feat-icon{background:rgba(74,201,226,0.2);border-color:rgba(74,201,226,0.5);transform:scale(1.1);}
+.feat-item h3{font-size:14px;font-weight:600;color:#fff;margin-bottom:8px;}
+.feat-item p{font-size:12px;line-height:1.75;color:rgba(255,255,255,0.5);}
+
+.testimonial{padding:64px 48px;max-width:1100px;margin:0 auto;}
+.test-label{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#999;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+.test-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
+.testimonial blockquote{font-family:'Manrope',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:600;line-height:1.4;color:#111;max-width:780px;margin-bottom:48px;}
+
+.footer-top-bar{background:#08222e;padding:48px 48px 0;}
+.footer-main-content{display:grid;grid-template-columns:1fr auto;gap:60px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,0.1);}
+.footer-brand-heading{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;color:#fff;margin-bottom:10px;}
+.footer-contact{display:inline-flex;align-items:center;gap:10px;background:#4ac9e2;color:#08222e;padding:9px 20px;border-radius:50px;font-size:12px;font-weight:700;text-decoration:none;transition:transform .15s,box-shadow .2s;}
+.footer-contact:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(74,201,226,0.4);}
+.footer-contact-arrow{width:24px;height:24px;border-radius:50%;background:rgba(8,34,46,0.2);display:flex;align-items:center;justify-content:center;font-size:12px;}
+.footer-very-bottom{background:#08222e;border-top:1px solid rgba(255,255,255,0.08);padding:16px 48px;display:flex;align-items:center;justify-content:space-between;}
+.footer-very-bottom p{font-size:11px;color:rgba(255,255,255,0.3);}
+.footer-legal{display:flex;gap:20px;}
+.footer-legal a{font-size:11px;color:rgba(255,255,255,0.3);text-decoration:none;}
+.footer-legal a:hover{color:rgba(255,255,255,0.6);}
+
+.reveal{opacity:0;transform:translateY(44px) scale(0.97);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1);}
+.reveal.active{opacity:1;transform:translateY(0) scale(1);}
+
+.ai-bot{position:fixed;right:25px;bottom:25px;width:70px;height:70px;border-radius:50%;overflow:hidden;cursor:pointer;z-index:99999;box-shadow:0 10px 30px rgba(0,0,0,0.35);border:2px solid rgba(255,255,255,0.3);}
+.ai-bot video{width:100%;height:100%;object-fit:cover;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 22 22" fill="none">
+        <path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9z" fill="#4ac9e2" opacity=".3"/>
+        <path d="M11 6v10M6 11h10" stroke="#4ac9e2" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">PR Harvest</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/triage">Check Symptoms</a></li>
+      <li><a href="/find-clinic">Find a Clinic</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+  </div>
+  <button class="nav-login" onclick="window.location.href='/login'">⊕ Login</button>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <video autoplay muted loop playsinline>
+      <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/doctor-team-doing-surgery-in-hospital-room-animation-gif-download-10967367.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-rays"></div>
+  <div class="hero-wave"></div>
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="badge-dot"></span> AI Rural Healthcare Triage</div>
+    <h1>Know When to <span class="shimmer-word">Seek Help</span><br>in Seconds, Not Hours.</h1>
+    <p class="hero-desc">Describe your symptoms in your own language and get an instant, reliable guide to how urgent your situation is — so you know whether to rest at home, visit a clinic, or head to the hospital.</p>
+    <a href="/triage" class="hero-cta">Check My Symptoms<span class="cta-arrow">→</span></a>
+  </div>
+  <div class="hero-mission">
+    <div class="mission-title"><span class="mission-dot"></span>Our Mission</div>
+    <p class="mission-text">To close the gap between rural communities and timely medical guidance, cutting unnecessary travel and easing pressure on overloaded hospitals.</p>
+    <a href="/about" class="mission-link">Learn More →</a>
+  </div>
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-hint-arrow">↓</div>
+  </div>
+</section>
+
+<div class="about-tabs">
+  <div class="tab-item active">About Us</div>
+  <div class="tab-item">How It Works</div>
+  <div class="tab-item">Vision</div>
+</div>
+
+<div class="who reveal" style="display:flex;align-items:center;justify-content:flex-start;gap:60px;">
+  <div class="who-left" style="flex:1;">
+    <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?w=800&q=90" alt="rural healthcare"
+      style="width:100%;max-width:500px;height:300px;object-fit:cover;border-radius:20px;box-shadow:0 4px 16px rgba(0,0,0,0.12);">
+  </div>
+  <div class="who-right" style="flex:1;">
+    <p style="color:#1e6b7f;font-weight:600;">→ Why We Built PR Harvest</p>
+    <h2>Bringing Primary Care Guidance to Every Village</h2>
+    <p>Rural and tier-2 populations often face long travel times, limited primary healthcare access, language barriers, and delayed medical guidance. PR Harvest gives people a preliminary, AI-assisted symptom check so they know whether their situation truly needs urgent professional attention.</p>
+  </div>
+</div>
+
+<div class="stats-row reveal">
+  <div class="stat-card green">
+    <img class="stat-card-img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=90" alt="rural clinic">
+    <div class="stat-card-overlay"></div>
+    <div class="stat-arrow">→</div>
+    <div class="stat-card-body">
+      <div class="stat-num" id="stat1">0+</div>
+      <div class="stat-name">Symptoms in Our Triage Database</div>
+      <div class="stat-desc">A growing library of common rural health complaints, mapped to urgency levels so people get a clear next step instantly.</div>
+    </div>
+  </div>
+  <div class="stat-card lime">
+    <div class="stat-arrow">→</div>
+    <div class="stat-card-body">
+      <div class="stat-num" id="stat2">0%</div>
+      <div class="stat-name">Fewer Unnecessary Hospital Visits</div>
+      <div class="stat-desc">Early estimates suggest smarter triage can meaningfully cut avoidable trips to overloaded hospitals, saving time and money.</div>
+    </div>
+  </div>
+</div>
+
+<section class="features">
+  <div class="features-inner">
+    <div class="feat-tag">Core Features</div>
+    <h2 class="reveal">Practical Tools Built for Rural and Tier-2 Healthcare Access</h2>
+    <div class="feat-grid">
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/triage'">
+        <div class="feat-icon">🩺</div>
+        <h3>Symptom Triage</h3>
+        <p>Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.</p>
+      </div>
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/language'">
+        <div class="feat-icon">🗣️</div>
+        <h3>Local Language Support</h3>
+        <p>Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.</p>
+      </div>
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/find-clinic'">
+        <div class="feat-icon">📍</div>
+        <h3>Nearby Clinic Locator</h3>
+        <p>Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.</p>
+      </div>
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/history'">
+        <div class="feat-icon">📋</div>
+        <h3>Symptom History</h3>
+        <p>Keep a simple record of past checks so you and any doctor you visit later have useful context.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial reveal">
+  <div class="test-top">
+    <span class="test-label">From the Field</span>
+  </div>
+  <blockquote>
+    "Before this, the nearest clinic was two hours away. Now I know in a minute whether my child's fever needs a doctor today or can wait until morning."
+  </blockquote>
+</section>
+
+<div class="footer-top-bar">
+  <div class="footer-main-content">
+    <div>
+      <p class="footer-brand-heading">Bringing fast, reliable, first-step medical guidance to every village — because a two-hour journey shouldn't decide whether someone gets help in time.</p>
+      <a href="/triage" class="footer-contact">Check Symptoms Now<span class="footer-contact-arrow">→</span></a>
+    </div>
+  </div>
+</div>
+<div class="footer-very-bottom">
+  <p>PR Harvest © 2026. Team Goku, NEXORA 2026.</p>
+  <div class="footer-legal">
+    <a href="#">Privacy &amp; Policy</a>
+    <a href="#">Terms &amp; Conditions</a>
+  </div>
+</div>
+
+<div class="ai-bot" onclick="window.location.href='/triage'" title="Start a symptom check">
+  <video autoplay muted loop playsinline>
+    <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/robot-animation-gif-download-8265276.mp4" type="video/mp4">
+  </video>
+</div>
+
+<script>
+document.querySelectorAll('.tab-item').forEach(t=>{
+  t.addEventListener('click',()=>{
+    t.closest('.about-tabs').querySelectorAll('.tab-item').forEach(x=>x.classList.remove('active'));
+    t.classList.add('active');
+  });
+});
+
+const container=document.getElementById('heroParticles');
+for(let i=0;i<24;i++){
+  const p=document.createElement('div');
+  p.className='particle';
+  const size=Math.random()*4+2;
+  p.style.cssText=`width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:${Math.random()*30}%;opacity:${Math.random()*0.6+0.2};animation-duration:${Math.random()*15+12}s;animation-delay:-${Math.random()*12}s;box-shadow:0 0 ${size*3}px rgba(74,201,226,0.8);`;
+  container.appendChild(p);
+}
+
+const revealObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('active');
+    }
+  });
+},{threshold:0.13});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+
+function countUp(el,target,suffix,dur){
+  if(el._animating) return;
+  el._animating=true;
+  let start=null;
+  const step=ts=>{
+    if(!start)start=ts;
+    const p=Math.min((ts-start)/dur,1);
+    const ease=1-Math.pow(1-p,3);
+    el.textContent=Math.round(ease*target)+suffix;
+    if(p<1){requestAnimationFrame(step);}
+    else{el._animating=false;}
+  };
+  requestAnimationFrame(step);
+}
+const statsObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const s1=document.getElementById('stat1');
+      const s2=document.getElementById('stat2');
+      s1.textContent='0+';s2.textContent='0%';
+      s1._animating=false;s2._animating=false;
+      countUp(s1,50,'+',2500);
+      countUp(s2,30,'%',2800);
+    }
+  });
+},{threshold:0.3});
+const statsRow=document.querySelector('.stats-row');
+if(statsRow) statsObs.observe(statsRow);
+</script>
+
+</body>
+</html>
