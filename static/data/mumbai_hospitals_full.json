@@ -12,7 +12,7 @@
       "total_beds": 261,
       "consultation_fee_inr": 950,
       "rating": 4.6,
-      "emergency": true,
+      "emergency": true,      
       "bed_categories": [
         {
           "type": "General Ward",
