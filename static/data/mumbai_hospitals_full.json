@@ -1,0 +1,6804 @@
+{
+  "hospitals": [
+    {
+      "id": 1,
+      "name": "Lilavati Hospital and Research Centre",
+      "address": "A-791, Bandra Reclamation Rd, Bandra West, Mumbai 400050",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0510043,
+      "longitude": 72.8293225,
+      "phone": "+91 22 6930 1000",
+      "beds_available": 73,
+      "total_beds": 261,
+      "consultation_fee_inr": 950,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 117,
+          "available": 32,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 18,
+          "price_per_day_inr": 1350
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 14,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 27,
+          "available": 9,
+          "price_per_day_inr": 5200
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Kokilaben Dhirubhai Ambani Hospital",
+      "address": "Rao Saheb Achutrao Patwardhan Marg, Andheri West, Mumbai 400053",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1309308,
+      "longitude": 72.8249882,
+      "phone": "+91 22 4269 9999",
+      "beds_available": 63,
+      "total_beds": 311,
+      "consultation_fee_inr": 1700,
+      "rating": 3.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 139,
+          "available": 28,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 77,
+          "available": 15,
+          "price_per_day_inr": 2400
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 62,
+          "available": 12,
+          "price_per_day_inr": 4750
+        },
+        {
+          "type": "ICU",
+          "total_beds": 33,
+          "available": 8,
+          "price_per_day_inr": 9350
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Jaslok Hospital & Research Centre",
+      "address": "15, Dr Gopalrao Deshmukh Marg, Peddar Rd, Mumbai 400026",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9716603,
+      "longitude": 72.8098319,
+      "phone": "+91 99301 92000",
+      "beds_available": 83,
+      "total_beds": 341,
+      "consultation_fee_inr": 1100,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 153,
+          "available": 37,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 85,
+          "available": 20,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 68,
+          "available": 16,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 10,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Bombay Hospital",
+      "address": "New Marine Lines, Marine Lines, Mumbai 400020",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9410307,
+      "longitude": 72.8272687,
+      "phone": "+91 22 2206 7676",
+      "beds_available": 72,
+      "total_beds": 229,
+      "consultation_fee_inr": 500,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 103,
+          "available": 32,
+          "price_per_day_inr": 300
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 57,
+          "available": 18,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 45,
+          "available": 14,
+          "price_per_day_inr": 1400
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 8,
+          "price_per_day_inr": 2750
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Nanavati Max Super Speciality Hospital",
+      "address": "Swami Vivekanand Rd, Vile Parle West, Mumbai 400056",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0958824,
+      "longitude": 72.840261,
+      "phone": "+91 22 6836 0000",
+      "beds_available": 67,
+      "total_beds": 219,
+      "consultation_fee_inr": 1900,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 98,
+          "available": 30,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 54,
+          "available": 16,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 43,
+          "available": 13,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 8,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Fortis Hospital Mulund",
+      "address": "Mulund Goregaon Link Rd, Mulund West, Mumbai 400078",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1617943,
+      "longitude": 72.9418091,
+      "phone": "+91 22 6884 6143",
+      "beds_available": 83,
+      "total_beds": 281,
+      "consultation_fee_inr": 1950,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 126,
+          "available": 37,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 70,
+          "available": 20,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 56,
+          "available": 16,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 29,
+          "available": 10,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Wockhardt Hospitals, Mumbai Central",
+      "address": "Dr Anandrao Nair Marg, Mumbai Central, Mumbai 400011",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9752117,
+      "longitude": 72.8238875,
+      "phone": "+91 82911 01001",
+      "beds_available": 82,
+      "total_beds": 269,
+      "consultation_fee_inr": 650,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 121,
+          "available": 36,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 67,
+          "available": 20,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 16,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 10,
+          "price_per_day_inr": 3600
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Dr L H Hiranandani Hospital",
+      "address": "Hillside Avenue, Hiranandani Gardens, Powai, Mumbai 400076",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1205191,
+      "longitude": 72.9169504,
+      "phone": "+91 84240 07007",
+      "beds_available": 38,
+      "total_beds": 91,
+      "consultation_fee_inr": 1200,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 40,
+          "available": 17,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 22,
+          "available": 9,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 18,
+          "available": 7,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 11,
+          "available": 5,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Sir H. N. Reliance Foundation Hospital",
+      "address": "Raja Ram Mohan Roy Rd, Girgaon, Mumbai 400004",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.958899,
+      "longitude": 72.819948,
+      "phone": "+91 1800 890 1111",
+      "beds_available": 45,
+      "total_beds": 305,
+      "consultation_fee_inr": 1400,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 137,
+          "available": 20,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 76,
+          "available": 11,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 61,
+          "available": 9,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 5,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Asian Heart Institute",
+      "address": "G/N, G Block BKC, Bandra East, Mumbai 400051",
+      "specialty": "Cardiology",
+      "latitude": 19.0652405,
+      "longitude": 72.8610142,
+      "phone": "+91 99208 00600",
+      "beds_available": 73,
+      "total_beds": 341,
+      "consultation_fee_inr": 1800,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 153,
+          "available": 32,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 85,
+          "available": 18,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 68,
+          "available": 14,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 9,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "KEM Hospital",
+      "address": "Acharya Donde Marg, Parel, Mumbai 400012",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0014348,
+      "longitude": 72.8419728,
+      "phone": "+91 22 2410 7000",
+      "beds_available": 44,
+      "total_beds": 263,
+      "consultation_fee_inr": 1850,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 118,
+          "available": 19,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 11,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 8,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 6,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Lokmanya Tilak Municipal General Hospital (Sion Hospital)",
+      "address": "Sion West, Mumbai 400022",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.035843,
+      "longitude": 72.8594662,
+      "phone": "+91 22 2406 3267",
+      "beds_available": 16,
+      "total_beds": 97,
+      "consultation_fee_inr": 1150,
+      "rating": 3.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 43,
+          "available": 7,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 24,
+          "available": 4,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 19,
+          "available": 3,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 11,
+          "available": 2,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Tata Memorial Hospital",
+      "address": "Dr Ernest Borges Rd, Parel East, Mumbai 400012",
+      "specialty": "Oncology",
+      "latitude": 19.0048619,
+      "longitude": 72.8429513,
+      "phone": "+91 22 2417 7000",
+      "beds_available": 25,
+      "total_beds": 335,
+      "consultation_fee_inr": 1350,
+      "rating": 3.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 150,
+          "available": 11,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 83,
+          "available": 6,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 67,
+          "available": 5,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 3,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Saifee Hospital",
+      "address": "Maharshi Karve Rd, Charni Road, Girgaon, Mumbai 400004",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9525318,
+      "longitude": 72.8182565,
+      "phone": "+91 22 6757 0111",
+      "beds_available": 58,
+      "total_beds": 341,
+      "consultation_fee_inr": 550,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 153,
+          "available": 26,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 85,
+          "available": 14,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 68,
+          "available": 11,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 7,
+          "price_per_day_inr": 3000
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Gleneagles Hospital (Parel)",
+      "address": "35, Dr Ernest Borges Rd, Parel East, Mumbai 400012",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9995043,
+      "longitude": 72.8406054,
+      "phone": "+91 92402 61611",
+      "beds_available": 21,
+      "total_beds": 267,
+      "consultation_fee_inr": 1400,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 120,
+          "available": 9,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 66,
+          "available": 5,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 4,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 3,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "SBS Multi-Speciality Hospital",
+      "address": "Veera Desai Rd, Andheri West, Mumbai 400053",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1366607,
+      "longitude": 72.8363391,
+      "phone": "+91 91375 27182",
+      "beds_available": 25,
+      "total_beds": 185,
+      "consultation_fee_inr": 400,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 83,
+          "available": 11,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 46,
+          "available": 6,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 5,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 3,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Bellevue Multispeciality Hospital",
+      "address": "New Link Rd, Azad Nagar, Andheri West, Mumbai 400053",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1292139,
+      "longitude": 72.8317153,
+      "phone": "+91 22 6686 8600",
+      "beds_available": 56,
+      "total_beds": 197,
+      "consultation_fee_inr": 1400,
+      "rating": 3.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 88,
+          "available": 25,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 14,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 11,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 6,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Nakshatra Multispeciality Hospital",
+      "address": "D.N.Nagar, Andheri West, Mumbai 400053",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1240921,
+      "longitude": 72.8318392,
+      "phone": "+91 91367 64270",
+      "beds_available": 61,
+      "total_beds": 227,
+      "consultation_fee_inr": 1800,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 102,
+          "available": 27,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 56,
+          "available": 15,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 45,
+          "available": 12,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 7,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Kapadia Multispeciality Hospital",
+      "address": "Mahatma Gandhi Rd, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1630706,
+      "longitude": 72.8434104,
+      "phone": "+91 77770 45206",
+      "beds_available": 61,
+      "total_beds": 317,
+      "consultation_fee_inr": 400,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 142,
+          "available": 27,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 79,
+          "available": 15,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 63,
+          "available": 12,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 33,
+          "available": 7,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Thunga STH Hospital Juhu",
+      "address": "Juhu Versova Link Rd, Andheri West, Mumbai 400053",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1209804,
+      "longitude": 72.8269134,
+      "phone": "+91 22 3524 4700",
+      "beds_available": 21,
+      "total_beds": 167,
+      "consultation_fee_inr": 600,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 75,
+          "available": 9,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 41,
+          "available": 5,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 33,
+          "available": 4,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 3,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "BSES MG Hospital",
+      "address": "Swami Vivekanand Rd, Andheri West, Mumbai 400058",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1193234,
+      "longitude": 72.8451682,
+      "phone": "+91 22 6648 7500",
+      "beds_available": 44,
+      "total_beds": 233,
+      "consultation_fee_inr": 450,
+      "rating": 3.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 104,
+          "available": 19,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 58,
+          "available": 11,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 46,
+          "available": 8,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 6,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "Holy Spirit Hospital & Research Centre",
+      "address": "Mahakali Caves Rd, Andheri East, Mumbai 400093",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1273935,
+      "longitude": 72.8671834,
+      "phone": "+91 22 4247 8888",
+      "beds_available": 18,
+      "total_beds": 231,
+      "consultation_fee_inr": 450,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 103,
+          "available": 8,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 57,
+          "available": 4,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 46,
+          "available": 3,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 3,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "CritiCare Asia Multispeciality Hospital (Juhu)",
+      "address": "JVPD Scheme, Andheri West, Mumbai 400049",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1156416,
+      "longitude": 72.8353782,
+      "phone": "+91 22 6909 6000",
+      "beds_available": 62,
+      "total_beds": 399,
+      "consultation_fee_inr": 1300,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 179,
+          "available": 27,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 99,
+          "available": 15,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 79,
+          "available": 12,
+          "price_per_day_inr": 3650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 42,
+          "available": 8,
+          "price_per_day_inr": 7150
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Lion Kartar Singh Hospital",
+      "address": "Dadabhai Cross Rd, Andheri West, Mumbai 400058",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.124298,
+      "longitude": 72.8409832,
+      "phone": null,
+      "beds_available": 82,
+      "total_beds": 219,
+      "consultation_fee_inr": 1200,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 98,
+          "available": 36,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 54,
+          "available": 20,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 43,
+          "available": 16,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 10,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Aaradhya Healthcare Superspeciality Hospital",
+      "address": "Marol, Andheri East, Mumbai 400059",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1094274,
+      "longitude": 72.88409,
+      "phone": "+91 22 6900 0009",
+      "beds_available": 77,
+      "total_beds": 299,
+      "consultation_fee_inr": 1150,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 134,
+          "available": 34,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 74,
+          "available": 19,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 59,
+          "available": 15,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 32,
+          "available": 9,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "name": "Criticare Hospital (Teli Gali)",
+      "address": "Teli Gali, Andheri East, Mumbai 400069",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1181073,
+      "longitude": 72.8505634,
+      "phone": "+91 88797 71122",
+      "beds_available": 20,
+      "total_beds": 85,
+      "consultation_fee_inr": 1600,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 38,
+          "available": 9,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 21,
+          "available": 5,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 17,
+          "available": 4,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 9,
+          "available": 2,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Sugun Multispeciality Hospital",
+      "address": "Military Rd, Marol, Andheri East, Mumbai 400059",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1171914,
+      "longitude": 72.8826361,
+      "phone": "+91 22 6686 9906",
+      "beds_available": 41,
+      "total_beds": 367,
+      "consultation_fee_inr": 1500,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 165,
+          "available": 18,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 91,
+          "available": 10,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 73,
+          "available": 8,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 38,
+          "available": 5,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Yati Multi-Speciality Hospital",
+      "address": "Jijamata Rd, Andheri East, Mumbai 400093",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1262092,
+      "longitude": 72.8599033,
+      "phone": "+91 84259 06111",
+      "beds_available": 20,
+      "total_beds": 345,
+      "consultation_fee_inr": 700,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 155,
+          "available": 9,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 86,
+          "available": 5,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 4,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 2,
+          "price_per_day_inr": 3850
+        }
+      ]
+    },
+    {
+      "id": 29,
+      "name": "SevenHills Hospital",
+      "address": "Marol Maroshi Rd, Andheri East, Mumbai 400059",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1179997,
+      "longitude": 72.8780374,
+      "phone": "+91 22 6767 6766",
+      "beds_available": 56,
+      "total_beds": 107,
+      "consultation_fee_inr": 1500,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 48,
+          "available": 25,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 26,
+          "available": 14,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 21,
+          "available": 11,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 12,
+          "available": 6,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Medicare Hospital",
+      "address": "Marol Naka, Andheri East, Mumbai 400059",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1084333,
+      "longitude": 72.8777682,
+      "phone": "+91 91376 00643",
+      "beds_available": 29,
+      "total_beds": 333,
+      "consultation_fee_inr": 1750,
+      "rating": 4.1,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 149,
+          "available": 13,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 83,
+          "available": 7,
+          "price_per_day_inr": 2450
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 66,
+          "available": 5,
+          "price_per_day_inr": 4900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 4,
+          "price_per_day_inr": 9600
+        }
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Apex Multi Speciality Hospital (Sakinaka)",
+      "address": "Andheri Ghatkopar Link Rd, Andheri East, Mumbai 400072",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0995449,
+      "longitude": 72.891786,
+      "phone": "+91 98677 66786",
+      "beds_available": 64,
+      "total_beds": 323,
+      "consultation_fee_inr": 1600,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 145,
+          "available": 28,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 80,
+          "available": 16,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 64,
+          "available": 12,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 34,
+          "available": 8,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Apex Superspeciality Hospitals (Borivali W)",
+      "address": "LT Rd, Borivali West, Mumbai 400091",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2293416,
+      "longitude": 72.8466084,
+      "phone": "+91 22 2898 6677",
+      "beds_available": 15,
+      "total_beds": 65,
+      "consultation_fee_inr": 1600,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 29,
+          "available": 6,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 16,
+          "available": 3,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 13,
+          "available": 3,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 7,
+          "available": 3,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Lotus Multispeciality Hospital Borivali W",
+      "address": "Devki Nagar, Borivali West, Mumbai 400103",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2406112,
+      "longitude": 72.8452939,
+      "phone": "+91 77770 22804",
+      "beds_available": 37,
+      "total_beds": 139,
+      "consultation_fee_inr": 1150,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 62,
+          "available": 16,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 34,
+          "available": 9,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 27,
+          "available": 7,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 16,
+          "available": 5,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Lotus Superspeciality Hospital",
+      "address": "Ram Mandir Rd, Borivali West, Mumbai 400091",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2270842,
+      "longitude": 72.8460337,
+      "phone": "+91 69133 00300",
+      "beds_available": 77,
+      "total_beds": 279,
+      "consultation_fee_inr": 450,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 125,
+          "available": 34,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 69,
+          "available": 19,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 55,
+          "available": 15,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 30,
+          "available": 9,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Apex Multispeciality Hospitals (Borivali E)",
+      "address": "Dattapada Rd, Borivali East, Mumbai 400066",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2203823,
+      "longitude": 72.8628767,
+      "phone": "+91 91366 65105",
+      "beds_available": 41,
+      "total_beds": 197,
+      "consultation_fee_inr": 1900,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 88,
+          "available": 18,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 10,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 8,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 5,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Phoenix Hospitals Pvt. Ltd.",
+      "address": "Chikoowadi, Borivali West, Mumbai 400092",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2195799,
+      "longitude": 72.838099,
+      "phone": "+91 22 2898 5671",
+      "beds_available": 20,
+      "total_beds": 365,
+      "consultation_fee_inr": 900,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 164,
+          "available": 9,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 91,
+          "available": 5,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 73,
+          "available": 4,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 37,
+          "available": 2,
+          "price_per_day_inr": 4950
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Apex Hospitals Borivali (Chandavarkar Rd)",
+      "address": "Chandavarkar Rd, Borivali West, Mumbai 400092",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2313394,
+      "longitude": 72.8496686,
+      "phone": "+91 91366 65105",
+      "beds_available": 43,
+      "total_beds": 381,
+      "consultation_fee_inr": 1200,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 171,
+          "available": 19,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 95,
+          "available": 10,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 76,
+          "available": 8,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 39,
+          "available": 6,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 38,
+      "name": "Xenon Multispeciality Hospital",
+      "address": "New Link Rd, Borivali West, Mumbai 400091",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2352981,
+      "longitude": 72.8408398,
+      "phone": "+91 82918 29154",
+      "beds_available": 30,
+      "total_beds": 205,
+      "consultation_fee_inr": 800,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 92,
+          "available": 13,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 51,
+          "available": 7,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 41,
+          "available": 6,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 4,
+          "price_per_day_inr": 4400
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Aum Superspeciality Hospital",
+      "address": "Mandapeshwar, Borivali West, Mumbai 400103",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2420886,
+      "longitude": 72.8549445,
+      "phone": "+91 80008 22230",
+      "beds_available": 66,
+      "total_beds": 397,
+      "consultation_fee_inr": 900,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 178,
+          "available": 29,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 99,
+          "available": 16,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 79,
+          "available": 13,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 41,
+          "available": 8,
+          "price_per_day_inr": 4950
+        }
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Oscar Hitech Multispeciality Hospital",
+      "address": "Swami Vivekanand Rd, Borivali East, Mumbai 400066",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2349286,
+      "longitude": 72.8587687,
+      "phone": "+91 84259 86919",
+      "beds_available": 53,
+      "total_beds": 181,
+      "consultation_fee_inr": 1200,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 81,
+          "available": 23,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 45,
+          "available": 13,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 36,
+          "available": 10,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 7,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 41,
+      "name": "Arihant Superspeciality Hospital",
+      "address": "Swami Vivekanand Rd, Borivali West, Mumbai 400092",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2189271,
+      "longitude": 72.8523851,
+      "phone": "+91 76668 06080",
+      "beds_available": 17,
+      "total_beds": 349,
+      "consultation_fee_inr": 1400,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 157,
+          "available": 7,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 87,
+          "available": 4,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 3,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 36,
+          "available": 3,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Namaha Specialised Healthcare",
+      "address": "SV Road, Kandivali West, Mumbai 400067",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.197834,
+      "longitude": 72.848306,
+      "phone": "+91 22 6123 6123",
+      "beds_available": 78,
+      "total_beds": 331,
+      "consultation_fee_inr": 500,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 148,
+          "available": 35,
+          "price_per_day_inr": 300
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 82,
+          "available": 19,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 66,
+          "available": 15,
+          "price_per_day_inr": 1400
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 9,
+          "price_per_day_inr": 2750
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "name": "Shreejii Hospital & Research Centre",
+      "address": "Akurli Rd, Kandivali East, Mumbai 400101",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2020976,
+      "longitude": 72.8540858,
+      "phone": "+91 84509 02203",
+      "beds_available": 44,
+      "total_beds": 183,
+      "consultation_fee_inr": 1300,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 82,
+          "available": 19,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 45,
+          "available": 11,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 36,
+          "available": 8,
+          "price_per_day_inr": 3650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 6,
+          "price_per_day_inr": 7150
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Apex Hospitals Kandivali",
+      "address": "Akurli Rd, Kandivali East, Mumbai 400101",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2005141,
+      "longitude": 72.8757951,
+      "phone": "+91 91366 65105",
+      "beds_available": 29,
+      "total_beds": 163,
+      "consultation_fee_inr": 1500,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 73,
+          "available": 13,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 40,
+          "available": 7,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 32,
+          "available": 5,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 4,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "name": "Seven Star Multispeciality Hospital",
+      "address": "Asha Nagar, Kandivali East, Mumbai 400101",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.211969,
+      "longitude": 72.8669862,
+      "phone": "+91 91377 98431",
+      "beds_available": 78,
+      "total_beds": 231,
+      "consultation_fee_inr": 400,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 103,
+          "available": 35,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 57,
+          "available": 19,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 46,
+          "available": 15,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 9,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "name": "Vardann Multi Speciality Hospital",
+      "address": "Swami Vivekanand Rd, Kandivali West, Mumbai 400067",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2116761,
+      "longitude": 72.8516058,
+      "phone": null,
+      "beds_available": 26,
+      "total_beds": 167,
+      "consultation_fee_inr": 1400,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 75,
+          "available": 11,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 41,
+          "available": 6,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 33,
+          "available": 5,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 4,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Shree Kandivali Hitwardhak Mandal Hospital (KHM)",
+      "address": "Swami Vivekananda Rd, Kandivali West, Mumbai 400067",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2006807,
+      "longitude": 72.8486316,
+      "phone": "+91 86570 23202",
+      "beds_available": 29,
+      "total_beds": 373,
+      "consultation_fee_inr": 1500,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 167,
+          "available": 13,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 93,
+          "available": 7,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 74,
+          "available": 5,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 39,
+          "available": 4,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "name": "ACE Heart Hospital",
+      "address": "Swami Vivekanand Rd, Kandivali West, Mumbai 400067",
+      "specialty": "Cardiology",
+      "latitude": 19.2078284,
+      "longitude": 72.8503123,
+      "phone": "+91 89285 95323",
+      "beds_available": 52,
+      "total_beds": 129,
+      "consultation_fee_inr": 1350,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 58,
+          "available": 23,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 32,
+          "available": 13,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 25,
+          "available": 10,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 6,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "name": "Shatabdi Hospital (BMC)",
+      "address": "Swami Vivekanand Rd, Kandivali West, Mumbai 400067",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.20841,
+      "longitude": 72.8515827,
+      "phone": null,
+      "beds_available": 48,
+      "total_beds": 161,
+      "consultation_fee_inr": 1450,
+      "rating": 3.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 72,
+          "available": 21,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 40,
+          "available": 12,
+          "price_per_day_inr": 2050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 32,
+          "available": 9,
+          "price_per_day_inr": 4050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 17,
+          "available": 6,
+          "price_per_day_inr": 8000
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Vansh Hospital",
+      "address": "90 Feet Rd, Kandivali East, Mumbai 400101",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.2130749,
+      "longitude": 72.8637791,
+      "phone": "+91 22 6813 6464",
+      "beds_available": 20,
+      "total_beds": 105,
+      "consultation_fee_inr": 550,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 47,
+          "available": 9,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 26,
+          "available": 5,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 21,
+          "available": 4,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "ICU",
+          "total_beds": 11,
+          "available": 2,
+          "price_per_day_inr": 3000
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "name": "City Multispeciality Hospital (Kandivali)",
+      "address": "Akurli Rd, Kandivali East, Mumbai 400101",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.200262,
+      "longitude": 72.8715381,
+      "phone": "+91 22 4608 3579",
+      "beds_available": 27,
+      "total_beds": 89,
+      "consultation_fee_inr": 1800,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 40,
+          "available": 12,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 22,
+          "available": 6,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 17,
+          "available": 5,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 10,
+          "available": 4,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "name": "CritiCare Asia Multispeciality Hospital (Malad)",
+      "address": "New Link Rd, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1803075,
+      "longitude": 72.835626,
+      "phone": "+91 22 6909 2000",
+      "beds_available": 64,
+      "total_beds": 223,
+      "consultation_fee_inr": 1100,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 100,
+          "available": 28,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 55,
+          "available": 16,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 44,
+          "available": 12,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 8,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "name": "Thunga Hospital (Malad)",
+      "address": "Swami Vivekanand Rd, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1953203,
+      "longitude": 72.8461197,
+      "phone": "+91 22 6908 4200",
+      "beds_available": 49,
+      "total_beds": 323,
+      "consultation_fee_inr": 1600,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 145,
+          "available": 22,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 80,
+          "available": 12,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 64,
+          "available": 9,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 34,
+          "available": 6,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "name": "Altiuz Multispecialty Hospital",
+      "address": "New Link Rd, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.18052,
+      "longitude": 72.8360962,
+      "phone": "+91 86556 97748",
+      "beds_available": 79,
+      "total_beds": 393,
+      "consultation_fee_inr": 1650,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 176,
+          "available": 35,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 98,
+          "available": 19,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 78,
+          "available": 15,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 41,
+          "available": 10,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "name": "Shah Lifeline Hospital",
+      "address": "Sainath Rd, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1900506,
+      "longitude": 72.8479996,
+      "phone": "+91 80 4812 6387",
+      "beds_available": 64,
+      "total_beds": 223,
+      "consultation_fee_inr": 400,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 100,
+          "available": 28,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 55,
+          "available": 16,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 44,
+          "available": 12,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 8,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "name": "Suchak Hospital",
+      "address": "Manchubhai Rd, Malad East, Mumbai 400097",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1888746,
+      "longitude": 72.8502201,
+      "phone": "+91 90827 31232",
+      "beds_available": 15,
+      "total_beds": 65,
+      "consultation_fee_inr": 600,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 29,
+          "available": 6,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 16,
+          "available": 3,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 13,
+          "available": 3,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 7,
+          "available": 3,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "name": "Garg Multispeciality Hospital",
+      "address": "Chunilal Giridharilal Marg, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1915612,
+      "longitude": 72.8452691,
+      "phone": "+91 97360 09730",
+      "beds_available": 16,
+      "total_beds": 217,
+      "consultation_fee_inr": 1050,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 97,
+          "available": 7,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 54,
+          "available": 4,
+          "price_per_day_inr": 1450
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 43,
+          "available": 3,
+          "price_per_day_inr": 2950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 2,
+          "price_per_day_inr": 5800
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "name": "Balajee Hospital Malad",
+      "address": "Rani Sati Rd, Malad East, Mumbai 400097",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1826169,
+      "longitude": 72.8567513,
+      "phone": "+91 91375 27180",
+      "beds_available": 72,
+      "total_beds": 189,
+      "consultation_fee_inr": 650,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 32,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 18,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 14,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 8,
+          "price_per_day_inr": 3600
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "name": "Cloudnine Hospital Malad",
+      "address": "New Link Rd, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1755524,
+      "longitude": 72.8376046,
+      "phone": "+91 99728 99728",
+      "beds_available": 19,
+      "total_beds": 333,
+      "consultation_fee_inr": 1850,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 149,
+          "available": 8,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 83,
+          "available": 4,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 66,
+          "available": 3,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 4,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "name": "Surana Hospital and Research Centre",
+      "address": "Tank Road, Malad West, Mumbai 400064",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1990805,
+      "longitude": 72.83847,
+      "phone": "+91 22 2802 2122",
+      "beds_available": 37,
+      "total_beds": 149,
+      "consultation_fee_inr": 1350,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 67,
+          "available": 16,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 37,
+          "available": 9,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 29,
+          "available": 7,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 16,
+          "available": 5,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "name": "Sanjeevani Hospital (Malad)",
+      "address": "Kedarmal Rd, Malad East, Mumbai 400097",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1845716,
+      "longitude": 72.8529107,
+      "phone": "+91 22 6988 5678",
+      "beds_available": 73,
+      "total_beds": 131,
+      "consultation_fee_inr": 1600,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 58,
+          "available": 32,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 32,
+          "available": 18,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 26,
+          "available": 14,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 15,
+          "available": 9,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "name": "Infinity Multispeciality Hospital",
+      "address": "Vir Sanghvi Marg, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1722856,
+      "longitude": 72.846154,
+      "phone": "+91 83559 01012",
+      "beds_available": 81,
+      "total_beds": 267,
+      "consultation_fee_inr": 1250,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 120,
+          "available": 36,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 66,
+          "available": 20,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 16,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 9,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 63,
+      "name": "Oscar Superspeciality Hospital (Goregaon)",
+      "address": "New Link Rd, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1610255,
+      "longitude": 72.8345623,
+      "phone": "+91 98671 18611",
+      "beds_available": 15,
+      "total_beds": 235,
+      "consultation_fee_inr": 950,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 105,
+          "available": 6,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 58,
+          "available": 3,
+          "price_per_day_inr": 1350
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 47,
+          "available": 3,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 3,
+          "price_per_day_inr": 5200
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "name": "Lifeline Medicare Hospitals",
+      "address": "Swami Vivekanand Rd, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1743581,
+      "longitude": 72.8446157,
+      "phone": "+91 22 6847 8100",
+      "beds_available": 27,
+      "total_beds": 129,
+      "consultation_fee_inr": 1350,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 58,
+          "available": 12,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 32,
+          "available": 6,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 25,
+          "available": 5,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 4,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "name": "SRV Hospitals Goregaon",
+      "address": "Road No. 2, Jawahar Nagar, Goregaon West, Mumbai 400062",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1591367,
+      "longitude": 72.8491711,
+      "phone": "+91 72096 00600",
+      "beds_available": 15,
+      "total_beds": 185,
+      "consultation_fee_inr": 700,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 83,
+          "available": 6,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 46,
+          "available": 3,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 3,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 3,
+          "price_per_day_inr": 3850
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "name": "Radha Krishna Hospital (Goregaon East)",
+      "address": "Film City Rd, Goregaon East, Mumbai 400063",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1728079,
+      "longitude": 72.8740547,
+      "phone": "+91 22 4962 9242",
+      "beds_available": 31,
+      "total_beds": 347,
+      "consultation_fee_inr": 1250,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 156,
+          "available": 13,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 86,
+          "available": 7,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 6,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 36,
+          "available": 5,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 67,
+      "name": "Matushree Gomati Hospital",
+      "address": "Mahatma Gandhi Rd, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1612077,
+      "longitude": 72.8401846,
+      "phone": "+91 99203 13039",
+      "beds_available": 53,
+      "total_beds": 291,
+      "consultation_fee_inr": 600,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 130,
+          "available": 23,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 72,
+          "available": 13,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 58,
+          "available": 10,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 7,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 68,
+      "name": "Vedant Multispeciality Hospital (Goregaon E)",
+      "address": "Film City Rd, Goregaon East, Mumbai 400065",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.175102,
+      "longitude": 72.8773583,
+      "phone": "+91 97696 66829",
+      "beds_available": 77,
+      "total_beds": 189,
+      "consultation_fee_inr": 1250,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 34,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 19,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 15,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 9,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 69,
+      "name": "Suvidha Hospital & Polyclinic",
+      "address": "Road No. 3, Goregaon West, Mumbai 400104",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1566604,
+      "longitude": 72.8466984,
+      "phone": "+91 73044 03447",
+      "beds_available": 62,
+      "total_beds": 379,
+      "consultation_fee_inr": 1650,
+      "rating": 4.1,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 170,
+          "available": 27,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 94,
+          "available": 15,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 75,
+          "available": 12,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 40,
+          "available": 8,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 70,
+      "name": "Holy Family Multispeciality Hospital Bandra",
+      "address": "St Andrews Rd, Bandra West, Mumbai 400050",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0551249,
+      "longitude": 72.8272688,
+      "phone": "+91 22 6267 0555",
+      "beds_available": 21,
+      "total_beds": 317,
+      "consultation_fee_inr": 1850,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 142,
+          "available": 9,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 79,
+          "available": 5,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 63,
+          "available": 4,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 33,
+          "available": 3,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 71,
+      "name": "Shanti Nursing Home & Multispeciality Hospital",
+      "address": "Swami Vivekanand Rd, Bandra West, Mumbai 400050",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0511352,
+      "longitude": 72.8380294,
+      "phone": "+91 98195 54457",
+      "beds_available": 35,
+      "total_beds": 355,
+      "consultation_fee_inr": 1250,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 159,
+          "available": 15,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 88,
+          "available": 8,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 71,
+          "available": 7,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 37,
+          "available": 5,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 72,
+      "name": "Guru Nanak Multispeciality Hospital",
+      "address": "Gandhi Nagar, Bandra East, Mumbai 400051",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0595984,
+      "longitude": 72.8525429,
+      "phone": "+91 22 4222 7777",
+      "beds_available": 35,
+      "total_beds": 345,
+      "consultation_fee_inr": 1850,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 155,
+          "available": 15,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 86,
+          "available": 8,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 7,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 5,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 73,
+      "name": "Fortis S L Raheja Hospital",
+      "address": "Raheja Rugnalaya Marg, Mahim West, Mumbai 400016",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0462883,
+      "longitude": 72.8426504,
+      "phone": "+91 22 6884 6143",
+      "beds_available": 17,
+      "total_beds": 199,
+      "consultation_fee_inr": 1950,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 89,
+          "available": 7,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 4,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 3,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 22,
+          "available": 3,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 74,
+      "name": "P. D. Hinduja Hospital, Khar Facility",
+      "address": "11th Rd, Khar West, Mumbai 400052",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0678902,
+      "longitude": 72.8353467,
+      "phone": "+91 22 6174 6000",
+      "beds_available": 63,
+      "total_beds": 401,
+      "consultation_fee_inr": 2000,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 180,
+          "available": 28,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 100,
+          "available": 15,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 80,
+          "available": 12,
+          "price_per_day_inr": 5600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 41,
+          "available": 8,
+          "price_per_day_inr": 11000
+        }
+      ]
+    },
+    {
+      "id": 75,
+      "name": "K.B. Bhabha Municipal General Hospital",
+      "address": "Waterfield Rd, Bandra West, Mumbai 400050",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0574544,
+      "longitude": 72.833645,
+      "phone": "+91 22 2642 2541",
+      "beds_available": 33,
+      "total_beds": 331,
+      "consultation_fee_inr": 1550,
+      "rating": 3.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 148,
+          "available": 14,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 82,
+          "available": 8,
+          "price_per_day_inr": 2150
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 66,
+          "available": 6,
+          "price_per_day_inr": 4350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 5,
+          "price_per_day_inr": 8500
+        }
+      ]
+    },
+    {
+      "id": 76,
+      "name": "Tanaya Nursing Home",
+      "address": "Kala Nagar, Bandra East, Mumbai 400051",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0601493,
+      "longitude": 72.8526071,
+      "phone": "+91 89765 25392",
+      "beds_available": 42,
+      "total_beds": 329,
+      "consultation_fee_inr": 1350,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 148,
+          "available": 18,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 82,
+          "available": 10,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 65,
+          "available": 8,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 34,
+          "available": 6,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 77,
+      "name": "Womens Hospital (Khar)",
+      "address": "16th Cross Rd, Khar West, Mumbai 400052",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0692867,
+      "longitude": 72.8306318,
+      "phone": "+91 98202 54545",
+      "beds_available": 72,
+      "total_beds": 129,
+      "consultation_fee_inr": 900,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 58,
+          "available": 32,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 32,
+          "available": 18,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 25,
+          "available": 14,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 8,
+          "price_per_day_inr": 4950
+        }
+      ]
+    },
+    {
+      "id": 78,
+      "name": "HVS Symbiosis Hospital",
+      "address": "Chabildas Rd, Dadar West, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0206285,
+      "longitude": 72.8429651,
+      "phone": "+91 85917 55648",
+      "beds_available": 18,
+      "total_beds": 271,
+      "consultation_fee_inr": 1100,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 121,
+          "available": 8,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 67,
+          "available": 4,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 54,
+          "available": 3,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 29,
+          "available": 3,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 79,
+      "name": "P. D. Hinduja Hospital and Medical Research Centre",
+      "address": "Swatantryaveer Savarkar Rd, Mahim West, Mumbai 400016",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0328748,
+      "longitude": 72.8391097,
+      "phone": "+91 22 6924 8000",
+      "beds_available": 58,
+      "total_beds": 401,
+      "consultation_fee_inr": 2000,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 180,
+          "available": 26,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 100,
+          "available": 14,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 80,
+          "available": 11,
+          "price_per_day_inr": 5600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 41,
+          "available": 7,
+          "price_per_day_inr": 11000
+        }
+      ]
+    },
+    {
+      "id": 80,
+      "name": "Siddhivinayak Healthcare Pvt. Ltd.",
+      "address": "Khed Galli, Dadar West, Prabhadevi, Mumbai 400025",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0138949,
+      "longitude": 72.8325943,
+      "phone": "+91 22 2431 8488",
+      "beds_available": 21,
+      "total_beds": 107,
+      "consultation_fee_inr": 550,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 48,
+          "available": 9,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 26,
+          "available": 5,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 21,
+          "available": 4,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "ICU",
+          "total_beds": 12,
+          "available": 3,
+          "price_per_day_inr": 3000
+        }
+      ]
+    },
+    {
+      "id": 81,
+      "name": "Shushrusha Citizens' Co-operative Hospital",
+      "address": "Ranade Rd, Dadar West, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0233661,
+      "longitude": 72.8379052,
+      "phone": null,
+      "beds_available": 62,
+      "total_beds": 119,
+      "consultation_fee_inr": 800,
+      "rating": 3.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 53,
+          "available": 27,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 29,
+          "available": 15,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 23,
+          "available": 12,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 8,
+          "price_per_day_inr": 4400
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "name": "Siddhachal Hospitals (Dadar)",
+      "address": "Shankar Ghanekar Rd, Prabhadevi, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0154874,
+      "longitude": 72.8335191,
+      "phone": "+91 97641 24172",
+      "beds_available": 28,
+      "total_beds": 91,
+      "consultation_fee_inr": 1400,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 40,
+          "available": 12,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 22,
+          "available": 7,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 18,
+          "available": 5,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 11,
+          "available": 4,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "name": "Thakur Hospital",
+      "address": "Shivaji Park, Dadar West, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0251661,
+      "longitude": 72.8400656,
+      "phone": "+91 22 2446 3517",
+      "beds_available": 84,
+      "total_beds": 193,
+      "consultation_fee_inr": 450,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 86,
+          "available": 37,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 48,
+          "available": 21,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 38,
+          "available": 16,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 10,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "name": "Dhanwantari Hospital & Research Centre",
+      "address": "Shivaji Park, Dadar West, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0239233,
+      "longitude": 72.8407406,
+      "phone": "+91 22 6574 5601",
+      "beds_available": 62,
+      "total_beds": 199,
+      "consultation_fee_inr": 1600,
+      "rating": 2.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 89,
+          "available": 27,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 15,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 12,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 22,
+          "available": 8,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "name": "Navneet Jain Health Centre",
+      "address": "Gyan Mandir Rd, Dadar West, Mumbai 400028",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0205235,
+      "longitude": 72.8384097,
+      "phone": "+91 22 2438 2121",
+      "beds_available": 74,
+      "total_beds": 183,
+      "consultation_fee_inr": 1150,
+      "rating": 3.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 82,
+          "available": 33,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 45,
+          "available": 18,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 36,
+          "available": 14,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 9,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "name": "Parel Hospital",
+      "address": "Jerbai Wadia Rd, Parel, Mumbai 400012",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0057946,
+      "longitude": 72.845694,
+      "phone": "+91 89287 50932",
+      "beds_available": 29,
+      "total_beds": 83,
+      "consultation_fee_inr": 1500,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 37,
+          "available": 13,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 20,
+          "available": 7,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 16,
+          "available": 5,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 10,
+          "available": 4,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "name": "Siddhachal Hospitals (Worli)",
+      "address": "Ganapatrao Kadam Marg, Lower Parel, Mumbai 400013",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9981214,
+      "longitude": 72.8229296,
+      "phone": "+91 88281 08408",
+      "beds_available": 69,
+      "total_beds": 173,
+      "consultation_fee_inr": 1650,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 77,
+          "available": 31,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 43,
+          "available": 17,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 34,
+          "available": 13,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 8,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "name": "Nowrosjee Wadia Maternity Hospital",
+      "address": "Acharya Donde Marg, Parel East, Mumbai 400012",
+      "specialty": "Maternity",
+      "latitude": 19.0032392,
+      "longitude": 72.8430332,
+      "phone": "+91 22 2414 6965",
+      "beds_available": 71,
+      "total_beds": 297,
+      "consultation_fee_inr": 700,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 133,
+          "available": 31,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 74,
+          "available": 17,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 59,
+          "available": 14,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 9,
+          "price_per_day_inr": 3850
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "name": "Sparsh Children's Hospital",
+      "address": "Acharya Donde Marg, Parel East, Mumbai 400012",
+      "specialty": "Paediatrics",
+      "latitude": 19.0048001,
+      "longitude": 72.8401454,
+      "phone": "+91 90901 81865",
+      "beds_available": 22,
+      "total_beds": 359,
+      "consultation_fee_inr": 2000,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 161,
+          "available": 9,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 89,
+          "available": 5,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 71,
+          "available": 4,
+          "price_per_day_inr": 5600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 38,
+          "available": 4,
+          "price_per_day_inr": 11000
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "name": "Zen Multi Speciality Hospital, Chembur",
+      "address": "10th Rd, Chembur Gaothan, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0558779,
+      "longitude": 72.896792,
+      "phone": "+91 22 3520 5600",
+      "beds_available": 75,
+      "total_beds": 235,
+      "consultation_fee_inr": 1200,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 105,
+          "available": 33,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 58,
+          "available": 18,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 47,
+          "available": 15,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 9,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "name": "Sushrut Hospital & Research Centre",
+      "address": "Swastik Park, Chembur, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0565405,
+      "longitude": 72.8895342,
+      "phone": "+91 93727 45480",
+      "beds_available": 35,
+      "total_beds": 285,
+      "consultation_fee_inr": 1200,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 128,
+          "available": 15,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 71,
+          "available": 8,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 57,
+          "available": 7,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 29,
+          "available": 5,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "name": "Acme Multispeciality Hospital, Chembur",
+      "address": "Signature Business Park, Chembur, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0603395,
+      "longitude": 72.8961304,
+      "phone": "+91 86550 06565",
+      "beds_available": 77,
+      "total_beds": 189,
+      "consultation_fee_inr": 1250,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 34,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 19,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 15,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 9,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "name": "Dr Das Multi-Speciality Hospital & ICCU",
+      "address": "4th Rd, Chembur Gaothan, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0592364,
+      "longitude": 72.8996095,
+      "phone": "+91 93211 99544",
+      "beds_available": 37,
+      "total_beds": 289,
+      "consultation_fee_inr": 1900,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 130,
+          "available": 16,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 72,
+          "available": 9,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 57,
+          "available": 7,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 30,
+          "available": 5,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "name": "Surana Sethia Hospital",
+      "address": "Sion-Trombay Rd, Suman Nagar, Chembur, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0535473,
+      "longitude": 72.8870158,
+      "phone": "+91 22 3378 3378",
+      "beds_available": 41,
+      "total_beds": 177,
+      "consultation_fee_inr": 1400,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 79,
+          "available": 18,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 44,
+          "available": 10,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 35,
+          "available": 8,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 5,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "name": "Savla Hospital, Chembur",
+      "address": "D.K. Sandu Marg, Chembur Gaothan, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0609448,
+      "longitude": 72.8981874,
+      "phone": "+91 22 2523 1312",
+      "beds_available": 46,
+      "total_beds": 137,
+      "consultation_fee_inr": 1350,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 61,
+          "available": 20,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 34,
+          "available": 11,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 27,
+          "available": 9,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 15,
+          "available": 6,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "name": "Apollo Spectra Hospital Chembur",
+      "address": "Best Colony, Chembur, Mumbai 400088",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.047139,
+      "longitude": 72.9110992,
+      "phone": "+91 40 6914 6071",
+      "beds_available": 73,
+      "total_beds": 411,
+      "consultation_fee_inr": 700,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 184,
+          "available": 32,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 102,
+          "available": 18,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 82,
+          "available": 14,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 43,
+          "available": 9,
+          "price_per_day_inr": 3850
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "name": "Surya Hospitals Chembur",
+      "address": "VN Purav Marg, Union Park, Chembur, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0465454,
+      "longitude": 72.9068781,
+      "phone": "+91 88288 28100",
+      "beds_available": 73,
+      "total_beds": 151,
+      "consultation_fee_inr": 450,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 67,
+          "available": 32,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 37,
+          "available": 18,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 30,
+          "available": 14,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 17,
+          "available": 9,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "name": "Mangal Anand Hospital",
+      "address": "Sion-Trombay Rd, Swastik Park, Chembur, Mumbai 400071",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0553381,
+      "longitude": 72.8891889,
+      "phone": "+91 70212 18182",
+      "beds_available": 61,
+      "total_beds": 187,
+      "consultation_fee_inr": 1000,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 84,
+          "available": 27,
+          "price_per_day_inr": 600
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 46,
+          "available": 15,
+          "price_per_day_inr": 1400
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 12,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 20,
+          "available": 7,
+          "price_per_day_inr": 5500
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "name": "Inlaks General Hospital",
+      "address": "Chembur Colony, Indira Nagar, Chembur, Mumbai 400074",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0462231,
+      "longitude": 72.8943998,
+      "phone": "+91 82911 70752",
+      "beds_available": 68,
+      "total_beds": 191,
+      "consultation_fee_inr": 1750,
+      "rating": 3.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 30,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 17,
+          "price_per_day_inr": 2450
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 38,
+          "available": 13,
+          "price_per_day_inr": 4900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 8,
+          "price_per_day_inr": 9600
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "name": "Dr L H Hiranandani Hospital (Powai)",
+      "address": "Hillside Ave, Hiranandani Gardens, Powai, Mumbai 400076",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1205191,
+      "longitude": 72.9169504,
+      "phone": "+91 84240 07007",
+      "beds_available": 49,
+      "total_beds": 383,
+      "consultation_fee_inr": 1100,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 172,
+          "available": 22,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 95,
+          "available": 12,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 76,
+          "available": 9,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 40,
+          "available": 6,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 101,
+      "name": "Powai Polyclinic & Hospital",
+      "address": "Main Gate Rd, Powai, Mumbai 400076",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1240698,
+      "longitude": 72.9164363,
+      "phone": "+91 93728 16519",
+      "beds_available": 65,
+      "total_beds": 185,
+      "consultation_fee_inr": 1950,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 83,
+          "available": 29,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 46,
+          "available": 16,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 37,
+          "available": 13,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 7,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "IIT Bombay Hospital",
+      "address": "IIT Area, Powai, Mumbai 400076",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1307518,
+      "longitude": 72.9142957,
+      "phone": "+91 22 2576 7051",
+      "beds_available": 23,
+      "total_beds": 281,
+      "consultation_fee_inr": 1000,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 126,
+          "available": 10,
+          "price_per_day_inr": 600
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 70,
+          "available": 5,
+          "price_per_day_inr": 1400
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 56,
+          "available": 4,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 29,
+          "available": 4,
+          "price_per_day_inr": 5500
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "S B Nursing Home - Hospital",
+      "address": "near Powai, Marol, Powai, Mumbai 400072",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1239736,
+      "longitude": 72.8905374,
+      "phone": "+91 97692 10938",
+      "beds_available": 32,
+      "total_beds": 159,
+      "consultation_fee_inr": 1900,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 71,
+          "available": 14,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 39,
+          "available": 8,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 31,
+          "available": 6,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 4,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "Nirali A M Naik Charitable Health-Care Facility",
+      "address": "Saki Vihar Rd, Chandivali, Powai, Mumbai 400072",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.121313,
+      "longitude": 72.8914345,
+      "phone": "+91 22 6251 9000",
+      "beds_available": 71,
+      "total_beds": 197,
+      "consultation_fee_inr": 600,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 88,
+          "available": 31,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 17,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 14,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 9,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "Nihal Nursing Home",
+      "address": "IIT Market, Powai, Mumbai 400076",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1253548,
+      "longitude": 72.9190399,
+      "phone": "+91 99202 70341",
+      "beds_available": 43,
+      "total_beds": 221,
+      "consultation_fee_inr": 750,
+      "rating": 3.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 99,
+          "available": 19,
+          "price_per_day_inr": 450
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 55,
+          "available": 10,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 44,
+          "available": 8,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 6,
+          "price_per_day_inr": 4100
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "Godrej Memorial Hospital",
+      "address": "Eastern Express Hwy, Vikhroli East, Mumbai 400079",
+      "specialty": "Oncology",
+      "latitude": 19.1037851,
+      "longitude": 72.9273209,
+      "phone": "+91 22 6641 7100",
+      "beds_available": 67,
+      "total_beds": 119,
+      "consultation_fee_inr": 1800,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 53,
+          "available": 30,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 29,
+          "available": 16,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 23,
+          "available": 13,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 8,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "name": "Sapna Health Care Centre Pvt Ltd",
+      "address": "Lal Bahadur Shastri Marg, Ghatkopar East, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0924024,
+      "longitude": 72.9122231,
+      "phone": "+91 98700 04114",
+      "beds_available": 38,
+      "total_beds": 171,
+      "consultation_fee_inr": 1800,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 76,
+          "available": 17,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 42,
+          "available": 9,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 34,
+          "available": 7,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 5,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "name": "Disha Hospital",
+      "address": "Andheri-Ghatkopar Rd, Ghatkopar West, Mumbai 400084",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0939185,
+      "longitude": 72.8983051,
+      "phone": "+91 90041 79994",
+      "beds_available": 33,
+      "total_beds": 121,
+      "consultation_fee_inr": 1450,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 54,
+          "available": 14,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 30,
+          "available": 8,
+          "price_per_day_inr": 2050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 24,
+          "available": 6,
+          "price_per_day_inr": 4050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 13,
+          "available": 5,
+          "price_per_day_inr": 8000
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "name": "Zynova Shalby Hospital",
+      "address": "Lal Bahadur Shastri Marg, Ghatkopar West, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0886636,
+      "longitude": 72.9065126,
+      "phone": "+91 22 6890 0000",
+      "beds_available": 66,
+      "total_beds": 347,
+      "consultation_fee_inr": 850,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 156,
+          "available": 29,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 86,
+          "available": 16,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 13,
+          "price_per_day_inr": 2400
+        },
+        {
+          "type": "ICU",
+          "total_beds": 36,
+          "available": 8,
+          "price_per_day_inr": 4700
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "name": "Aarogyada Multi SuperSpeciality Hospital",
+      "address": "Ghatkopar-Andheri Link Rd, Ghatkopar West, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0909515,
+      "longitude": 72.9137955,
+      "phone": "+91 22 4630 3030",
+      "beds_available": 72,
+      "total_beds": 259,
+      "consultation_fee_inr": 1150,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 116,
+          "available": 32,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 64,
+          "available": 18,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 51,
+          "available": 14,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 8,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "name": "Supreme Multi Speciality Hospital LLP",
+      "address": "Andheri-Ghatkopar Rd, Ghatkopar West, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0907818,
+      "longitude": 72.913752,
+      "phone": "+91 77159 40917",
+      "beds_available": 29,
+      "total_beds": 103,
+      "consultation_fee_inr": 1900,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 46,
+          "available": 13,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 25,
+          "available": 7,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 20,
+          "available": 5,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 12,
+          "available": 4,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "name": "Parakh Hospital",
+      "address": "Khokhani Ln, Ghatkopar East, Mumbai 400077",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0845195,
+      "longitude": 72.9076404,
+      "phone": "+91 22 6782 7000",
+      "beds_available": 53,
+      "total_beds": 181,
+      "consultation_fee_inr": 1900,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 81,
+          "available": 23,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 45,
+          "available": 13,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 36,
+          "available": 10,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 7,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "name": "Shalya Hospital",
+      "address": "Sant Narsi Mehta Rd, Ghatkopar West, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0878668,
+      "longitude": 72.9027294,
+      "phone": "+91 88779 19293",
+      "beds_available": 71,
+      "total_beds": 247,
+      "consultation_fee_inr": 750,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 111,
+          "available": 31,
+          "price_per_day_inr": 450
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 61,
+          "available": 17,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 49,
+          "available": 14,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 26,
+          "available": 9,
+          "price_per_day_inr": 4100
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "name": "Samartha Maternity & Multispeciality Hospital",
+      "address": "M. G. Road, Ghatkopar East, Mumbai 400077",
+      "specialty": "Maternity",
+      "latitude": 19.0812788,
+      "longitude": 72.9040814,
+      "phone": "+91 22 2508 5775",
+      "beds_available": 45,
+      "total_beds": 95,
+      "consultation_fee_inr": 400,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 42,
+          "available": 20,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 23,
+          "available": 11,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 19,
+          "available": 9,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 11,
+          "available": 5,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "name": "Vedant Central Hospital (Ghatkopar)",
+      "address": "R.B. Kadam Marg, Ghatkopar West, Mumbai 400084",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0928736,
+      "longitude": 72.9037671,
+      "phone": "+91 1800 267 1444",
+      "beds_available": 56,
+      "total_beds": 197,
+      "consultation_fee_inr": 1600,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 88,
+          "available": 25,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 49,
+          "available": 14,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 11,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 6,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "name": "Nulife Hospital",
+      "address": "Lal Bahadur Shastri Marg, Ghatkopar West, Mumbai 400086",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0881513,
+      "longitude": 72.9050136,
+      "phone": "+91 82828 21290",
+      "beds_available": 30,
+      "total_beds": 195,
+      "consultation_fee_inr": 1500,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 87,
+          "available": 13,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 48,
+          "available": 7,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 39,
+          "available": 6,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 4,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "name": "Rajawadi Hospital",
+      "address": "7th Rd, Ghatkopar East, Mumbai 400077",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0786749,
+      "longitude": 72.9012984,
+      "phone": null,
+      "beds_available": 58,
+      "total_beds": 191,
+      "consultation_fee_inr": 900,
+      "rating": 3.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 26,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 14,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 38,
+          "available": 11,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 7,
+          "price_per_day_inr": 4950
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "name": "CritiCare Asia Multi Specialty Hospital (Kurla)",
+      "address": "Kirol Rd, Kurla West, Mumbai 400070",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0760723,
+      "longitude": 72.8862077,
+      "phone": "+91 22 6755 6755",
+      "beds_available": 38,
+      "total_beds": 131,
+      "consultation_fee_inr": 950,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 58,
+          "available": 17,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 32,
+          "available": 9,
+          "price_per_day_inr": 1350
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 26,
+          "available": 7,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 15,
+          "available": 5,
+          "price_per_day_inr": 5200
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "name": "Habib Hospital",
+      "address": "A H Wadia Marg, Kurla West, Mumbai 400070",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0782752,
+      "longitude": 72.88002,
+      "phone": "+91 82915 30076",
+      "beds_available": 56,
+      "total_beds": 287,
+      "consultation_fee_inr": 1500,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 129,
+          "available": 25,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 71,
+          "available": 14,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 57,
+          "available": 11,
+          "price_per_day_inr": 4200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 30,
+          "available": 6,
+          "price_per_day_inr": 8250
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "name": "Agashe Hospital Kurla",
+      "address": "Lal Bahadur Shastri Marg, Kurla West, Mumbai 400070",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0805729,
+      "longitude": 72.8803369,
+      "phone": "+91 73049 89552",
+      "beds_available": 84,
+      "total_beds": 263,
+      "consultation_fee_inr": 1850,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 118,
+          "available": 37,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 21,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 16,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 10,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 121,
+      "name": "City Hospital & Research Centre (Kurla)",
+      "address": "Sonapur Ln, Kurla West, Mumbai 400070",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0810945,
+      "longitude": 72.8819064,
+      "phone": "+91 99870 38888",
+      "beds_available": 69,
+      "total_beds": 213,
+      "consultation_fee_inr": 1600,
+      "rating": 3.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 95,
+          "available": 31,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 53,
+          "available": 17,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 42,
+          "available": 13,
+          "price_per_day_inr": 4500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 8,
+          "price_per_day_inr": 8800
+        }
+      ]
+    },
+    {
+      "id": 122,
+      "name": "Suraj Hospital",
+      "address": "Halav Pool, Kurla West, Mumbai 400070",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0742247,
+      "longitude": 72.883725,
+      "phone": "+91 93242 05787",
+      "beds_available": 46,
+      "total_beds": 247,
+      "consultation_fee_inr": 1650,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 111,
+          "available": 20,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 61,
+          "available": 11,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 49,
+          "available": 9,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 26,
+          "available": 6,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 123,
+      "name": "SRV Hospitals - Chembur (Tilak Nagar)",
+      "address": "Dr Mandakini Parihar Marg, Chembur, Mumbai 400089",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0673839,
+      "longitude": 72.892714,
+      "phone": "+91 84518 00800",
+      "beds_available": 79,
+      "total_beds": 323,
+      "consultation_fee_inr": 600,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 145,
+          "available": 35,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 80,
+          "available": 19,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 64,
+          "available": 15,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 34,
+          "available": 10,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 124,
+      "name": "Upasani Super Speciality Hospital",
+      "address": "Devi Dayal Rd, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1745996,
+      "longitude": 72.9423708,
+      "phone": "+91 22 6881 4200",
+      "beds_available": 78,
+      "total_beds": 301,
+      "consultation_fee_inr": 1250,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 135,
+          "available": 35,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 75,
+          "available": 19,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 60,
+          "available": 15,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 9,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 125,
+      "name": "Aditi Hospital (Elite Lifecare)",
+      "address": "Purushottam Kheraj Rd, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1720095,
+      "longitude": 72.9486459,
+      "phone": "+91 80704 27427",
+      "beds_available": 17,
+      "total_beds": 289,
+      "consultation_fee_inr": 500,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 130,
+          "available": 7,
+          "price_per_day_inr": 300
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 72,
+          "available": 4,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 57,
+          "available": 3,
+          "price_per_day_inr": 1400
+        },
+        {
+          "type": "ICU",
+          "total_beds": 30,
+          "available": 3,
+          "price_per_day_inr": 2750
+        }
+      ]
+    },
+    {
+      "id": 126,
+      "name": "Hira Mongi Navneet Hospital",
+      "address": "Valji Ladha Rd, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1710118,
+      "longitude": 72.9501619,
+      "phone": "+91 22 3504 3504",
+      "beds_available": 84,
+      "total_beds": 213,
+      "consultation_fee_inr": 1100,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 95,
+          "available": 37,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 53,
+          "available": 21,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 42,
+          "available": 16,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 10,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 127,
+      "name": "Apex Hospitals Mulund",
+      "address": "Pipeline Rd, Veena Nagar, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1809624,
+      "longitude": 72.942467,
+      "phone": "+91 91366 65105",
+      "beds_available": 68,
+      "total_beds": 191,
+      "consultation_fee_inr": 1950,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 30,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 17,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 38,
+          "available": 13,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 8,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 128,
+      "name": "Platinum Hospital Mulund",
+      "address": "Dumping Rd, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1826625,
+      "longitude": 72.9543591,
+      "phone": "+91 22 6171 0700",
+      "beds_available": 38,
+      "total_beds": 161,
+      "consultation_fee_inr": 1150,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 72,
+          "available": 17,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 40,
+          "available": 9,
+          "price_per_day_inr": 1600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 32,
+          "available": 7,
+          "price_per_day_inr": 3200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 17,
+          "available": 5,
+          "price_per_day_inr": 6300
+        }
+      ]
+    },
+    {
+      "id": 129,
+      "name": "Saarthi Health Care",
+      "address": "MG Road, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1765382,
+      "longitude": 72.9513583,
+      "phone": "+91 86550 57870",
+      "beds_available": 43,
+      "total_beds": 361,
+      "consultation_fee_inr": 750,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 162,
+          "available": 19,
+          "price_per_day_inr": 450
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 90,
+          "available": 10,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 72,
+          "available": 8,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 37,
+          "available": 6,
+          "price_per_day_inr": 4100
+        }
+      ]
+    },
+    {
+      "id": 130,
+      "name": "Indigo Hospital Mulund",
+      "address": "Lal Bahadur Shastri Marg, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1669913,
+      "longitude": 72.9383382,
+      "phone": "+91 93727 23701",
+      "beds_available": 69,
+      "total_beds": 123,
+      "consultation_fee_inr": 1800,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 55,
+          "available": 31,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 30,
+          "available": 17,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 24,
+          "available": 13,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 14,
+          "available": 8,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 131,
+      "name": "Sigma Superspeciality Hospital Mulund",
+      "address": "MG Road, Mulund West, Mumbai 400080",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1750954,
+      "longitude": 72.9535237,
+      "phone": "+91 77770 44086",
+      "beds_available": 17,
+      "total_beds": 229,
+      "consultation_fee_inr": 650,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 103,
+          "available": 7,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 57,
+          "available": 4,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 45,
+          "available": 3,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 3,
+          "price_per_day_inr": 3600
+        }
+      ]
+    },
+    {
+      "id": 132,
+      "name": "Galaxy Superspeciality Hospital (Mulund E)",
+      "address": "VB Phadake Rd, Mulund East, Mumbai 400081",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1653228,
+      "longitude": 72.9596982,
+      "phone": "+91 93210 20050",
+      "beds_available": 46,
+      "total_beds": 227,
+      "consultation_fee_inr": 750,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 102,
+          "available": 20,
+          "price_per_day_inr": 450
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 56,
+          "available": 11,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 45,
+          "available": 9,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 24,
+          "available": 6,
+          "price_per_day_inr": 4100
+        }
+      ]
+    },
+    {
+      "id": 133,
+      "name": "Aastha Hospital (Vikhroli)",
+      "address": "Tagore Nagar, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.116095,
+      "longitude": 72.9315058,
+      "phone": "+91 93225 99737",
+      "beds_available": 78,
+      "total_beds": 241,
+      "consultation_fee_inr": 1400,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 108,
+          "available": 35,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 60,
+          "available": 19,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 48,
+          "available": 15,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 9,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 134,
+      "name": "Laxmi Health Care Center & ICCU",
+      "address": "Tagore Nagar, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.113647,
+      "longitude": 72.931603,
+      "phone": "+91 82912 19131",
+      "beds_available": 57,
+      "total_beds": 249,
+      "consultation_fee_inr": 1850,
+      "rating": 4.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 112,
+          "available": 25,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 62,
+          "available": 14,
+          "price_per_day_inr": 2600
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 49,
+          "available": 11,
+          "price_per_day_inr": 5200
+        },
+        {
+          "type": "ICU",
+          "total_beds": 26,
+          "available": 7,
+          "price_per_day_inr": 10200
+        }
+      ]
+    },
+    {
+      "id": 135,
+      "name": "Adi Arogyam Superspeciality Hospital",
+      "address": "Kannamwar Nagar, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1123359,
+      "longitude": 72.9346428,
+      "phone": "+91 88506 26106",
+      "beds_available": 22,
+      "total_beds": 159,
+      "consultation_fee_inr": 1900,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 71,
+          "available": 9,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 39,
+          "available": 5,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 31,
+          "available": 4,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 4,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 136,
+      "name": "Yashwant Hospital",
+      "address": "Tagore Nagar, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1151621,
+      "longitude": 72.9336968,
+      "phone": "+91 91371 70173",
+      "beds_available": 72,
+      "total_beds": 269,
+      "consultation_fee_inr": 1650,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 121,
+          "available": 32,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 67,
+          "available": 18,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 14,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 8,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 137,
+      "name": "Samarth Hospital (Vikhroli)",
+      "address": "Station Rd, Vikhroli West, Mumbai 400079",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1095926,
+      "longitude": 72.9263987,
+      "phone": "+91 72085 28133",
+      "beds_available": 26,
+      "total_beds": 207,
+      "consultation_fee_inr": 1750,
+      "rating": 3.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 93,
+          "available": 11,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 51,
+          "available": 6,
+          "price_per_day_inr": 2450
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 41,
+          "available": 5,
+          "price_per_day_inr": 4900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 22,
+          "available": 4,
+          "price_per_day_inr": 9600
+        }
+      ]
+    },
+    {
+      "id": 138,
+      "name": "Romeen Medico Surgical Hospital",
+      "address": "Tagore Nagar, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1153958,
+      "longitude": 72.9309199,
+      "phone": "+91 22 2574 5562",
+      "beds_available": 52,
+      "total_beds": 159,
+      "consultation_fee_inr": 1950,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 71,
+          "available": 23,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 39,
+          "available": 13,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 31,
+          "available": 10,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 18,
+          "available": 6,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 139,
+      "name": "Navkaar Hospitals (Bhandup)",
+      "address": "Lal Bahadur Shastri Marg, Bhandup West, Mumbai 400078",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1584186,
+      "longitude": 72.9379205,
+      "phone": "+91 22 6923 0000",
+      "beds_available": 72,
+      "total_beds": 269,
+      "consultation_fee_inr": 1350,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 121,
+          "available": 32,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 67,
+          "available": 18,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 14,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 8,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 140,
+      "name": "Dr Badwaik Hospital",
+      "address": "Lal Bahadur Shastri Marg, Bhandup West, Mumbai 400078",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1504952,
+      "longitude": 72.9378475,
+      "phone": "+91 79000 03294",
+      "beds_available": 29,
+      "total_beds": 143,
+      "consultation_fee_inr": 950,
+      "rating": 4.3,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 64,
+          "available": 13,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 35,
+          "available": 7,
+          "price_per_day_inr": 1350
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 28,
+          "available": 5,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 16,
+          "available": 4,
+          "price_per_day_inr": 5200
+        }
+      ]
+    },
+    {
+      "id": 141,
+      "name": "Ruby Hospital (Vikhroli)",
+      "address": "Seth Govindram Jolly Marg, Vikhroli East, Mumbai 400083",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1164916,
+      "longitude": 72.9317066,
+      "phone": "+91 22 2574 9092",
+      "beds_available": 44,
+      "total_beds": 283,
+      "consultation_fee_inr": 1100,
+      "rating": 3.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 127,
+          "available": 19,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 70,
+          "available": 11,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 56,
+          "available": 8,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 30,
+          "available": 6,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "name": "Balaji Hospital (Byculla)",
+      "address": "Victoria Rd, Byculla East, Mumbai 400027",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.97727,
+      "longitude": 72.835352,
+      "phone": "+91 22 2374 0000",
+      "beds_available": 64,
+      "total_beds": 353,
+      "consultation_fee_inr": 450,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 158,
+          "available": 28,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 88,
+          "available": 16,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 70,
+          "available": 12,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 37,
+          "available": 8,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "name": "Masina Hospital Trust",
+      "address": "Sant Savata Mali Marg, Byculla, Mumbai 400027",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.974471,
+      "longitude": 72.8358074,
+      "phone": "+91 1800 266 0711",
+      "beds_available": 62,
+      "total_beds": 269,
+      "consultation_fee_inr": 1650,
+      "rating": 3.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 121,
+          "available": 27,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 67,
+          "available": 15,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 53,
+          "available": 12,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 8,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "name": "Bharat Ratna Dr. Babasaheb Ambedkar Memorial Hospital",
+      "address": "Byculla East, Mumbai 400027",
+      "specialty": "Oncology",
+      "latitude": 18.9802382,
+      "longitude": 72.8335392,
+      "phone": "+91 93213 37164",
+      "beds_available": 79,
+      "total_beds": 263,
+      "consultation_fee_inr": 1950,
+      "rating": 3.6,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 118,
+          "available": 35,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 19,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 15,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 10,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "name": "Nair Hospital",
+      "address": "Topiwala National Medical College, Mumbai Central, Mumbai 400008",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9730203,
+      "longitude": 72.8218343,
+      "phone": "+91 22 2302 7000",
+      "beds_available": 20,
+      "total_beds": 345,
+      "consultation_fee_inr": 1800,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 155,
+          "available": 9,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 86,
+          "available": 5,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 69,
+          "available": 4,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 35,
+          "available": 2,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "name": "JJ Hospital Mumbai",
+      "address": "J J Marg, Nagpada, Mumbai 400008",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.9626408,
+      "longitude": 72.8337029,
+      "phone": "+91 22 2373 5555",
+      "beds_available": 63,
+      "total_beds": 301,
+      "consultation_fee_inr": 1900,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 135,
+          "available": 28,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 75,
+          "available": 15,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 60,
+          "available": 12,
+          "price_per_day_inr": 5300
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 8,
+          "price_per_day_inr": 10450
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "name": "Prince Aly Khan Hospital",
+      "address": "Tara Bagh, Mazgaon, Mumbai 400027",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.97115,
+      "longitude": 72.8358811,
+      "phone": null,
+      "beds_available": 43,
+      "total_beds": 231,
+      "consultation_fee_inr": 1950,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 103,
+          "available": 19,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 57,
+          "available": 10,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 46,
+          "available": 8,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 25,
+          "available": 6,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "name": "Apollo Clinic Colaba",
+      "address": "Convent St, Colaba, Mumbai 400001",
+      "specialty": "Multi-Speciality",
+      "latitude": 18.923251,
+      "longitude": 72.8313256,
+      "phone": "+91 22 2202 1122",
+      "beds_available": 40,
+      "total_beds": 145,
+      "consultation_fee_inr": 650,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 65,
+          "available": 18,
+          "price_per_day_inr": 400
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 36,
+          "available": 10,
+          "price_per_day_inr": 900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 29,
+          "available": 8,
+          "price_per_day_inr": 1800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 15,
+          "available": 4,
+          "price_per_day_inr": 3600
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "name": "KLS Memorial Hospital",
+      "address": "Tanaji Malusare Rd, Vile Parle West, Mumbai 400056",
+      "specialty": "Oncology",
+      "latitude": 19.1077972,
+      "longitude": 72.8408012,
+      "phone": "+91 22 6171 3939",
+      "beds_available": 57,
+      "total_beds": 249,
+      "consultation_fee_inr": 450,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 112,
+          "available": 25,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 62,
+          "available": 14,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 49,
+          "available": 11,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 26,
+          "available": 7,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "name": "Advanced Multispeciality Hospital (Irla)",
+      "address": "Gulmohar Rd, Vile Parle West, Mumbai 400056",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1095919,
+      "longitude": 72.8376936,
+      "phone": "+91 88790 76095",
+      "beds_available": 61,
+      "total_beds": 157,
+      "consultation_fee_inr": 450,
+      "rating": 4.1,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 70,
+          "available": 27,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 39,
+          "available": 15,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 31,
+          "available": 12,
+          "price_per_day_inr": 1250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 17,
+          "available": 7,
+          "price_per_day_inr": 2500
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "name": "Surya Hospitals Santacruz",
+      "address": "Swami Vivekanand Rd, Santacruz West, Mumbai 400054",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0855574,
+      "longitude": 72.8378872,
+      "phone": "+91 88288 28100",
+      "beds_available": 56,
+      "total_beds": 117,
+      "consultation_fee_inr": 400,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 52,
+          "available": 25,
+          "price_per_day_inr": 250
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 29,
+          "available": 14,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 23,
+          "available": 11,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 13,
+          "available": 6,
+          "price_per_day_inr": 2200
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "name": "Four Care Hospital",
+      "address": "Mahant Rd, Vile Parle East, Mumbai 400057",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.101489,
+      "longitude": 72.8514348,
+      "phone": "+91 22 6740 4444",
+      "beds_available": 54,
+      "total_beds": 363,
+      "consultation_fee_inr": 1950,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 163,
+          "available": 24,
+          "price_per_day_inr": 1150
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 90,
+          "available": 13,
+          "price_per_day_inr": 2750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 72,
+          "available": 10,
+          "price_per_day_inr": 5450
+        },
+        {
+          "type": "ICU",
+          "total_beds": 38,
+          "available": 7,
+          "price_per_day_inr": 10700
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "name": "Benz Hospital",
+      "address": "2nd Hasnabad Ln, Santacruz West, Mumbai 400054",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0796859,
+      "longitude": 72.8406669,
+      "phone": "+91 70456 28529",
+      "beds_available": 68,
+      "total_beds": 261,
+      "consultation_fee_inr": 950,
+      "rating": 4.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 117,
+          "available": 30,
+          "price_per_day_inr": 550
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 17,
+          "price_per_day_inr": 1350
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 13,
+          "price_per_day_inr": 2650
+        },
+        {
+          "type": "ICU",
+          "total_beds": 27,
+          "available": 8,
+          "price_per_day_inr": 5200
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "name": "Babasaheb Gawde Charitable Hospital",
+      "address": "Mahatma Gandhi Rd, Vile Parle East, Mumbai 400057",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0997711,
+      "longitude": 72.8463373,
+      "phone": "+91 81049 70566",
+      "beds_available": 61,
+      "total_beds": 177,
+      "consultation_fee_inr": 1650,
+      "rating": 3.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 79,
+          "available": 27,
+          "price_per_day_inr": 1000
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 44,
+          "available": 15,
+          "price_per_day_inr": 2300
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 35,
+          "available": 12,
+          "price_per_day_inr": 4600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 7,
+          "price_per_day_inr": 9100
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "name": "Sujay Hospital",
+      "address": "Gulmohar Rd, JVPD Scheme, Vile Parle West, Mumbai 400049",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1162027,
+      "longitude": 72.8339944,
+      "phone": "+91 22 2621 2233",
+      "beds_available": 18,
+      "total_beds": 361,
+      "consultation_fee_inr": 1400,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 162,
+          "available": 8,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 90,
+          "available": 4,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 72,
+          "available": 3,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 37,
+          "available": 3,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "name": "AllCure SuperSpeciality Hospital",
+      "address": "Jogeshwari Station Rd, Jogeshwari East, Mumbai 400060",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1359726,
+      "longitude": 72.8520426,
+      "phone": "+91 74001 90223",
+      "beds_available": 54,
+      "total_beds": 263,
+      "consultation_fee_inr": 1250,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 118,
+          "available": 24,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 65,
+          "available": 13,
+          "price_per_day_inr": 1750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 52,
+          "available": 10,
+          "price_per_day_inr": 3500
+        },
+        {
+          "type": "ICU",
+          "total_beds": 28,
+          "available": 7,
+          "price_per_day_inr": 6900
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "name": "Mallika Hospital",
+      "address": "Swami Vivekanand Rd, Jogeshwari West, Mumbai 400102",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.137442,
+      "longitude": 72.8467119,
+      "phone": "+91 90820 97421",
+      "beds_available": 81,
+      "total_beds": 217,
+      "consultation_fee_inr": 600,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 97,
+          "available": 36,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 54,
+          "available": 20,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 43,
+          "available": 16,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 9,
+          "price_per_day_inr": 3300
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "name": "Jogeshwari Hospital",
+      "address": "Sankar Rd, Jogeshwari West, Mumbai 400102",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.136052,
+      "longitude": 72.8445928,
+      "phone": "+91 99675 75505",
+      "beds_available": 62,
+      "total_beds": 149,
+      "consultation_fee_inr": 850,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 67,
+          "available": 27,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 37,
+          "available": 15,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 29,
+          "available": 12,
+          "price_per_day_inr": 2400
+        },
+        {
+          "type": "ICU",
+          "total_beds": 16,
+          "available": 8,
+          "price_per_day_inr": 4700
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "name": "Caspian Multispeciality Hospital",
+      "address": "Dattaram Waikar Rd, Jogeshwari East, Mumbai 400060",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1365365,
+      "longitude": 72.862572,
+      "phone": "+91 86557 50561",
+      "beds_available": 24,
+      "total_beds": 253,
+      "consultation_fee_inr": 1400,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 113,
+          "available": 10,
+          "price_per_day_inr": 850
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 63,
+          "available": 6,
+          "price_per_day_inr": 1950
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 50,
+          "available": 4,
+          "price_per_day_inr": 3900
+        },
+        {
+          "type": "ICU",
+          "total_beds": 27,
+          "available": 4,
+          "price_per_day_inr": 7700
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "name": "City Multispeciality Hospital (Jogeshwari)",
+      "address": "Swami Vivekanand Rd, Jogeshwari West, Mumbai 400102",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1431765,
+      "longitude": 72.8431936,
+      "phone": "+91 89760 71737",
+      "beds_available": 73,
+      "total_beds": 301,
+      "consultation_fee_inr": 800,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 135,
+          "available": 32,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 75,
+          "available": 18,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 60,
+          "available": 14,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 9,
+          "price_per_day_inr": 4400
+        }
+      ]
+    },
+    {
+      "id": 161,
+      "name": "KJ Cure Hospital",
+      "address": "Swami Vivekanand Rd, Jogeshwari West, Mumbai 400102",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1300929,
+      "longitude": 72.8472554,
+      "phone": "+91 80976 02691",
+      "beds_available": 44,
+      "total_beds": 203,
+      "consultation_fee_inr": 1200,
+      "rating": 4.4,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 91,
+          "available": 19,
+          "price_per_day_inr": 700
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 50,
+          "available": 11,
+          "price_per_day_inr": 1700
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 40,
+          "available": 8,
+          "price_per_day_inr": 3350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 22,
+          "available": 6,
+          "price_per_day_inr": 6600
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "name": "Bluebell Hospital",
+      "address": "New Link Rd, Jogeshwari West, Mumbai 400102",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.1419093,
+      "longitude": 72.8341476,
+      "phone": "+91 89761 59645",
+      "beds_available": 42,
+      "total_beds": 329,
+      "consultation_fee_inr": 1350,
+      "rating": 4.5,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 148,
+          "available": 18,
+          "price_per_day_inr": 800
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 82,
+          "available": 10,
+          "price_per_day_inr": 1900
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 65,
+          "available": 8,
+          "price_per_day_inr": 3800
+        },
+        {
+          "type": "ICU",
+          "total_beds": 34,
+          "available": 6,
+          "price_per_day_inr": 7400
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "name": "Galaxy Multispeciality Hospital (Antop Hill)",
+      "address": "Shaikh Mistry Rd, Antop Hill, Mumbai 400037",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0228961,
+      "longitude": 72.8636875,
+      "phone": "+91 81044 21347",
+      "beds_available": 23,
+      "total_beds": 171,
+      "consultation_fee_inr": 1100,
+      "rating": 4.2,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 76,
+          "available": 10,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 42,
+          "available": 5,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 34,
+          "available": 4,
+          "price_per_day_inr": 3100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 19,
+          "available": 4,
+          "price_per_day_inr": 6050
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "name": "Mumbai Port Trust Hospital",
+      "address": "Nadkarni Park, Wadala East, Mumbai 400037",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0126515,
+      "longitude": 72.8614387,
+      "phone": "+91 22 2412 9684",
+      "beds_available": 80,
+      "total_beds": 305,
+      "consultation_fee_inr": 2000,
+      "rating": 3.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 137,
+          "available": 36,
+          "price_per_day_inr": 1200
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 76,
+          "available": 20,
+          "price_per_day_inr": 2800
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 61,
+          "available": 16,
+          "price_per_day_inr": 5600
+        },
+        {
+          "type": "ICU",
+          "total_beds": 31,
+          "available": 8,
+          "price_per_day_inr": 11000
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "name": "Smt S R Mehta & Sir K P Cardiac Institute",
+      "address": "King's Circle, Sion East, Mumbai 400022",
+      "specialty": "Cardiology",
+      "latitude": 19.0323445,
+      "longitude": 72.85963,
+      "phone": "+91 22 6910 5400",
+      "beds_available": 15,
+      "total_beds": 315,
+      "consultation_fee_inr": 1050,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 141,
+          "available": 6,
+          "price_per_day_inr": 650
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 78,
+          "available": 3,
+          "price_per_day_inr": 1450
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 63,
+          "available": 3,
+          "price_per_day_inr": 2950
+        },
+        {
+          "type": "ICU",
+          "total_beds": 33,
+          "available": 3,
+          "price_per_day_inr": 5800
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "name": "Sengol Hospital",
+      "address": "Wadala East, Antop Hill, Mumbai 400037",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0221084,
+      "longitude": 72.8625167,
+      "phone": "+91 84528 16169",
+      "beds_available": 57,
+      "total_beds": 299,
+      "consultation_fee_inr": 800,
+      "rating": 4.0,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 134,
+          "available": 25,
+          "price_per_day_inr": 500
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 74,
+          "available": 14,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 59,
+          "available": 11,
+          "price_per_day_inr": 2250
+        },
+        {
+          "type": "ICU",
+          "total_beds": 32,
+          "available": 7,
+          "price_per_day_inr": 4400
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "name": "Aditya Jyot Eye Hospital (Dr Agarwals)",
+      "address": "Road No 9, Wadala, Mumbai 400031",
+      "specialty": "Ophthalmology",
+      "latitude": 19.0213126,
+      "longitude": 72.8589402,
+      "phone": "+91 95949 24428",
+      "beds_available": 34,
+      "total_beds": 213,
+      "consultation_fee_inr": 1550,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 95,
+          "available": 15,
+          "price_per_day_inr": 950
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 53,
+          "available": 8,
+          "price_per_day_inr": 2150
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 42,
+          "available": 6,
+          "price_per_day_inr": 4350
+        },
+        {
+          "type": "ICU",
+          "total_beds": 23,
+          "available": 5,
+          "price_per_day_inr": 8500
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "name": "Ashirwad Multispeciality Hospital",
+      "address": "Bhaudaji Rd, Matunga East, Mumbai 400019",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0279302,
+      "longitude": 72.8549783,
+      "phone": "+91 80797 90808",
+      "beds_available": 43,
+      "total_beds": 151,
+      "consultation_fee_inr": 750,
+      "rating": 4.8,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 67,
+          "available": 19,
+          "price_per_day_inr": 450
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 37,
+          "available": 10,
+          "price_per_day_inr": 1050
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 30,
+          "available": 8,
+          "price_per_day_inr": 2100
+        },
+        {
+          "type": "ICU",
+          "total_beds": 17,
+          "available": 6,
+          "price_per_day_inr": 4100
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "name": "Shantilal Shanghvi Eye Institute",
+      "address": "RJ Gaikwad Rd, Wadala East, Mumbai 400037",
+      "specialty": "Ophthalmology",
+      "latitude": 19.0159595,
+      "longitude": 72.8672941,
+      "phone": "+91 22 6978 3333",
+      "beds_available": 33,
+      "total_beds": 191,
+      "consultation_fee_inr": 1800,
+      "rating": 4.9,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 85,
+          "available": 14,
+          "price_per_day_inr": 1100
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 47,
+          "available": 8,
+          "price_per_day_inr": 2500
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 38,
+          "available": 6,
+          "price_per_day_inr": 5050
+        },
+        {
+          "type": "ICU",
+          "total_beds": 21,
+          "available": 5,
+          "price_per_day_inr": 9900
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "name": "Chinmay Nursing Home",
+      "address": "Bhakti Park, Wadala, Mumbai 400037",
+      "specialty": "Multi-Speciality",
+      "latitude": 19.0253705,
+      "longitude": 72.8788729,
+      "phone": "+91 22 6821 6703",
+      "beds_available": 68,
+      "total_beds": 391,
+      "consultation_fee_inr": 550,
+      "rating": 3.7,
+      "emergency": true,
+      "bed_categories": [
+        {
+          "type": "General Ward",
+          "total_beds": 175,
+          "available": 30,
+          "price_per_day_inr": 350
+        },
+        {
+          "type": "Semi-Private Room",
+          "total_beds": 97,
+          "available": 17,
+          "price_per_day_inr": 750
+        },
+        {
+          "type": "Private Room",
+          "total_beds": 78,
+          "available": 13,
+          "price_per_day_inr": 1550
+        },
+        {
+          "type": "ICU",
+          "total_beds": 41,
+          "available": 8,
+          "price_per_day_inr": 3000
+        }
+      ]
+    }
+  ]
+}

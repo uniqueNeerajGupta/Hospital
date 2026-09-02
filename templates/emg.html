@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Assistant – PR Harvest</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;}
+
+/* ── TOP BAR ── */
+.topbar{
+  position:sticky;top:0;z-index:500;
+  background:#08222e;color:#fff;padding:14px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,0.15);
+}
+.topbar-left{display:flex;align-items:center;gap:10px;}
+.topbar-left a{color:#fff;text-decoration:none;font-size:20px;opacity:.8;}
+.topbar h1{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;}
+.topbar-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:1px;}
+.loc-pill{
+  display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);
+  border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:6px 12px;
+  font-size:11.5px;color:#bfe9f2;
+}
+.loc-dot{width:7px;height:7px;border-radius:50%;background:#4ac9e2;animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,201,226,.6);}50%{box-shadow:0 0 0 6px rgba(74,201,226,0);}}
+
+/* ── URGENCY BAR ── */
+.urgency-bar{
+  display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:#fff;
+  border-bottom:1px solid #e6edf0;-webkit-overflow-scrolling:touch;
+}
+.urgency-chip{
+  flex-shrink:0;padding:8px 16px;border-radius:20px;font-size:12.5px;font-weight:600;
+  border:1.5px solid #dbe6ea;background:#fff;color:#3d5b66;cursor:pointer;transition:all .15s;
+  white-space:nowrap;
+}
+.urgency-chip.active{background:#08222e;border-color:#08222e;color:#fff;}
+.urgency-chip:hover:not(.active){border-color:#4ac9e2;color:#08222e;}
+
+/* ── LAYOUT ── */
+.layout{display:grid;grid-template-columns:1fr 460px;height:calc(100vh - 118px);}
+#map{width:100%;height:100%;}
+.panel{overflow-y:auto;background:#f4f8fa;padding:16px;}
+.panel-head{margin-bottom:14px;}
+.panel-head h2{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;color:#0e2430;}
+.panel-head p{font-size:12px;color:#5c7580;margin-top:3px;}
+
+/* ── HOSPITAL CARD ── */
+.h-card{
+  background:#fff;border:1px solid #e6edf0;border-radius:14px;padding:16px;margin-bottom:12px;
+  cursor:pointer;transition:border-color .15s,box-shadow .15s;position:relative;
+}
+.h-card:hover{border-color:#4ac9e2;box-shadow:0 4px 16px rgba(8,34,46,0.08);}
+.h-card.selected{border-color:#4ac9e2;box-shadow:0 4px 20px rgba(74,201,226,0.25);background:#f4fcfd;}
+.h-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
+.h-name{font-size:14.5px;font-weight:700;color:#0e2430;line-height:1.35;}
+.h-specialty{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:600;color:#1e6b7f;background:#e6f6f9;padding:2px 8px;border-radius:20px;}
+.h-dist{
+  flex-shrink:0;text-align:right;
+}
+.h-dist-km{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;color:#08222e;}
+.h-dist-label{font-size:9px;color:#8fa3ab;text-transform:uppercase;letter-spacing:.5px;}
+.h-meta{display:flex;gap:14px;margin-top:10px;font-size:11.5px;color:#5c7580;flex-wrap:wrap;}
+.h-meta span{display:flex;align-items:center;gap:4px;}
+.h-beds-row{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+.bed-tag{
+  font-size:10.5px;padding:4px 9px;border-radius:8px;font-weight:600;
+  background:#eef4f6;color:#3d5b66;
+}
+.bed-tag.low{background:#fdeceb;color:#c0392b;}
+.bed-tag.ok{background:#eafaf0;color:#1e8449;}
+.h-actions{display:flex;gap:8px;margin-top:14px;}
+.btn{
+  flex:1;padding:9px 10px;border-radius:9px;font-size:12px;font-weight:700;
+  border:none;cursor:pointer;text-align:center;transition:transform .1s,box-shadow .15s;
+  display:flex;align-items:center;justify-content:center;gap:5px;
+}
+.btn-route{background:#fff;color:#1e6b7f;border:1.5px solid #b9dee6;}
+.btn-route:hover{background:#eaf7fa;}
+.btn-book{background:#4ac9e2;color:#08222e;}
+.btn-book:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,201,226,.45);}
+.btn-book:disabled{background:#dfe6e9;color:#9aabb1;cursor:not-allowed;transform:none;box-shadow:none;}
+
+/* ── LOADING / EMPTY ── */
+.state-box{text-align:center;padding:50px 20px;color:#8fa3ab;font-size:13px;}
+.spinner{width:34px;height:34px;border:3px solid #dbe9ec;border-top-color:#4ac9e2;border-radius:50%;
+  animation:spin .8s linear infinite;margin:0 auto 14px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+
+/* ── MODAL ── */
+.modal-overlay{
+  position:fixed;inset:0;background:rgba(8,20,28,0.55);backdrop-filter:blur(3px);
+  display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;
+  padding:26px;animation:modalIn .25s ease;
+}
+@keyframes modalIn{from{opacity:0;transform:translateY(16px) scale(.97);}to{opacity:1;transform:translateY(0) scale(1);}}
+.modal h3{font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;color:#0e2430;}
+.modal .modal-sub{font-size:12.5px;color:#5c7580;margin-top:4px;margin-bottom:20px;}
+.field{margin-bottom:14px;}
+.field label{display:block;font-size:11.5px;font-weight:700;color:#3d5b66;margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
+.field input, .field select{
+  width:100%;padding:11px 13px;border:1.5px solid #dbe6ea;border-radius:10px;font-size:13.5px;
+  font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:#fbfdfd;
+}
+.field input:focus, .field select:focus{border-color:#4ac9e2;background:#fff;}
+.bed-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.bed-opt{
+  border:1.5px solid #dbe6ea;border-radius:10px;padding:10px;cursor:pointer;transition:all .15s;
+}
+.bed-opt.active{border-color:#4ac9e2;background:#eaf7fa;}
+.bed-opt.disabled{opacity:.4;cursor:not-allowed;}
+.bed-opt-type{font-size:12px;font-weight:700;color:#0e2430;}
+.bed-opt-price{font-size:11px;color:#5c7580;margin-top:2px;}
+.bed-opt-avail{font-size:10px;color:#1e8449;margin-top:2px;font-weight:600;}
+.modal-submit{
+  width:100%;background:#08222e;color:#fff;border:none;padding:13px;border-radius:10px;
+  font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;transition:opacity .15s;
+}
+.modal-submit:hover{opacity:.92;}
+.modal-submit:disabled{background:#dfe6e9;color:#9aabb1;cursor:not-allowed;}
+.modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;color:#8fa3ab;cursor:pointer;}
+
+/* ── CONFIRMATION ── */
+.confirm-box{text-align:center;}
+.confirm-icon{
+  width:64px;height:64px;border-radius:50%;background:#eafaf0;color:#1e8449;
+  display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 16px;
+}
+.confirm-code{
+  font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;letter-spacing:2px;color:#08222e;
+  background:#f4f8fa;border:1.5px dashed #b9dee6;border-radius:10px;padding:12px;margin:14px 0;
+}
+.confirm-note{font-size:12px;color:#5c7580;line-height:1.6;text-align:left;background:#fbfdfd;border:1px solid #e6edf0;border-radius:10px;padding:12px;margin-top:14px;}
+
+/* ── MOBILE ── */
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;height:auto;}
+  #map{height:280px;}
+  .panel{max-height:none;overflow-y:visible;}
+}
+.disclaimer-strip{
+  background:#fff4e0;color:#8a5a00;font-size:11px;text-align:center;padding:7px 12px;
+  border-bottom:1px solid #f0dcae;
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="topbar-left">
+    <a href="/" title="Back">←</a>
+    <div>
+      <h1>Admission Assistant</h1>
+      <div class="topbar-sub">Doctor advised admission? We'll find you a bed.</div>
+    </div>
+  </div>
+  <div class="loc-pill" id="locPill"><span class="loc-dot"></span><span id="locText">Locating you…</span></div>
+</div>
+<div class="disclaimer-strip">⚠ Demo prototype — bed booking here is simulated and not a live hospital reservation.</div>
+
+<div class="urgency-bar" id="urgencyBar">
+  <div class="urgency-chip active" data-filter="all">All Hospitals</div>
+  <div class="urgency-chip" data-filter="Cardiology">Heart / Cardiac</div>
+  <div class="urgency-chip" data-filter="Oncology">Cancer</div>
+  <div class="urgency-chip" data-filter="Orthopedics">Orthopedic</div>
+  <div class="urgency-chip" data-filter="Maternity">Maternity</div>
+  <div class="urgency-chip" data-filter="Paediatrics">Child Care</div>
+  <div class="urgency-chip" data-filter="Ophthalmology">Eye Care</div>
+</div>
+
+<div class="layout">
+  <div id="map"></div>
+  <div class="panel">
+    <div class="panel-head">
+      <h2 id="panelTitle">Finding nearby hospitals…</h2>
+      <p id="panelSub">Sorted by distance from your current location.</p>
+    </div>
+    <div id="hospitalList">
+      <div class="state-box"><div class="spinner"></div>Getting your location…</div>
+    </div>
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookModalOverlay">
+  <div class="modal" id="bookModal"></div>
+</div>
+
+<script>
+let userLat = null, userLng = null;
+let hospitals = [];
+let map, userMarker, hospitalMarkers = [];
+let selectedHospital = null;
+let selectedBedType = null;
+let activeFilter = 'all';
+
+/* ── Haversine distance in km ── */
+function distKm(lat1, lon1, lat2, lon2){
+  const R = 6371;
+  const dLat = (lat2-lat1) * Math.PI/180;
+  const dLon = (lon2-lon1) * Math.PI/180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+/* ── Init map ── */
+function initMap(lat, lng){
+  map = L.map('map').setView([lat, lng], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
+  }).addTo(map);
+
+  const userIcon = L.divIcon({
+    className: '', html: '<div style="width:18px;height:18px;background:#4ac9e2;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 6px rgba(74,201,226,.3),0 2px 8px rgba(0,0,0,.3);"></div>',
+    iconSize:[18,18], iconAnchor:[9,9]
+  });
+  userMarker = L.marker([lat, lng], {icon:userIcon}).addTo(map).bindPopup('<b>You are here</b>');
+}
+
+function hospIcon(urgent){
+  const color = urgent ? '#e23c3c' : '#08222e';
+  return L.divIcon({
+    className:'',
+    html:`<div style="background:${color};color:#fff;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.35);border:2px solid #fff;"><span style="transform:rotate(45deg);font-size:12px;">🏥</span></div>`,
+    iconSize:[26,26], iconAnchor:[13,26]
+  });
+}
+
+/* ── Load hospitals ── */
+async function loadHospitals(){
+  try{
+    let res = await fetch('/static/data/mumbai_hospitals_full.json');
+    if(!res.ok) res = await fetch('mumbai_hospitals_full.json');
+    const data = await res.json();
+    hospitals = data.hospitals;
+  }catch(e){
+    document.getElementById('hospitalList').innerHTML = '<div class="state-box">Could not load hospital data. Make sure mumbai_hospitals_full.json is in /static/data/.</div>';
+    return;
+  }
+  renderList();
+}
+
+/* ── Geolocation ── */
+function locate(){
+  if(!navigator.geolocation){
+    fallbackLocation("Geolocation not supported — showing Mumbai center.");
+    return;
+  }
+  navigator.geolocation.getCurrentPosition(
+    pos=>{
+      userLat = pos.coords.latitude;
+      userLng = pos.coords.longitude;
+      document.getElementById('locText').textContent = 'Location detected';
+      initMap(userLat, userLng);
+      loadHospitals();
+    },
+    err=>{ fallbackLocation("Location denied — showing Mumbai center."); },
+    {enableHighAccuracy:true, timeout:8000}
+  );
+}
+function fallbackLocation(msg){
+  userLat = 19.0760; userLng = 72.8777; // Mumbai center fallback
+  document.getElementById('locText').textContent = msg;
+  initMap(userLat, userLng);
+  loadHospitals();
+}
+
+/* ── Render list + markers ── */
+function renderList(){
+  hospitalMarkers.forEach(m=>map.removeLayer(m));
+  hospitalMarkers = [];
+
+  let list = hospitals.map(h=>({...h, distance: distKm(userLat, userLng, h.latitude, h.longitude)}));
+  if(activeFilter !== 'all'){
+    list = list.filter(h => h.specialty === activeFilter);
+  }
+  list.sort((a,b)=>a.distance-b.distance);
+  list = list.slice(0, 25);
+
+  document.getElementById('panelTitle').textContent = `${list.length} hospitals near you`;
+  document.getElementById('panelSub').textContent = 'Sorted by distance from your current location.';
+
+  const container = document.getElementById('hospitalList');
+  if(list.length === 0){
+    container.innerHTML = '<div class="state-box">No hospitals found for this filter.</div>';
+    return;
+  }
+
+  container.innerHTML = list.map(h=>{
+    const beds = h.bed_categories || [];
+    const bedsHtml = beds.map(b=>{
+      const cls = b.available === 0 ? 'low' : (b.available < 5 ? 'low' : 'ok');
+      return `<span class="bed-tag ${cls}">${b.type}: ${b.available} left</span>`;
+    }).join('');
+    return `
+    <div class="h-card" data-id="${h.id}" onclick="focusHospital(${h.id})">
+      <div class="h-card-top">
+        <div>
+          <div class="h-name">${h.name}</div>
+          <span class="h-specialty">${h.specialty}</span>
+        </div>
+        <div class="h-dist">
+          <div class="h-dist-km">${h.distance.toFixed(1)}</div>
+          <div class="h-dist-label">km away</div>
+        </div>
+      </div>
+      <div class="h-meta">
+        <span>⭐ ${h.rating}</span>
+        <span>🛏️ ${h.beds_available}/${h.total_beds} beds free</span>
+        <span>📞 ${h.phone || 'N/A'}</span>
+      </div>
+      <div class="h-beds-row">${bedsHtml}</div>
+      <div class="h-actions">
+        <button class="btn btn-route" onclick="event.stopPropagation(); getRoute(${h.id})">📍 Directions</button>
+        <button class="btn btn-book" onclick="event.stopPropagation(); openBooking(${h.id})" ${h.beds_available===0?'disabled':''}>${h.beds_available===0?'Full':'Book a Bed'}</button>
+      </div>
+    </div>`;
+  }).join('');
+
+  list.forEach(h=>{
+    const marker = L.marker([h.latitude, h.longitude], {icon: hospIcon(h.emergency)}).addTo(map)
+      .bindPopup(`<b>${h.name}</b><br>${h.distance.toFixed(1)} km away<br>${h.beds_available} beds free`);
+    marker.hospId = h.id;
+    marker.on('click', ()=> focusHospital(h.id, false));
+    hospitalMarkers.push(marker);
+  });
+}
+
+function findHospById(id){ return hospitals.find(h=>h.id===id); }
+
+function focusHospital(id, scrollList=true){
+  document.querySelectorAll('.h-card').forEach(c=>c.classList.remove('selected'));
+  const card = document.querySelector(`.h-card[data-id="${id}"]`);
+  if(card) card.classList.add('selected');
+  const h = findHospById(id);
+  if(h && map){ map.flyTo([h.latitude, h.longitude], 15, {duration:0.6}); }
+  const marker = hospitalMarkers.find(m=>m.hospId===id);
+  if(marker) marker.openPopup();
+}
+
+/* ── Directions (opens Google Maps app/web with live route) ── */
+function getRoute(id){
+  const h = findHospById(id);
+  if(!h) return;
+  const url = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${h.latitude},${h.longitude}&travelmode=driving`;
+  window.open(url, '_blank');
+}
+
+/* ── Booking modal ── */
+function openBooking(id){
+  selectedHospital = findHospById(id);
+  selectedBedType = null;
+  const beds = selectedHospital.bed_categories || [];
+
+  document.getElementById('bookModal').innerHTML = `
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>Reserve a Bed</h3>
+    <div class="modal-sub">${selectedHospital.name} · ${selectedHospital.distance ? selectedHospital.distance.toFixed(1)+' km away' : ''}</div>
+
+    <div class="field">
+      <label>Select Bed Type</label>
+      <div class="bed-options" id="bedOptions">
+        ${beds.map(b=>`
+          <div class="bed-opt ${b.available===0?'disabled':''}" data-type="${b.type}" onclick="selectBed('${b.type}', ${b.available})">
+            <div class="bed-opt-type">${b.type}</div>
+            <div class="bed-opt-price">₹${b.price_per_day_inr}/day</div>
+            <div class="bed-opt-avail">${b.available} available</div>
+          </div>`).join('')}
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Patient Full Name</label>
+      <input type="text" id="patName" placeholder="e.g. Neeraj Gupta">
+    </div>
+    <div class="field">
+      <label>Contact Number</label>
+      <input type="tel" id="patPhone" placeholder="10-digit mobile number" maxlength="10">
+    </div>
+    <div class="field">
+      <label>Reason for Admission</label>
+      <select id="patReason">
+        <option value="">Doctor's advice for admission</option>
+        <option>Fever / Infection</option>
+        <option>Accident / Injury</option>
+        <option>Cardiac issue</option>
+        <option>Surgery scheduled</option>
+        <option>Maternity</option>
+        <option>Other</option>
+      </select>
+    </div>
+
+    <button class="modal-submit" id="confirmBtn" onclick="confirmBooking()" disabled>Select a bed type to continue</button>
+  `;
+  document.getElementById('bookModalOverlay').classList.add('open');
+}
+
+function selectBed(type, avail){
+  if(avail === 0) return;
+  selectedBedType = type;
+  document.querySelectorAll('.bed-opt').forEach(el=>el.classList.remove('active'));
+  document.querySelector(`.bed-opt[data-type="${type}"]`).classList.add('active');
+  const btn = document.getElementById('confirmBtn');
+  btn.disabled = false;
+  btn.textContent = `Confirm ${type} Reservation`;
+}
+
+function closeModal(){
+  document.getElementById('bookModalOverlay').classList.remove('open');
+}
+
+function confirmBooking(){
+  const name = document.getElementById('patName').value.trim();
+  const phone = document.getElementById('patPhone').value.trim();
+  if(!name || !phone || !selectedBedType){
+    alert('Please fill patient name, phone number, and select a bed type.');
+    return;
+  }
+
+  // Simulate decrementing bed availability locally
+  const bedCat = selectedHospital.bed_categories.find(b=>b.type===selectedBedType);
+  if(bedCat && bedCat.available > 0){
+    bedCat.available -= 1;
+    selectedHospital.beds_available -= 1;
+  }
+
+  const code = 'PRH-' + Math.random().toString(36).substring(2,7).toUpperCase();
+
+  document.getElementById('bookModal').innerHTML = `
+    <button class="modal-close" onclick="closeModal(); renderList();">✕</button>
+    <div class="confirm-box">
+      <div class="confirm-icon">✓</div>
+      <h3>Bed Reserved</h3>
+      <div class="modal-sub">${selectedHospital.name}</div>
+      <div class="confirm-code">${code}</div>
+      <div class="confirm-note">
+        <b>${selectedBedType}</b> reserved for <b>${name}</b>.<br>
+        Show this code at the hospital's admission desk — your details are already on file, so paperwork is minimal.<br><br>
+        📞 Hospital contact: ${selectedHospital.phone || 'N/A'}<br>
+        📍 ${selectedHospital.address}
+      </div>
+      <button class="modal-submit" onclick="closeModal(); renderList();" style="margin-top:16px;">Done</button>
+    </div>
+  `;
+}
+
+/* ── Filters ── */
+document.getElementById('urgencyBar').addEventListener('click', e=>{
+  const chip = e.target.closest('.urgency-chip');
+  if(!chip) return;
+  document.querySelectorAll('.urgency-chip').forEach(c=>c.classList.remove('active'));
+  chip.classList.add('active');
+  activeFilter = chip.dataset.filter;
+  renderList();
+});
+
+document.getElementById('bookModalOverlay').addEventListener('click', e=>{
+  if(e.target.id === 'bookModalOverlay') closeModal();
+});
+
+locate();
+</script>
+</body>
+</html>
