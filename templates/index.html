@@ -23,7 +23,7 @@ nav{
 @keyframes navSlideDown{to{transform:translateY(0);}}
 .nav-left{display:flex;align-items:center;gap:32px;}
 .logo{display:flex;align-items:center;gap:7px;}
-.logo-icon{width:22px;height:22px;}
+.logo-icon{width:34px;height:34px;object-fit:cover;flex-shrink:0;}
 .logo-text{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;color:#fff;letter-spacing:-0.3px;}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none;}
 .nav-links a{font-size:13px;font-weight:400;color:rgba(255,255,255,0.75);text-decoration:none;transition:color .2s;}
@@ -36,6 +36,22 @@ nav{
   transition:transform .15s,box-shadow .2s;
 }
 .nav-login:hover{transform:translateY(-1px);box-shadow:0 4px 14px rgba(74,201,226,0.4);}
+.nav-emergency-btn{
+  background:#e23c3c !important;color:#fff !important;
+  animation:emergencyPulse 2s ease-in-out infinite;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 18px 6px 6px !important;
+}
+.nav-emergency-btn:hover{box-shadow:0 4px 18px rgba(226,60,60,0.6) !important;}
+.emg-icon-wrap{
+  width:34px;height:34px;border-radius:50%;overflow:hidden;flex-shrink:0;
+  border:1.5px solid rgba(255,255,255,0.6);display:flex;
+}
+.emg-icon-wrap video{width:100%;height:100%;object-fit:cover;}
+@keyframes emergencyPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(226,60,60,0.5);}
+  50%{box-shadow:0 0 0 6px rgba(226,60,60,0);}
+}
 .lang-select{
   background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);
   color:#fff;font-size:12px;padding:6px 10px;border-radius:6px;
@@ -263,10 +279,6 @@ nav{
 <nav>
   <div class="nav-left">
     <div class="logo">
-      <svg class="logo-icon" viewBox="0 0 22 22" fill="none">
-        <path d="M11 2C6 2 2 6 2 11s4 9 9 9 9-4 9-9-4-9-9-9z" fill="#4ac9e2" opacity=".3"/>
-        <path d="M11 6v10M6 11h10" stroke="#4ac9e2" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
       <span class="logo-text">PR Harvest</span>
     </div>
     <ul class="nav-links">
@@ -287,7 +299,19 @@ nav{
       <option value="gu">ગુજરાતી</option>
       <option value="pa">ਪੰਜਾਬੀ</option>
     </select>
-    <button class="nav-login" onclick="window.location.href='/login'" data-i18n="nav_login">⊕ Login</button>
+    <div style="width:34px;height:34px;border-radius:50%;overflow:hidden;flex-shrink:0;border:2px solid rgba(255,80,80,0.5);display:none;">
+      <video class="logo-icon" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;">
+        <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/medical-character-showing-heart-pain-animation-gif-download-13516647.mp4" type="video/mp4">
+      </video>
+    </div>
+    <button class="nav-login nav-emergency-btn" onclick="window.location.href='/emg'">
+      <span class="emg-icon-wrap">
+        <video autoplay muted loop playsinline>
+          <source src="https://cdnl.iconscout.com/lottie/premium/preview-watermark/medical-character-showing-heart-pain-animation-gif-download-13516647.mp4" type="video/mp4">
+        </video>
+      </span>
+      <span data-i18n="nav_emergency">Emergency</span>
+    </button>
   </div>
 </nav>
 
@@ -501,7 +525,7 @@ if(statsRow) statsObs.observe(statsRow);
 ══════════════════════════════════════════ */
 const translations = {
   en: {
-    nav_home:"Home", nav_triage:"Check Symptoms", nav_clinic:"Find a Clinic", nav_about:"About", nav_login:"⊕ Login",
+    nav_home:"Home", nav_triage:"Check Symptoms", nav_clinic:"Find a Clinic", nav_about:"About", nav_emergency:"⊕ Emergency",
     hero_badge:"AI Rural Healthcare Triage",
     hero_title:'Know When to <span class="shimmer-word">Seek Help</span><br>in Seconds, Not Hours.',
     hero_desc:"Describe your symptoms in your own language and get an instant, reliable guide to how urgent your situation is — so you know whether to rest at home, visit a clinic, or head to the hospital.",
@@ -525,7 +549,7 @@ const translations = {
     footer_cta:"Check Symptoms Now"
   },
   hi: {
-    nav_home:"होम", nav_triage:"लक्षण जांचें", nav_clinic:"क्लिनिक खोजें", nav_about:"हमारे बारे में", nav_login:"⊕ लॉगिन",
+    nav_home:"होम", nav_triage:"लक्षण जांचें", nav_clinic:"क्लिनिक खोजें", nav_about:"हमारे बारे में", nav_emergency:"⊕ इमरजेंसी",
     hero_badge:"एआई ग्रामीण स्वास्थ्य सेवा त्रिआज",
     hero_title:'जानें कब लें <span class="shimmer-word">मदद</span><br>सेकंडों में, घंटों में नहीं।',
     hero_desc:"अपने लक्षण अपनी भाषा में बताएं और तुरंत जानें कि स्थिति कितनी गंभीर है — घर पर आराम करें, क्लिनिक जाएं, या अस्पताल जाएं।",
@@ -549,7 +573,7 @@ const translations = {
     footer_cta:"अभी लक्षण जांचें"
   },
   mr: {
-    nav_home:"मुख्यपृष्ठ", nav_triage:"लक्षणे तपासा", nav_clinic:"दवाखाना शोधा", nav_about:"आमच्याबद्दल", nav_login:"⊕ लॉगिन",
+    nav_home:"मुख्यपृष्ठ", nav_triage:"लक्षणे तपासा", nav_clinic:"दवाखाना शोधा", nav_about:"आमच्याबद्दल", nav_emergency:"⊕ इमरजेंसी",
     hero_badge:"एआय ग्रामीण आरोग्यसेवा त्रिआज",
     hero_title:'कधी <span class="shimmer-word">मदत</span> घ्यावी<br>ते सेकंदात जाणून घ्या.',
     hero_desc:"तुमची लक्षणे तुमच्या भाषेत सांगा आणि परिस्थिती किती गंभीर आहे हे लगेच जाणून घ्या — घरी आराम करा, दवाखान्यात जा किंवा रुग्णालयात जा.",
@@ -573,7 +597,7 @@ const translations = {
     footer_cta:"आत्ता लक्षणे तपासा"
   },
   bn: {
-    nav_home:"হোম", nav_triage:"লক্ষণ পরীক্ষা করুন", nav_clinic:"ক্লিনিক খুঁজুন", nav_about:"আমাদের সম্পর্কে", nav_login:"⊕ লগইন",
+    nav_home:"হোম", nav_triage:"লক্ষণ পরীক্ষা করুন", nav_clinic:"ক্লিনিক খুঁজুন", nav_about:"আমাদের সম্পর্কে", nav_emergency:"⊕ জরুরি",
     hero_badge:"এআই গ্রামীণ স্বাস্থ্যসেবা ট্রায়াজ",
     hero_title:'কখন <span class="shimmer-word">সাহায্য</span> নেবেন<br>জানুন সেকেন্ডে, ঘণ্টায় নয়।',
     hero_desc:"আপনার লক্ষণগুলি নিজের ভাষায় বলুন এবং তাৎক্ষণিকভাবে জানুন পরিস্থিতি কতটা গুরুতর — বাড়িতে বিশ্রাম নিন, ক্লিনিকে যান, বা হাসপাতালে যান।",
@@ -597,7 +621,7 @@ const translations = {
     footer_cta:"এখনই লক্ষণ পরীক্ষা করুন"
   },
   ta: {
-    nav_home:"முகப்பு", nav_triage:"அறிகுறிகளை சரிபார்க்கவும்", nav_clinic:"மருந்தகம் தேடவும்", nav_about:"எங்களை பற்றி", nav_login:"⊕ உள்நுழைய",
+    nav_home:"முகப்பு", nav_triage:"அறிகுறிகளை சரிபார்க்கவும்", nav_clinic:"மருந்தகம் தேடவும்", nav_about:"எங்களை பற்றி", nav_emergency:"⊕ அவசரம்",
     hero_badge:"AI கிராமப்புற சுகாதார ட்ரையேஜ்",
     hero_title:'எப்போது <span class="shimmer-word">உதவி</span> தேவை<br>என்பதை நொடிகளில் அறியுங்கள்.',
     hero_desc:"உங்கள் அறிகுறிகளை உங்கள் மொழியில் விவரிக்கவும், உடனடியாக நிலைமையின் தீவிரத்தை அறியவும் — வீட்டில் ஓய்வெடுக்கவா, மருந்தகம் செல்லவா, அல்லது மருத்துவமனைக்கு செல்லவா என்பதை தெரிந்துகொள்ளுங்கள்.",
@@ -621,7 +645,7 @@ const translations = {
     footer_cta:"இப்போதே அறிகுறிகளை சரிபார்க்கவும்"
   },
   te: {
-    nav_home:"హోమ్", nav_triage:"లక్షణాలు తనిఖీ చేయండి", nav_clinic:"క్లినిక్ కనుగొనండి", nav_about:"మా గురించి", nav_login:"⊕ లాగిన్",
+    nav_home:"హోమ్", nav_triage:"లక్షణాలు తనిఖీ చేయండి", nav_clinic:"క్లినిక్ కనుగొనండి", nav_about:"మా గురించి", nav_emergency:"⊕ అత్యవసరం",
     hero_badge:"AI గ్రామీణ ఆరోగ్య సంరక్షణ ట్రయాజ్",
     hero_title:'ఎప్పుడు <span class="shimmer-word">సహాయం</span> కావాలో<br>సెకన్లలో తెలుసుకోండి.',
     hero_desc:"మీ లక్షణాలను మీ భాషలో వివరించండి మరియు పరిస్థితి ఎంత తీవ్రమో తక్షణమే తెలుసుకోండి — ఇంట్లో విశ్రాంతి తీసుకోవాలా, క్లినిక్‌కు వెళ్లాలా, లేదా ఆసుపత్రికి వెళ్లాలా.",
@@ -645,7 +669,7 @@ const translations = {
     footer_cta:"ఇప్పుడే లక్షణాలు తనిఖీ చేయండి"
   },
   gu: {
-    nav_home:"હોમ", nav_triage:"લક્ષણો તપાસો", nav_clinic:"ક્લિનિક શોધો", nav_about:"અમારા વિશે", nav_login:"⊕ લોગિન",
+    nav_home:"હોમ", nav_triage:"લક્ષણો તપાસો", nav_clinic:"ક્લિનિક શોધો", nav_about:"અમારા વિશે", nav_emergency:"⊕ કટોકટી",
     hero_badge:"AI ગ્રામીણ આરોગ્યસંભાળ ટ્રાયાજ",
     hero_title:'ક્યારે <span class="shimmer-word">મદદ</span> લેવી<br>તે સેકન્ડોમાં જાણો.',
     hero_desc:"તમારા લક્ષણો તમારી ભાષામાં જણાવો અને પરિસ્થિતિ કેટલી ગંભીર છે તે તરત જાણો — ઘરે આરામ કરવો, ક્લિનિકમાં જવું, કે હોસ્પિટલમાં જવું.",
@@ -669,7 +693,7 @@ const translations = {
     footer_cta:"અત્યારે લક્ષણો તપાસો"
   },
   pa: {
-    nav_home:"ਹੋਮ", nav_triage:"ਲੱਛਣ ਜਾਂਚੋ", nav_clinic:"ਕਲੀਨਿਕ ਲੱਭੋ", nav_about:"ਸਾਡੇ ਬਾਰੇ", nav_login:"⊕ ਲਾਗਇਨ",
+    nav_home:"ਹੋਮ", nav_triage:"ਲੱਛਣ ਜਾਂਚੋ", nav_clinic:"ਕਲੀਨਿਕ ਲੱਭੋ", nav_about:"ਸਾਡੇ ਬਾਰੇ", nav_emergency:"⊕ ਐਮਰਜੈਂਸੀ",
     hero_badge:"AI ਪੇਂਡੂ ਸਿਹਤ ਸੰਭਾਲ ਟ੍ਰਾਈਏਜ",
     hero_title:'ਕਦੋਂ <span class="shimmer-word">ਮਦਦ</span> ਲੈਣੀ<br>ਸਕਿੰਟਾਂ ਵਿੱਚ ਜਾਣੋ।',
     hero_desc:"ਆਪਣੇ ਲੱਛਣ ਆਪਣੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੋ ਅਤੇ ਤੁਰੰਤ ਜਾਣੋ ਕਿ ਸਥਿਤੀ ਕਿੰਨੀ ਗੰਭੀਰ ਹੈ — ਘਰ ਆਰਾਮ ਕਰਨਾ, ਕਲੀਨਿਕ ਜਾਣਾ, ਜਾਂ ਹਸਪਤਾਲ ਜਾਣਾ।",
