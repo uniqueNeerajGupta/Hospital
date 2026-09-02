@@ -1,0 +1,2 @@
+pip install flask flask-sqlalchemy flask-migrate python-dotenv requests
+pip freeze > requirements.txt
