@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Health Camps Near You – Shivir Sandesh</title>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+<script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;min-height:100vh;}
+
+.topbar{background:#08222e;color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px;}
+.topbar a{color:#fff;text-decoration:none;font-size:20px;opacity:.8;}
+.topbar h1{font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;}
+.topbar-sub{font-size:10.5px;color:rgba(255,255,255,0.55);}
+.mode-tabs{display:flex;background:#fff;border-bottom:1px solid #e6edf0;}
+.mode-tab{flex:1;text-align:center;padding:12px;font-size:12.5px;font-weight:700;color:#8fa3ab;cursor:pointer;border-bottom:2px solid transparent;}
+.mode-tab.active{color:#08222e;border-bottom-color:#4ac9e2;}
+
+.wrap{max-width:560px;margin:0 auto;padding:20px 20px 60px;}
+
+.camp-card{background:#fff;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 3px 14px rgba(8,34,46,0.06);}
+.camp-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:10px;}
+.camp-village{font-family:'Manrope',sans-serif;font-size:15px;font-weight:800;color:#0e2430;}
+.camp-location{font-size:11.5px;color:#5c7580;margin-top:2px;}
+.camp-date-badge{background:#e6f6f9;color:#1e6b7f;font-size:11px;font-weight:800;padding:5px 11px;border-radius:20px;white-space:nowrap;}
+.camp-services{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.camp-service-tag{background:#f4f8fa;color:#3d5b66;font-size:10.5px;font-weight:600;padding:4px 10px;border-radius:8px;}
+.camp-meta{font-size:11.5px;color:#8fa3ab;margin-bottom:12px;}
+.camp-btn{width:100%;background:#4ac9e2;color:#08222e;border:none;padding:12px;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;}
+
+.empty-state{text-align:center;padding:60px 20px;color:#8fa3ab;font-size:13px;}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(8,20,28,0.55);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;}
+.modal-overlay.open{display:flex;}
+.modal{background:#fff;border-radius:18px;width:100%;max-width:400px;padding:24px;text-align:center;position:relative;}
+.modal h3{font-family:'Manrope',sans-serif;font-size:17px;font-weight:800;margin-bottom:6px;}
+.modal .modal-sub{font-size:12px;color:#5c7580;margin-bottom:18px;}
+.field{margin-bottom:12px;text-align:left;}
+.field label{display:block;font-size:11px;font-weight:700;color:#3d5b66;margin-bottom:6px;text-transform:uppercase;}
+.field input{width:100%;padding:11px 13px;border:1.5px solid #dbe6ea;border-radius:9px;font-size:13.5px;outline:none;}
+.field input:focus{border-color:#4ac9e2;}
+.modal-btn{width:100%;background:#08222e;color:#fff;border:none;padding:12px;border-radius:9px;font-size:13.5px;font-weight:700;cursor:pointer;margin-top:6px;}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:none;font-size:20px;color:#8fa3ab;cursor:pointer;}
+.qr-box{margin-top:16px;display:flex;justify-content:center;}
+.qr-note{font-size:11px;color:#8fa3ab;margin-top:10px;line-height:1.6;}
+
+#scannerReader{width:100%;border-radius:12px;overflow:hidden;margin-bottom:14px;}
+.attendance-summary{display:flex;gap:10px;margin-bottom:14px;}
+.att-stat{flex:1;background:#fff;border-radius:12px;padding:14px;text-align:center;}
+.att-num{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;}
+.att-num.green{color:#1e8449;}
+.att-num.orange{color:#8a5a00;}
+.att-label{font-size:10px;color:#8fa3ab;text-transform:uppercase;margin-top:2px;}
+.followup-btn{width:100%;background:#e2a13c;color:#fff;border:none;padding:13px;border-radius:11px;font-size:13.5px;font-weight:800;cursor:pointer;margin-bottom:14px;}
+.beneficiary-row{display:flex;justify-content:space-between;align-items:center;background:#fff;border-radius:10px;padding:11px 14px;margin-bottom:7px;font-size:12.5px;}
+.beneficiary-row .status{font-size:10.5px;font-weight:700;padding:3px 9px;border-radius:8px;}
+.status.in{background:#eafaf0;color:#1e8449;}
+.status.out{background:#fff4e0;color:#8a5a00;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/">←</a>
+  <div>
+    <h1>Health Camps Near You</h1>
+    <div class="topbar-sub">Shivir Sandesh</div>
+  </div>
+</div>
+
+<div class="mode-tabs">
+  <div class="mode-tab active" data-mode="browse">Find a Camp</div>
+  <div class="mode-tab" data-mode="organizer">Organizer Check-in</div>
+</div>
+
+<div class="wrap" id="browseView">
+  <div id="campList"><div class="empty-state">Loading camps…</div></div>
+</div>
+
+<div class="wrap" id="organizerView" style="display:none;">
+  <div class="field"><label>Camp ID</label><input type="text" id="orgCampId" placeholder="Paste camp ID from registration"></div>
+  <div id="orgSummary"></div>
+  <div id="scannerReader"></div>
+  <button class="camp-btn" id="scanToggleBtn" onclick="toggleScanner()">📷 Start QR Scanner</button>
+  <button class="followup-btn" onclick="sendFollowup()" style="margin-top:12px;">📢 Send Follow-up to Missed Beneficiaries</button>
+  <div id="beneficiaryList"></div>
+</div>
+
+<div class="modal-overlay" id="regModalOverlay">
+  <div class="modal" id="regModal"></div>
+</div>
+
+<script>
+let camps = [];
+let currentMode = 'browse';
+let html5QrCode = null;
+let scannerActive = false;
+
+document.querySelectorAll('.mode-tab').forEach(tab=>{
+  tab.addEventListener('click', ()=>{
+    document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
+    currentMode = tab.dataset.mode;
+    document.getElementById('browseView').style.display = currentMode === 'browse' ? 'block' : 'none';
+    document.getElementById('organizerView').style.display = currentMode === 'organizer' ? 'block' : 'none';
+  });
+});
+
+async function loadCamps(){
+  try{
+    const res = await fetch('/api/camps');
+    const data = await res.json();
+    camps = data.camps || [];
+    renderCampList();
+  }catch(e){
+    document.getElementById('campList').innerHTML = '<div class="empty-state">Could not load camps. Check your connection.</div>';
+  }
+}
+
+function renderCampList(){
+  const container = document.getElementById('campList');
+  if(camps.length === 0){
+    container.innerHTML = '<div class="empty-state">No camps announced yet. Check back soon, or ask your ASHA worker.</div>';
+    return;
+  }
+  container.innerHTML = camps.map(c => `
+    <div class="camp-card">
+      <div class="camp-top">
+        <div>
+          <div class="camp-village">${c.village}</div>
+          <div class="camp-location">📍 ${c.location}</div>
+        </div>
+        <div class="camp-date-badge">${formatDate(c.date)}</div>
+      </div>
+      <div class="camp-services">${c.services.map(s=>`<span class="camp-service-tag">${s}</span>`).join('')}</div>
+      <div class="camp-meta">🕐 ${c.time} · 👤 Organized by ${c.asha_name} · ${c.registered_count} registered</div>
+      <button class="camp-btn" onclick="openRegister('${c.id}')">Register for This Camp</button>
+    </div>
+  `).join('');
+}
+
+function formatDate(d){
+  try{ return new Date(d).toLocaleDateString('en-IN', {day:'numeric', month:'short'}); }
+  catch(e){ return d; }
+}
+
+function openRegister(campId){
+  const camp = camps.find(c=>c.id===campId);
+  document.getElementById('regModal').innerHTML = `
+    <button class="modal-close" onclick="closeRegModal()">✕</button>
+    <h3>Register for Camp</h3>
+    <div class="modal-sub">${camp.village} · ${formatDate(camp.date)} at ${camp.time}</div>
+    <div class="field"><label>Your Name</label><input type="text" id="regName" placeholder="Full name"></div>
+    <div class="field"><label>Phone Number</label><input type="tel" id="regPhone" placeholder="10-digit number" maxlength="10"></div>
+    <button class="modal-btn" onclick="submitRegistration('${campId}')">Register — I'll be there</button>
+  `;
+  document.getElementById('regModalOverlay').classList.add('open');
+}
+function closeRegModal(){ document.getElementById('regModalOverlay').classList.remove('open'); }
+
+async function submitRegistration(campId){
+  const name = document.getElementById('regName').value.trim();
+  const phone = document.getElementById('regPhone').value.trim();
+  if(!name || !phone){ alert('Please enter your name and phone number.'); return; }
+
+  try{
+    const res = await fetch(`/api/camps/${campId}/register`, {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({name, phone})
+    });
+    const data = await res.json();
+    if(data.error){ alert(data.error); return; }
+    showQrConfirmation(campId, data.beneficiary);
+    loadCamps();
+  }catch(e){
+    alert('Something went wrong. Please try again.');
+  }
+}
+
+function showQrConfirmation(campId, beneficiary){
+  document.getElementById('regModal').innerHTML = `
+    <button class="modal-close" onclick="closeRegModal()">✕</button>
+    <h3>You're Registered! ✓</h3>
+    <div class="modal-sub">A WhatsApp confirmation is on its way to you.</div>
+    <div class="qr-box"><canvas id="qrCanvas"></canvas></div>
+    <div class="qr-note">Show this QR code at the camp for quick check-in. A screenshot works too — no internet needed on camp day.</div>
+    <button class="modal-btn" onclick="closeRegModal()" style="margin-top:16px;">Done</button>
+  `;
+  const qrData = JSON.stringify({camp_id: campId, beneficiary_id: beneficiary.id, name: beneficiary.name});
+  QRCode.toCanvas(document.getElementById('qrCanvas'), qrData, {width: 200});
+}
+
+document.getElementById('regModalOverlay').addEventListener('click', e=>{
+  if(e.target.id === 'regModalOverlay') closeRegModal();
+});
+
+async function toggleScanner(){
+  const campId = document.getElementById('orgCampId').value.trim();
+  if(!campId){ alert('Enter the Camp ID first.'); return; }
+
+  if(scannerActive){
+    if(html5QrCode) await html5QrCode.stop();
+    scannerActive = false;
+    document.getElementById('scanToggleBtn').textContent = '📷 Start QR Scanner';
+    return;
+  }
+
+  html5QrCode = new Html5Qrcode("scannerReader");
+  try{
+    await html5QrCode.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 220 },
+      onScanSuccess,
+      () => {}
+    );
+    scannerActive = true;
+    document.getElementById('scanToggleBtn').textContent = '⏹ Stop Scanner';
+  }catch(e){
+    alert('Could not access camera. Check people in manually from the list below once they check in via their own QR.');
+  }
+}
+
+async function onScanSuccess(decodedText){
+  try{
+    const parsed = JSON.parse(decodedText);
+    if(parsed.beneficiary_id){
+      await fetch(`/api/camps/${parsed.camp_id}/checkin`, {
+        method: 'POST', headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({beneficiary_id: parsed.beneficiary_id})
+      });
+      loadAttendance(document.getElementById('orgCampId').value.trim());
+      if(html5QrCode) await html5QrCode.pause(true);
+      setTimeout(()=>{ if(html5QrCode && scannerActive) html5QrCode.resume(); }, 1500);
+    }
+  }catch(e){}
+}
+
+document.getElementById('orgCampId').addEventListener('change', e=>{ loadAttendance(e.target.value.trim()); });
+
+async function loadAttendance(campId){
+  if(!campId) return;
+  try{
+    const res = await fetch(`/api/camps/${campId}/attendance`);
+    const data = await res.json();
+    if(data.error){ document.getElementById('orgSummary').innerHTML = ''; return; }
+
+    document.getElementById('orgSummary').innerHTML = `
+      <div class="attendance-summary">
+        <div class="att-stat"><div class="att-num green">${data.attended.length}</div><div class="att-label">Checked In</div></div>
+        <div class="att-stat"><div class="att-num orange">${data.missed.length}</div><div class="att-label">Not Yet Arrived</div></div>
+      </div>
+    `;
+
+    const allBeneficiaries = [...data.attended.map(b=>({...b, checked_in:true})), ...data.missed.map(b=>({...b, checked_in:false}))];
+    document.getElementById('beneficiaryList').innerHTML = allBeneficiaries.map(b => `
+      <div class="beneficiary-row">
+        <div>${b.name} · ${b.phone}</div>
+        <div class="status ${b.checked_in ? 'in':'out'}">${b.checked_in ? '✓ Arrived' : 'Pending'}</div>
+      </div>
+    `).join('');
+  }catch(e){}
+}
+
+async function sendFollowup(){
+  const campId = document.getElementById('orgCampId').value.trim();
+  if(!campId){ alert('Enter the Camp ID first.'); return; }
+
+  try{
+    const res = await fetch(`/api/camps/${campId}/followup`, {method:'POST'});
+    const data = await res.json();
+    if(data.count === 0){ alert('No missed beneficiaries — everyone checked in!'); }
+    else{ alert(`Sending follow-up WhatsApp messages to ${data.count} beneficiaries who missed the camp.`); }
+  }catch(e){
+    alert('Could not send follow-ups right now.');
+  }
+}
+
+const urlParams = new URLSearchParams(window.location.search);
+const preselectedId = urlParams.get('id');
+if(preselectedId){
+  setTimeout(()=> openRegister(preselectedId), 500);
+}
+
+loadCamps();
+</script>
+
+</body>
+</html>

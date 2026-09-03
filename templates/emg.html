@@ -10,149 +10,95 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;}
-
-/* ── TOP BAR ── */
-.topbar{
-  position:sticky;top:0;z-index:500;
-  background:#08222e;color:#fff;padding:14px 20px;
-  display:flex;align-items:center;justify-content:space-between;
-  box-shadow:0 2px 12px rgba(0,0,0,0.15);
-}
+.topbar{position:sticky;top:0;z-index:500;background:#08222e;color:#fff;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.15);}
 .topbar-left{display:flex;align-items:center;gap:10px;}
 .topbar-left a{color:#fff;text-decoration:none;font-size:20px;opacity:.8;}
 .topbar h1{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;}
 .topbar-sub{font-size:11px;color:rgba(255,255,255,0.55);margin-top:1px;}
-.loc-pill{
-  display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);
-  border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:6px 12px;
-  font-size:11.5px;color:#bfe9f2;
-}
+.loc-pill{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.18);border-radius:20px;padding:6px 12px;font-size:11.5px;color:#bfe9f2;}
 .loc-dot{width:7px;height:7px;border-radius:50%;background:#4ac9e2;animation:pulse 2s infinite;}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(74,201,226,.6);}50%{box-shadow:0 0 0 6px rgba(74,201,226,0);}}
-
-/* ── URGENCY BAR ── */
-.urgency-bar{
-  display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:#fff;
-  border-bottom:1px solid #e6edf0;-webkit-overflow-scrolling:touch;
-}
-.urgency-chip{
-  flex-shrink:0;padding:8px 16px;border-radius:20px;font-size:12.5px;font-weight:600;
-  border:1.5px solid #dbe6ea;background:#fff;color:#3d5b66;cursor:pointer;transition:all .15s;
-  white-space:nowrap;
-}
+.urgency-bar{display:flex;gap:8px;overflow-x:auto;padding:12px 16px;background:#fff;border-bottom:1px solid #e6edf0;-webkit-overflow-scrolling:touch;}
+.urgency-chip{flex-shrink:0;padding:8px 16px;border-radius:20px;font-size:12.5px;font-weight:600;border:1.5px solid #dbe6ea;background:#fff;color:#3d5b66;cursor:pointer;transition:all .15s;white-space:nowrap;}
 .urgency-chip.active{background:#08222e;border-color:#08222e;color:#fff;}
 .urgency-chip:hover:not(.active){border-color:#4ac9e2;color:#08222e;}
-
-/* ── LAYOUT ── */
 .layout{display:grid;grid-template-columns:1fr 460px;height:calc(100vh - 118px);}
 #map{width:100%;height:100%;}
 .panel{overflow-y:auto;background:#f4f8fa;padding:16px;}
-.panel-head{margin-bottom:14px;}
+.panel-head{margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;}
 .panel-head h2{font-family:'Manrope',sans-serif;font-size:16px;font-weight:700;color:#0e2430;}
 .panel-head p{font-size:12px;color:#5c7580;margin-top:3px;}
-
-/* ── HOSPITAL CARD ── */
-.h-card{
-  background:#fff;border:1px solid #e6edf0;border-radius:14px;padding:16px;margin-bottom:12px;
-  cursor:pointer;transition:border-color .15s,box-shadow .15s;position:relative;
-}
+.back-btn{background:#fff;border:1.5px solid #dbe6ea;border-radius:9px;padding:7px 13px;font-size:12px;font-weight:700;color:#08222e;cursor:pointer;display:flex;align-items:center;gap:5px;}
+.back-btn:hover{border-color:#4ac9e2;}
+.h-card{background:#fff;border:1px solid #e6edf0;border-radius:14px;padding:16px;margin-bottom:12px;cursor:pointer;transition:border-color .15s,box-shadow .15s;position:relative;}
 .h-card:hover{border-color:#4ac9e2;box-shadow:0 4px 16px rgba(8,34,46,0.08);}
 .h-card.selected{border-color:#4ac9e2;box-shadow:0 4px 20px rgba(74,201,226,0.25);background:#f4fcfd;}
 .h-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;}
 .h-name{font-size:14.5px;font-weight:700;color:#0e2430;line-height:1.35;}
 .h-specialty{display:inline-block;margin-top:4px;font-size:10.5px;font-weight:600;color:#1e6b7f;background:#e6f6f9;padding:2px 8px;border-radius:20px;}
-.h-dist{
-  flex-shrink:0;text-align:right;
-}
+.h-dist{flex-shrink:0;text-align:right;}
 .h-dist-km{font-family:'Manrope',sans-serif;font-size:16px;font-weight:800;color:#08222e;}
 .h-dist-label{font-size:9px;color:#8fa3ab;text-transform:uppercase;letter-spacing:.5px;}
 .h-meta{display:flex;gap:14px;margin-top:10px;font-size:11.5px;color:#5c7580;flex-wrap:wrap;}
 .h-meta span{display:flex;align-items:center;gap:4px;}
 .h-beds-row{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
-.bed-tag{
-  font-size:10.5px;padding:4px 9px;border-radius:8px;font-weight:600;
-  background:#eef4f6;color:#3d5b66;
-}
+.bed-tag{font-size:10.5px;padding:4px 9px;border-radius:8px;font-weight:600;background:#eef4f6;color:#3d5b66;}
 .bed-tag.low{background:#fdeceb;color:#c0392b;}
 .bed-tag.ok{background:#eafaf0;color:#1e8449;}
 .h-actions{display:flex;gap:8px;margin-top:14px;}
-.btn{
-  flex:1;padding:9px 10px;border-radius:9px;font-size:12px;font-weight:700;
-  border:none;cursor:pointer;text-align:center;transition:transform .1s,box-shadow .15s;
-  display:flex;align-items:center;justify-content:center;gap:5px;
-}
+.btn{flex:1;padding:9px 10px;border-radius:9px;font-size:12px;font-weight:700;border:none;cursor:pointer;text-align:center;transition:transform .1s,box-shadow .15s;display:flex;align-items:center;justify-content:center;gap:5px;}
 .btn-route{background:#fff;color:#1e6b7f;border:1.5px solid #b9dee6;}
 .btn-route:hover{background:#eaf7fa;}
 .btn-book{background:#4ac9e2;color:#08222e;}
 .btn-book:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(74,201,226,.45);}
 .btn-book:disabled{background:#dfe6e9;color:#9aabb1;cursor:not-allowed;transform:none;box-shadow:none;}
-
-/* ── LOADING / EMPTY ── */
 .state-box{text-align:center;padding:50px 20px;color:#8fa3ab;font-size:13px;}
-.spinner{width:34px;height:34px;border:3px solid #dbe9ec;border-top-color:#4ac9e2;border-radius:50%;
-  animation:spin .8s linear infinite;margin:0 auto 14px;}
+.spinner{width:34px;height:34px;border:3px solid #dbe9ec;border-top-color:#4ac9e2;border-radius:50%;animation:spin .8s linear infinite;margin:0 auto 14px;}
 @keyframes spin{to{transform:rotate(360deg);}}
-
-/* ── MODAL ── */
-.modal-overlay{
-  position:fixed;inset:0;background:rgba(8,20,28,0.55);backdrop-filter:blur(3px);
-  display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;
-}
+.route-summary{background:linear-gradient(135deg,#08222e,#0e3446);color:#fff;border-radius:14px;padding:18px;margin-bottom:14px;}
+.route-summary-top{display:flex;justify-content:space-between;align-items:flex-end;}
+.route-time{font-family:'Manrope',sans-serif;font-size:28px;font-weight:800;}
+.route-dist{font-size:12.5px;color:rgba(255,255,255,0.7);margin-top:2px;}
+.route-eta{text-align:right;font-size:11px;color:rgba(255,255,255,0.6);}
+.route-hosp-name{font-size:13px;font-weight:700;margin-top:10px;color:#4ac9e2;}
+.route-actions{display:flex;gap:8px;margin-top:14px;}
+.btn-call{background:#08222e;color:#fff;}
+.btn-call:hover{opacity:.9;}
+.steps-list{list-style:none;}
+.step-item{display:flex;gap:12px;padding:12px 4px;border-bottom:1px solid #e6edf0;align-items:flex-start;}
+.step-item:last-child{border-bottom:none;}
+.step-icon{width:30px;height:30px;border-radius:50%;background:#eaf7fa;color:#1e6b7f;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.step-text{font-size:12.5px;color:#0e2430;line-height:1.5;padding-top:5px;}
+.step-dist{font-size:10.5px;color:#8fa3ab;margin-top:2px;}
+.modal-overlay{position:fixed;inset:0;background:rgba(8,20,28,0.55);backdrop-filter:blur(3px);display:none;align-items:center;justify-content:center;z-index:2000;padding:20px;}
 .modal-overlay.open{display:flex;}
-.modal{
-  background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;
-  padding:26px;animation:modalIn .25s ease;
-}
+.modal{background:#fff;border-radius:18px;width:100%;max-width:440px;max-height:90vh;overflow-y:auto;padding:26px;animation:modalIn .25s ease;}
 @keyframes modalIn{from{opacity:0;transform:translateY(16px) scale(.97);}to{opacity:1;transform:translateY(0) scale(1);}}
 .modal h3{font-family:'Manrope',sans-serif;font-size:18px;font-weight:800;color:#0e2430;}
 .modal .modal-sub{font-size:12.5px;color:#5c7580;margin-top:4px;margin-bottom:20px;}
 .field{margin-bottom:14px;}
 .field label{display:block;font-size:11.5px;font-weight:700;color:#3d5b66;margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;}
-.field input, .field select{
-  width:100%;padding:11px 13px;border:1.5px solid #dbe6ea;border-radius:10px;font-size:13.5px;
-  font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:#fbfdfd;
-}
+.field input, .field select{width:100%;padding:11px 13px;border:1.5px solid #dbe6ea;border-radius:10px;font-size:13.5px;font-family:'Inter',sans-serif;outline:none;transition:border-color .15s;background:#fbfdfd;}
 .field input:focus, .field select:focus{border-color:#4ac9e2;background:#fff;}
 .bed-options{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-.bed-opt{
-  border:1.5px solid #dbe6ea;border-radius:10px;padding:10px;cursor:pointer;transition:all .15s;
-}
+.bed-opt{border:1.5px solid #dbe6ea;border-radius:10px;padding:10px;cursor:pointer;transition:all .15s;}
 .bed-opt.active{border-color:#4ac9e2;background:#eaf7fa;}
 .bed-opt.disabled{opacity:.4;cursor:not-allowed;}
 .bed-opt-type{font-size:12px;font-weight:700;color:#0e2430;}
 .bed-opt-price{font-size:11px;color:#5c7580;margin-top:2px;}
 .bed-opt-avail{font-size:10px;color:#1e8449;margin-top:2px;font-weight:600;}
-.modal-submit{
-  width:100%;background:#08222e;color:#fff;border:none;padding:13px;border-radius:10px;
-  font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;transition:opacity .15s;
-}
+.modal-submit{width:100%;background:#08222e;color:#fff;border:none;padding:13px;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;margin-top:6px;transition:opacity .15s;}
 .modal-submit:hover{opacity:.92;}
 .modal-submit:disabled{background:#dfe6e9;color:#9aabb1;cursor:not-allowed;}
 .modal-close{position:absolute;top:16px;right:16px;background:none;border:none;font-size:20px;color:#8fa3ab;cursor:pointer;}
-
-/* ── CONFIRMATION ── */
 .confirm-box{text-align:center;}
-.confirm-icon{
-  width:64px;height:64px;border-radius:50%;background:#eafaf0;color:#1e8449;
-  display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 16px;
-}
-.confirm-code{
-  font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;letter-spacing:2px;color:#08222e;
-  background:#f4f8fa;border:1.5px dashed #b9dee6;border-radius:10px;padding:12px;margin:14px 0;
-}
+.confirm-icon{width:64px;height:64px;border-radius:50%;background:#eafaf0;color:#1e8449;display:flex;align-items:center;justify-content:center;font-size:32px;margin:0 auto 16px;}
+.confirm-code{font-family:'Manrope',sans-serif;font-size:22px;font-weight:800;letter-spacing:2px;color:#08222e;background:#f4f8fa;border:1.5px dashed #b9dee6;border-radius:10px;padding:12px;margin:14px 0;}
 .confirm-note{font-size:12px;color:#5c7580;line-height:1.6;text-align:left;background:#fbfdfd;border:1px solid #e6edf0;border-radius:10px;padding:12px;margin-top:14px;}
-
-/* ── MOBILE ── */
-@media (max-width:900px){
-  .layout{grid-template-columns:1fr;height:auto;}
-  #map{height:280px;}
-  .panel{max-height:none;overflow-y:visible;}
-}
-.disclaimer-strip{
-  background:#fff4e0;color:#8a5a00;font-size:11px;text-align:center;padding:7px 12px;
-  border-bottom:1px solid #f0dcae;
-}
+@media (max-width:900px){.layout{grid-template-columns:1fr;height:auto;}#map{height:280px;}.panel{max-height:none;overflow-y:visible;}}
+.disclaimer-strip{background:#fff4e0;color:#8a5a00;font-size:11px;text-align:center;padding:7px 12px;border-bottom:1px solid #f0dcae;}
 </style>
+<script src="/static/js/voice-agent.js"></script>
 </head>
 <body>
 
@@ -181,9 +127,11 @@ body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;}
 <div class="layout">
   <div id="map"></div>
   <div class="panel">
-    <div class="panel-head">
-      <h2 id="panelTitle">Finding nearby hospitals…</h2>
-      <p id="panelSub">Sorted by distance from your current location.</p>
+    <div class="panel-head" id="panelHead">
+      <div>
+        <h2 id="panelTitle">Finding nearby hospitals…</h2>
+        <p id="panelSub">Sorted by distance from your current location.</p>
+      </div>
     </div>
     <div id="hospitalList">
       <div class="state-box"><div class="spinner"></div>Getting your location…</div>
@@ -191,7 +139,6 @@ body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;}
   </div>
 </div>
 
-<!-- BOOKING MODAL -->
 <div class="modal-overlay" id="bookModalOverlay">
   <div class="modal" id="bookModal"></div>
 </div>
@@ -203,8 +150,66 @@ let map, userMarker, hospitalMarkers = [];
 let selectedHospital = null;
 let selectedBedType = null;
 let activeFilter = 'all';
+let currentProfile = null;
 
-/* ── Haversine distance in km ── */
+const PROFILE_KEY = 'prHarvestPatientProfile';
+
+function getProfile(){
+  try{ const raw = localStorage.getItem(PROFILE_KEY); return raw ? JSON.parse(raw) : null; }catch(e){ return null; }
+}
+function saveProfile(profile){ localStorage.setItem(PROFILE_KEY, JSON.stringify(profile)); }
+function ensureProfile(callback){
+  let existing = getProfile();
+  if(!existing){
+    existing = { name: 'Neeraj Gupta', phone: '9987003075', age: '34', gender: 'Male', bloodGroup: 'B+', address: 'Nirmala Nagar, Mumbai', allergies: 'None reported', emergencyContact: '9987003075' };
+    saveProfile(existing);
+  }
+  callback(existing);
+}
+function showProfileSetupModal(callback){
+  const p = getProfile() || {};
+  document.getElementById('bookModal').innerHTML = `
+    <h3>Your Health Profile</h3>
+    <div class="modal-sub">Reused automatically for every visit.</div>
+    <div class="field"><label>Full Name</label><input type="text" id="pfName" value="${p.name || ''}"></div>
+    <div class="field"><label>Phone Number</label><input type="tel" id="pfPhone" value="${p.phone || ''}" maxlength="10"></div>
+    <div class="field"><label>Age</label><input type="number" id="pfAge" value="${p.age || ''}" min="0" max="120"></div>
+    <div class="field"><label>Gender</label>
+      <select id="pfGender"><option value="">Select</option>
+        <option ${p.gender==='Male'?'selected':''}>Male</option>
+        <option ${p.gender==='Female'?'selected':''}>Female</option>
+        <option ${p.gender==='Other'?'selected':''}>Other</option>
+      </select></div>
+    <div class="field"><label>Blood Group</label>
+      <select id="pfBlood"><option value="">Select</option>
+        ${['A+','A-','B+','B-','O+','O-','AB+','AB-','Unknown'].map(bg=>`<option ${p.bloodGroup===bg?'selected':''}>${bg}</option>`).join('')}
+      </select></div>
+    <div class="field"><label>Address</label><input type="text" id="pfAddress" value="${p.address || ''}"></div>
+    <div class="field"><label>Known Allergies</label><input type="text" id="pfAllergies" value="${p.allergies || ''}"></div>
+    <div class="field"><label>Emergency Contact</label><input type="tel" id="pfEmergencyContact" value="${p.emergencyContact || ''}" maxlength="10"></div>
+    <button class="modal-submit" onclick="submitProfileSetup()">Save & Continue</button>
+  `;
+  window._profileCallback = callback;
+  document.getElementById('bookModalOverlay').classList.add('open');
+}
+function submitProfileSetup(){
+  const name = document.getElementById('pfName').value.trim();
+  const phone = document.getElementById('pfPhone').value.trim();
+  if(!name || !phone){ alert('Please enter at least your name and phone number.'); return; }
+  const profile = {
+    name, phone,
+    age: document.getElementById('pfAge').value.trim(),
+    gender: document.getElementById('pfGender').value,
+    bloodGroup: document.getElementById('pfBlood').value,
+    address: document.getElementById('pfAddress').value.trim(),
+    allergies: document.getElementById('pfAllergies').value.trim(),
+    emergencyContact: document.getElementById('pfEmergencyContact').value.trim(),
+  };
+  saveProfile(profile);
+  closeModal();
+  if(window._profileCallback) window._profileCallback(profile);
+}
+
 function distKm(lat1, lon1, lat2, lon2){
   const R = 6371;
   const dLat = (lat2-lat1) * Math.PI/180;
@@ -213,30 +218,18 @@ function distKm(lat1, lon1, lat2, lon2){
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
 }
 
-/* ── Init map ── */
 function initMap(lat, lng){
   map = L.map('map').setView([lat, lng], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors', maxZoom: 19
-  }).addTo(map);
-
-  const userIcon = L.divIcon({
-    className: '', html: '<div style="width:18px;height:18px;background:#4ac9e2;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 6px rgba(74,201,226,.3),0 2px 8px rgba(0,0,0,.3);"></div>',
-    iconSize:[18,18], iconAnchor:[9,9]
-  });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors', maxZoom: 19 }).addTo(map);
+  const userIcon = L.divIcon({ className: '', html: '<div style="width:18px;height:18px;background:#4ac9e2;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 6px rgba(74,201,226,.3),0 2px 8px rgba(0,0,0,.3);"></div>', iconSize:[18,18], iconAnchor:[9,9] });
   userMarker = L.marker([lat, lng], {icon:userIcon}).addTo(map).bindPopup('<b>You are here</b>');
 }
 
 function hospIcon(urgent){
   const color = urgent ? '#e23c3c' : '#08222e';
-  return L.divIcon({
-    className:'',
-    html:`<div style="background:${color};color:#fff;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.35);border:2px solid #fff;"><span style="transform:rotate(45deg);font-size:12px;">🏥</span></div>`,
-    iconSize:[26,26], iconAnchor:[13,26]
-  });
+  return L.divIcon({ className:'', html:`<div style="background:${color};color:#fff;width:26px;height:26px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px rgba(0,0,0,.35);border:2px solid #fff;"><span style="transform:rotate(45deg);font-size:12px;">🏥</span></div>`, iconSize:[26,26], iconAnchor:[13,26] });
 }
 
-/* ── Load hospitals ── */
 async function loadHospitals(){
   try{
     let res = await fetch('/static/data/mumbai_hospitals_full.json');
@@ -244,22 +237,17 @@ async function loadHospitals(){
     const data = await res.json();
     hospitals = data.hospitals;
   }catch(e){
-    document.getElementById('hospitalList').innerHTML = '<div class="state-box">Could not load hospital data. Make sure mumbai_hospitals_full.json is in /static/data/.</div>';
+    document.getElementById('hospitalList').innerHTML = '<div class="state-box">Could not load hospital data.</div>';
     return;
   }
   renderList();
 }
 
-/* ── Geolocation ── */
 function locate(){
-  if(!navigator.geolocation){
-    fallbackLocation("Geolocation not supported — showing Mumbai center.");
-    return;
-  }
+  if(!navigator.geolocation){ fallbackLocation("Geolocation not supported — showing Mumbai center."); return; }
   navigator.geolocation.getCurrentPosition(
     pos=>{
-      userLat = pos.coords.latitude;
-      userLng = pos.coords.longitude;
+      userLat = pos.coords.latitude; userLng = pos.coords.longitude;
       document.getElementById('locText').textContent = 'Location detected';
       initMap(userLat, userLng);
       loadHospitals();
@@ -269,32 +257,25 @@ function locate(){
   );
 }
 function fallbackLocation(msg){
-  userLat = 19.0760; userLng = 72.8777; // Mumbai center fallback
+  userLat = 19.0760; userLng = 72.8777;
   document.getElementById('locText').textContent = msg;
   initMap(userLat, userLng);
   loadHospitals();
 }
 
-/* ── Render list + markers ── */
 function renderList(){
   hospitalMarkers.forEach(m=>map.removeLayer(m));
   hospitalMarkers = [];
 
   let list = hospitals.map(h=>({...h, distance: distKm(userLat, userLng, h.latitude, h.longitude)}));
-  if(activeFilter !== 'all'){
-    list = list.filter(h => h.specialty === activeFilter);
-  }
+  if(activeFilter !== 'all') list = list.filter(h => h.specialty === activeFilter);
   list.sort((a,b)=>a.distance-b.distance);
   list = list.slice(0, 25);
 
-  document.getElementById('panelTitle').textContent = `${list.length} hospitals near you`;
-  document.getElementById('panelSub').textContent = 'Sorted by distance from your current location.';
+  document.getElementById('panelHead').innerHTML = `<div><h2 id="panelTitle">${list.length} hospitals near you</h2><p id="panelSub">Sorted by distance from your current location.</p></div>`;
 
   const container = document.getElementById('hospitalList');
-  if(list.length === 0){
-    container.innerHTML = '<div class="state-box">No hospitals found for this filter.</div>';
-    return;
-  }
+  if(list.length === 0){ container.innerHTML = '<div class="state-box">No hospitals found for this filter.</div>'; return; }
 
   container.innerHTML = list.map(h=>{
     const beds = h.bed_categories || [];
@@ -305,20 +286,10 @@ function renderList(){
     return `
     <div class="h-card" data-id="${h.id}" onclick="focusHospital(${h.id})">
       <div class="h-card-top">
-        <div>
-          <div class="h-name">${h.name}</div>
-          <span class="h-specialty">${h.specialty}</span>
-        </div>
-        <div class="h-dist">
-          <div class="h-dist-km">${h.distance.toFixed(1)}</div>
-          <div class="h-dist-label">km away</div>
-        </div>
+        <div><div class="h-name">${h.name}</div><span class="h-specialty">${h.specialty}</span></div>
+        <div class="h-dist"><div class="h-dist-km">${h.distance.toFixed(1)}</div><div class="h-dist-label">km away</div></div>
       </div>
-      <div class="h-meta">
-        <span>⭐ ${h.rating}</span>
-        <span>🛏️ ${h.beds_available}/${h.total_beds} beds free</span>
-        <span>📞 ${h.phone || 'N/A'}</span>
-      </div>
+      <div class="h-meta"><span>⭐ ${h.rating}</span><span>🛏️ ${h.beds_available}/${h.total_beds} beds free</span><span>📞 ${h.phone || 'N/A'}</span></div>
       <div class="h-beds-row">${bedsHtml}</div>
       <div class="h-actions">
         <button class="btn btn-route" onclick="event.stopPropagation(); getRoute(${h.id})">📍 Directions</button>
@@ -348,62 +319,143 @@ function focusHospital(id, scrollList=true){
   if(marker) marker.openPopup();
 }
 
-/* ── Directions (opens Google Maps app/web with live route) ── */
-function getRoute(id){
+/* ── In-app directions (our own map, no Google Maps) ── */
+let routeLine = null;
+let routeStartMarker = null, routeEndMarker = null;
+
+async function getRoute(id){
   const h = findHospById(id);
   if(!h) return;
-  const url = `https://www.google.com/maps/dir/?api=1&origin=${userLat},${userLng}&destination=${h.latitude},${h.longitude}&travelmode=driving`;
-  window.open(url, '_blank');
+
+  document.getElementById('panelHead').innerHTML = `<div><h2>Getting route…</h2><p>Calculating the fastest way to ${h.name}</p></div>`;
+  document.getElementById('hospitalList').innerHTML = '<div class="state-box"><div class="spinner"></div>Loading directions…</div>';
+
+  try{
+    const url = `https://router.project-osrm.org/route/v1/driving/${userLng},${userLat};${h.longitude},${h.latitude}?overview=full&geometries=geojson&steps=true`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(!data.routes || !data.routes.length) throw new Error('No route found');
+    drawRoute(data.routes[0], h);
+  }catch(e){
+    document.getElementById('hospitalList').innerHTML = `<div class="state-box">Couldn't calculate a route right now.<br><br><button class="back-btn" onclick="renderList()">← Back to list</button></div>`;
+  }
 }
 
-/* ── Booking modal ── */
+function drawRoute(route, hospital){
+  if(routeLine) map.removeLayer(routeLine);
+  if(routeStartMarker) map.removeLayer(routeStartMarker);
+  if(routeEndMarker) map.removeLayer(routeEndMarker);
+
+  const coords = route.geometry.coordinates.map(c => [c[1], c[0]]);
+  routeLine = L.polyline(coords, {color:'#4ac9e2', weight:6, opacity:0.9, lineCap:'round'}).addTo(map);
+
+  const startIcon = L.divIcon({className:'', html:'<div style="width:16px;height:16px;background:#4ac9e2;border:3px solid #fff;border-radius:50%;box-shadow:0 0 0 5px rgba(74,201,226,.3);"></div>', iconSize:[16,16], iconAnchor:[8,8]});
+  routeStartMarker = L.marker([userLat, userLng], {icon:startIcon}).addTo(map).bindPopup('You');
+  routeEndMarker = L.marker([hospital.latitude, hospital.longitude], {icon: hospIcon(true)}).addTo(map).bindPopup(hospital.name);
+
+  map.fitBounds(routeLine.getBounds(), {padding:[40,40]});
+
+  const durationMin = Math.round(route.duration / 60);
+  const distanceKm = (route.distance / 1000).toFixed(1);
+  const eta = new Date(Date.now() + route.duration*1000);
+  const etaStr = eta.toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'});
+
+  document.getElementById('panelHead').innerHTML = `<button class="back-btn" onclick="clearRoute(); renderList();">← Back</button>`;
+
+  const stepsHtml = (route.legs[0].steps || []).map(step=>{
+    const instr = formatInstruction(step);
+    const dist = step.distance >= 1000 ? (step.distance/1000).toFixed(1)+' km' : Math.round(step.distance)+' m';
+    return `<li class="step-item"><div class="step-icon">${maneuverIcon(step.maneuver)}</div><div><div class="step-text">${instr}</div><div class="step-dist">${dist}</div></div></li>`;
+  }).join('');
+
+  document.getElementById('hospitalList').innerHTML = `
+    <div class="route-summary">
+      <div class="route-summary-top">
+        <div><div class="route-time">${durationMin} min</div><div class="route-dist">${distanceKm} km · driving</div></div>
+        <div class="route-eta">Arrive by<br><b style="color:#4ac9e2;font-size:14px;">${etaStr}</b></div>
+      </div>
+      <div class="route-hosp-name">🏥 ${hospital.name}</div>
+      <div class="route-actions">
+        <button class="btn btn-call" onclick="window.location.href='tel:${(hospital.phone||'').replace(/\\s/g,'')}'">📞 Call Hospital</button>
+        <button class="btn btn-book" onclick="openBooking(${hospital.id})" ${hospital.beds_available===0?'disabled':''}>🛏️ Book Bed</button>
+      </div>
+    </div>
+    <ul class="steps-list">${stepsHtml}</ul>
+  `;
+}
+
+function clearRoute(){
+  if(routeLine){ map.removeLayer(routeLine); routeLine=null; }
+  if(routeStartMarker){ map.removeLayer(routeStartMarker); routeStartMarker=null; }
+  if(routeEndMarker){ map.removeLayer(routeEndMarker); routeEndMarker=null; }
+}
+
+function maneuverIcon(m){
+  if(!m) return '↑';
+  const type = m.type, mod = m.modifier || '';
+  if(type === 'depart') return '📍';
+  if(type === 'arrive') return '🏁';
+  if(mod.includes('left')) return '↰';
+  if(mod.includes('right')) return '↱';
+  if(mod.includes('straight') || type==='continue') return '↑';
+  if(type === 'roundabout') return '↻';
+  return '↑';
+}
+
+function formatInstruction(step){
+  const m = step.maneuver;
+  const road = step.name ? ` onto <b>${step.name}</b>` : '';
+  if(!m) return 'Continue' + road;
+  if(m.type === 'depart') return 'Start' + road;
+  if(m.type === 'arrive') return 'You have arrived at your destination';
+  const mod = m.modifier || '';
+  let verb = 'Continue';
+  if(mod.includes('left')) verb = 'Turn left';
+  else if(mod.includes('right')) verb = 'Turn right';
+  else if(mod.includes('straight')) verb = 'Go straight';
+  else if(m.type === 'roundabout') verb = 'Enter the roundabout';
+  return verb + road;
+}
+
 function openBooking(id){
   selectedHospital = findHospById(id);
   selectedBedType = null;
-  const beds = selectedHospital.bed_categories || [];
+  ensureProfile((profile) => { renderBookingForm(profile); });
+}
 
+function renderBookingForm(profile){
+  currentProfile = profile;
+  const beds = selectedHospital.bed_categories || [];
   document.getElementById('bookModal').innerHTML = `
     <button class="modal-close" onclick="closeModal()">✕</button>
     <h3>Reserve a Bed</h3>
     <div class="modal-sub">${selectedHospital.name} · ${selectedHospital.distance ? selectedHospital.distance.toFixed(1)+' km away' : ''}</div>
-
-    <div class="field">
-      <label>Select Bed Type</label>
+    <div class="field"><label>Patient (from your profile)</label>
+      <div style="background:#f4f8fa;border:1.5px solid #e6edf0;border-radius:10px;padding:12px 13px;font-size:13px;">
+        <b>${profile.name}</b> · ${profile.age || '—'} yrs · ${profile.gender || '—'} · Blood: ${profile.bloodGroup || 'Unknown'}<br>
+        <span style="color:#5c7580;">📞 ${profile.phone}</span>
+        ${profile.allergies ? `<br><span style="color:#c0392b;font-size:11.5px;">⚠ Allergies: ${profile.allergies}</span>` : ''}
+      </div>
+      <div style="margin-top:6px;"><a href="#" onclick="editProfile(); return false;" style="font-size:11.5px;color:#1e6b7f;font-weight:600;">Edit my profile →</a></div>
+    </div>
+    <div class="field"><label>Select Bed Type</label>
       <div class="bed-options" id="bedOptions">
-        ${beds.map(b=>`
-          <div class="bed-opt ${b.available===0?'disabled':''}" data-type="${b.type}" onclick="selectBed('${b.type}', ${b.available})">
-            <div class="bed-opt-type">${b.type}</div>
-            <div class="bed-opt-price">₹${b.price_per_day_inr}/day</div>
-            <div class="bed-opt-avail">${b.available} available</div>
-          </div>`).join('')}
+        ${beds.map(b=>`<div class="bed-opt ${b.available===0?'disabled':''}" data-type="${b.type}" onclick="selectBed('${b.type}', ${b.available})">
+          <div class="bed-opt-type">${b.type}</div><div class="bed-opt-price">₹${b.price_per_day_inr}/day</div><div class="bed-opt-avail">${b.available} available</div>
+        </div>`).join('')}
       </div>
     </div>
-
-    <div class="field">
-      <label>Patient Full Name</label>
-      <input type="text" id="patName" placeholder="e.g. Neeraj Gupta">
-    </div>
-    <div class="field">
-      <label>Contact Number</label>
-      <input type="tel" id="patPhone" placeholder="10-digit mobile number" maxlength="10">
-    </div>
-    <div class="field">
-      <label>Reason for Admission</label>
-      <select id="patReason">
-        <option value="">Doctor's advice for admission</option>
-        <option>Fever / Infection</option>
-        <option>Accident / Injury</option>
-        <option>Cardiac issue</option>
-        <option>Surgery scheduled</option>
-        <option>Maternity</option>
-        <option>Other</option>
-      </select>
-    </div>
-
+    <div class="field"><label>Reason for Admission</label>
+      <select id="patReason"><option value="">Doctor's advice for admission</option>
+        <option>Fever / Infection</option><option>Accident / Injury</option><option>Cardiac issue</option><option>Surgery scheduled</option><option>Maternity</option><option>Other</option>
+      </select></div>
+    <div class="field"><label>Insurance Provider (if any)</label><input type="text" id="patInsurance" placeholder="e.g. Ayushman Bharat, Star Health"></div>
     <button class="modal-submit" id="confirmBtn" onclick="confirmBooking()" disabled>Select a bed type to continue</button>
   `;
   document.getElementById('bookModalOverlay').classList.add('open');
 }
+
+function editProfile(){ showProfileSetupModal((updated) => renderBookingForm(updated)); }
 
 function selectBed(type, avail){
   if(avail === 0) return;
@@ -415,26 +467,25 @@ function selectBed(type, avail){
   btn.textContent = `Confirm ${type} Reservation`;
 }
 
-function closeModal(){
-  document.getElementById('bookModalOverlay').classList.remove('open');
-}
+function closeModal(){ document.getElementById('bookModalOverlay').classList.remove('open'); }
 
 function confirmBooking(){
-  const name = document.getElementById('patName').value.trim();
-  const phone = document.getElementById('patPhone').value.trim();
-  if(!name || !phone || !selectedBedType){
-    alert('Please fill patient name, phone number, and select a bed type.');
-    return;
-  }
+  const name = currentProfile.name;
+  const phone = currentProfile.phone;
+  const reason = document.getElementById('patReason').value || "Doctor's advice for admission";
+  const insurance = document.getElementById('patInsurance').value.trim() || 'Not provided';
+  const familyNum = currentProfile.emergencyContact || '';
 
-  // Simulate decrementing bed availability locally
+  if(!selectedBedType){ alert('Please select a bed type.'); return; }
+
   const bedCat = selectedHospital.bed_categories.find(b=>b.type===selectedBedType);
-  if(bedCat && bedCat.available > 0){
-    bedCat.available -= 1;
-    selectedHospital.beds_available -= 1;
-  }
+  if(bedCat && bedCat.available > 0){ bedCat.available -= 1; selectedHospital.beds_available -= 1; }
 
   const code = 'PRH-' + Math.random().toString(36).substring(2,7).toUpperCase();
+  const waMessage = `🏥 Hospital Bed Confirmed\n\nPatient: ${name} (${currentProfile.age || '—'} yrs, ${currentProfile.gender || '—'})\nBlood Group: ${currentProfile.bloodGroup || 'Unknown'}\nAllergies: ${currentProfile.allergies || 'None reported'}\nContact: ${phone}\n\nHospital: ${selectedHospital.name}\nReason: ${reason}\nBed Type: ${selectedBedType}\nInsurance: ${insurance}\nBooking Code: ${code}\nHospital Contact: ${selectedHospital.phone || 'N/A'}\nAddress: ${selectedHospital.address}\n\nSent via PR Harvest.`;
+  const waEncoded = encodeURIComponent(waMessage);
+  const waNumber = familyNum ? '91' + familyNum.replace(/\D/g,'') : '';
+  const waUrl = waNumber ? `https://wa.me/${waNumber}?text=${waEncoded}` : `https://wa.me/?text=${waEncoded}`;
 
   document.getElementById('bookModal').innerHTML = `
     <button class="modal-close" onclick="closeModal(); renderList();">✕</button>
@@ -443,30 +494,38 @@ function confirmBooking(){
       <h3>Bed Reserved</h3>
       <div class="modal-sub">${selectedHospital.name}</div>
       <div class="confirm-code">${code}</div>
-      <div class="confirm-note">
-        <b>${selectedBedType}</b> reserved for <b>${name}</b>.<br>
-        Show this code at the hospital's admission desk — your details are already on file, so paperwork is minimal.<br><br>
-        📞 Hospital contact: ${selectedHospital.phone || 'N/A'}<br>
-        📍 ${selectedHospital.address}
-      </div>
-      <button class="modal-submit" onclick="closeModal(); renderList();" style="margin-top:16px;">Done</button>
+      <div class="confirm-note"><b>${selectedBedType}</b> reserved for <b>${name}</b>.<br>Show this code at the admission desk.<br><br>📞 ${selectedHospital.phone || 'N/A'}<br>📍 ${selectedHospital.address}</div>
+      <div id="waStatus" style="margin-top:14px;padding:12px;background:#eafaf0;border-radius:10px;font-size:12.5px;color:#1e8449;display:${familyNum ? 'block' : 'none'};">💬 Sending WhatsApp to family automatically…</div>
+      <button class="modal-submit" onclick="closeModal(); renderList();" style="margin-top:14px;background:#eaf7fa;color:#1e6b7f;">Done</button>
     </div>
   `;
+
+  if(familyNum){
+    fetch('/api/send-whatsapp', {
+      method: 'POST', headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({ phone: familyNum, message: waMessage })
+    })
+    .then(res => res.json())
+    .then(data => { const statusEl = document.getElementById('waStatus'); if(statusEl) statusEl.textContent = '✅ ' + (data.note || 'WhatsApp sent to family automatically.'); })
+    .catch(() => {
+      const statusEl = document.getElementById('waStatus');
+      if(statusEl){ statusEl.style.background = '#fdeceb'; statusEl.style.color = '#c0392b';
+        statusEl.innerHTML = `⚠ Auto-send unavailable. <a href="${waUrl}" target="_blank" style="color:#c0392b;font-weight:700;">Tap here to send manually.</a>`; }
+    });
+  }
 }
 
-/* ── Filters ── */
 document.getElementById('urgencyBar').addEventListener('click', e=>{
   const chip = e.target.closest('.urgency-chip');
   if(!chip) return;
   document.querySelectorAll('.urgency-chip').forEach(c=>c.classList.remove('active'));
   chip.classList.add('active');
   activeFilter = chip.dataset.filter;
+  clearRoute();
   renderList();
 });
 
-document.getElementById('bookModalOverlay').addEventListener('click', e=>{
-  if(e.target.id === 'bookModalOverlay') closeModal();
-});
+document.getElementById('bookModalOverlay').addEventListener('click', e=>{ if(e.target.id === 'bookModalOverlay') closeModal(); });
 
 locate();
 </script>

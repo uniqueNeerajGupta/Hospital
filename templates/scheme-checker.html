@@ -1,0 +1,1777 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>सरकारी स्वास्थ्य योजनाएँ | PR Harvest</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --green:#087f5b;
+    --green-dark:#075b43;
+    --green-light:#e8f7f1;
+    --blue:#075985;
+    --blue-light:#e8f4fb;
+    --orange:#e67e22;
+    --orange-light:#fff3e6;
+    --red:#c0392b;
+    --text:#17201d;
+    --muted:#66736e;
+    --bg:#f5f8f6;
+    --white:#ffffff;
+    --border:#dce6e1;
+    --shadow:0 8px 28px rgba(20,60,45,.08);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family:"Noto Sans Devanagari","Inter",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+button,
+a{
+    font-family:inherit;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    background:#073b31;
+    color:white;
+    min-height:68px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:12px 5%;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.brand-icon{
+    width:42px;
+    height:42px;
+    border-radius:12px;
+    background:#fff;
+    color:var(--green);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:23px;
+}
+
+.brand strong{
+    display:block;
+    font-size:18px;
+}
+
+.brand span{
+    display:block;
+    font-size:12px;
+    opacity:.75;
+}
+
+.scheme-count{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.2);
+    padding:8px 13px;
+    border-radius:30px;
+    font-size:13px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    background:
+        linear-gradient(135deg,#073b31,#087f5b);
+    color:white;
+    padding:42px 5% 50px;
+}
+
+.hero-inner{
+    max-width:1100px;
+    margin:auto;
+}
+
+.hero-label{
+    display:inline-flex;
+    align-items:center;
+    gap:7px;
+    background:rgba(255,255,255,.12);
+    padding:7px 12px;
+    border-radius:30px;
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-size:clamp(28px,5vw,48px);
+    line-height:1.18;
+    max-width:800px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    max-width:720px;
+    font-size:16px;
+    opacity:.9;
+}
+
+/* ================= QUICK INFO ================= */
+
+.quick-info{
+    max-width:1100px;
+    margin:-25px auto 0;
+    padding:0 5%;
+    position:relative;
+    z-index:5;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    background:white;
+    border-radius:18px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+}
+
+.quick-item{
+    padding:18px;
+    text-align:center;
+    border-right:1px solid var(--border);
+}
+
+.quick-item:last-child{
+    border-right:none;
+}
+
+.quick-icon{
+    font-size:25px;
+    margin-bottom:3px;
+}
+
+.quick-item strong{
+    display:block;
+    font-size:18px;
+    color:var(--green-dark);
+}
+
+.quick-item span{
+    font-size:12px;
+    color:var(--muted);
+}
+
+/* ================= MAIN ================= */
+
+.container{
+    max-width:1100px;
+    margin:42px auto;
+    padding:0 5%;
+}
+
+.section{
+    margin-bottom:45px;
+}
+
+.section-heading{
+    margin-bottom:20px;
+}
+
+.section-heading h2{
+    font-size:25px;
+    margin-bottom:3px;
+}
+
+.section-heading p{
+    color:var(--muted);
+    font-size:14px;
+}
+
+/* ================= SCHEME CARD ================= */
+
+.scheme-card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:20px;
+    margin-bottom:18px;
+    overflow:hidden;
+    box-shadow:0 4px 16px rgba(20,60,45,.04);
+    transition:.2s ease;
+}
+
+.scheme-card:hover{
+    transform:translateY(-2px);
+    box-shadow:var(--shadow);
+}
+
+.scheme-top{
+    display:flex;
+    gap:18px;
+    padding:22px;
+}
+
+.scheme-icon{
+    flex:0 0 64px;
+    width:64px;
+    height:64px;
+    border-radius:17px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    background:var(--green-light);
+}
+
+.scheme-card.blue .scheme-icon{
+    background:var(--blue-light);
+}
+
+.scheme-card.orange .scheme-icon{
+    background:var(--orange-light);
+}
+
+.scheme-content{
+    flex:1;
+}
+
+.scheme-content h3{
+    font-size:20px;
+    line-height:1.35;
+    margin-bottom:4px;
+}
+
+.scheme-subtitle{
+    font-size:13px;
+    color:var(--muted);
+    margin-bottom:12px;
+}
+
+/* BIG BENEFIT */
+
+.benefit{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:#f0faf6;
+    border:1px solid #ccebdd;
+    color:var(--green-dark);
+    padding:8px 12px;
+    border-radius:10px;
+    font-weight:800;
+    font-size:18px;
+}
+
+.benefit small{
+    font-size:11px;
+    font-weight:600;
+}
+
+/* SIMPLE INFO */
+
+.simple-info{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    padding:0 22px 20px;
+}
+
+.info-box{
+    background:#f7faf8;
+    border-radius:12px;
+    padding:12px;
+}
+
+.info-box .info-title{
+    font-size:12px;
+    color:var(--muted);
+    margin-bottom:3px;
+}
+
+.info-box strong{
+    font-size:14px;
+}
+
+/* ACTIONS */
+
+.scheme-actions{
+    padding:15px 22px 20px;
+    border-top:1px solid #edf1ef;
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    min-height:48px;
+    border-radius:12px;
+    padding:11px 17px;
+    font-size:14px;
+    font-weight:700;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+}
+
+.btn-primary{
+    background:var(--green);
+    color:white;
+    flex:1;
+}
+
+.btn-primary:hover{
+    background:var(--green-dark);
+}
+
+.btn-secondary{
+    background:#eef3f1;
+    color:#23443a;
+}
+
+.btn-secondary:hover{
+    background:#e1eae6;
+}
+
+/* ================= VOICE ================= */
+
+.voice-card{
+    background:linear-gradient(135deg,#fff7e9,#fff);
+    border:1px solid #f2dfbd;
+    border-radius:20px;
+    padding:22px;
+    display:flex;
+    align-items:center;
+    gap:18px;
+    margin-bottom:35px;
+}
+
+.voice-icon{
+    width:60px;
+    height:60px;
+    flex-shrink:0;
+    border-radius:50%;
+    background:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.voice-card h3{
+    font-size:18px;
+}
+
+.voice-card p{
+    color:var(--muted);
+    font-size:13px;
+}
+
+.voice-btn{
+    margin-left:auto;
+    background:#e67e22;
+    color:white;
+}
+
+/* ================= QUIZ ================= */
+
+.quiz-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,30,23,.7);
+    backdrop-filter:blur(5px);
+    z-index:2000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+}
+
+.quiz-overlay.active{
+    display:flex;
+}
+
+.quiz{
+    width:100%;
+    max-width:600px;
+    max-height:92vh;
+    overflow-y:auto;
+    background:white;
+    border-radius:24px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.quiz-header{
+    background:#073b31;
+    color:white;
+    padding:20px;
+    position:sticky;
+    top:0;
+    z-index:2;
+}
+
+.quiz-header-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.quiz-header h2{
+    font-size:20px;
+}
+
+.close-btn{
+    width:40px;
+    height:40px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.12);
+    color:white;
+    font-size:22px;
+    cursor:pointer;
+}
+
+.progress{
+    margin-top:14px;
+    height:7px;
+    background:rgba(255,255,255,.15);
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    width:25%;
+    background:#6ee7b7;
+    transition:.3s;
+}
+
+.quiz-body{
+    padding:25px;
+}
+
+.question-number{
+    color:var(--green);
+    font-weight:800;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.question{
+    font-size:23px;
+    line-height:1.4;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.question-help{
+    background:#f5f8f6;
+    padding:12px;
+    border-radius:12px;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:18px;
+}
+
+.options{
+    display:grid;
+    gap:11px;
+}
+
+.option{
+    width:100%;
+    min-height:58px;
+    padding:13px 15px;
+    border:2px solid var(--border);
+    background:white;
+    border-radius:14px;
+    text-align:left;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.option:hover{
+    border-color:var(--green);
+    background:var(--green-light);
+}
+
+.option.selected{
+    border-color:var(--green);
+    background:var(--green-light);
+}
+
+.quiz-footer{
+    display:flex;
+    gap:10px;
+    padding:18px 25px 25px;
+}
+
+.quiz-footer button{
+    flex:1;
+}
+
+/* ================= RESULT ================= */
+
+.result{
+    display:none;
+}
+
+.result.active{
+    display:block;
+}
+
+.result-icon{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    background:var(--green-light);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+    margin:0 auto 15px;
+}
+
+.result h3{
+    text-align:center;
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.result-message{
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+.next-step{
+    background:#f6faf8;
+    border:1px solid var(--border);
+    border-radius:15px;
+    padding:17px;
+    margin-bottom:15px;
+}
+
+.next-step strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.documents{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-top:8px;
+}
+
+.document{
+    background:white;
+    border:1px solid var(--border);
+    padding:6px 10px;
+    border-radius:8px;
+    font-size:12px;
+}
+
+/* ================= NOTE ================= */
+
+.note{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:18px;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.note strong{
+    color:var(--text);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#073b31;
+    color:white;
+    padding:25px 5%;
+    text-align:center;
+    font-size:12px;
+    opacity:.95;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:700px){
+
+    .navbar{
+        padding:10px 15px;
+    }
+
+    .brand-icon{
+        width:38px;
+        height:38px;
+    }
+
+    .scheme-count{
+        font-size:11px;
+        padding:6px 9px;
+    }
+
+    .hero{
+        padding:30px 18px 45px;
+    }
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .quick-info{
+        padding:0 12px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-item{
+        border-right:none;
+        border-bottom:1px solid var(--border);
+        padding:12px;
+    }
+
+    .quick-item:last-child{
+        border-bottom:none;
+    }
+
+    .container{
+        padding:0 13px;
+        margin-top:30px;
+    }
+
+    .section-heading h2{
+        font-size:22px;
+    }
+
+    .scheme-top{
+        padding:18px;
+    }
+
+    .scheme-icon{
+        width:50px;
+        height:50px;
+        flex-basis:50px;
+        font-size:25px;
+        border-radius:14px;
+    }
+
+    .scheme-content h3{
+        font-size:17px;
+    }
+
+    .benefit{
+        font-size:17px;
+    }
+
+    .simple-info{
+        grid-template-columns:1fr;
+        padding:0 18px 16px;
+    }
+
+    .scheme-actions{
+        padding:14px 18px 18px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .voice-card{
+        align-items:flex-start;
+        flex-wrap:wrap;
+    }
+
+    .voice-btn{
+        width:100%;
+        margin-left:0;
+    }
+
+    .quiz-body{
+        padding:20px;
+    }
+
+    .question{
+        font-size:20px;
+    }
+
+    .quiz-footer{
+        padding:15px 20px 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="brand">
+        <div class="brand-icon">🏥</div>
+
+        <div>
+            <strong>PR Harvest</strong>
+            <span>सरकारी स्वास्थ्य योजनाएँ</span>
+        </div>
+    </div>
+
+    <div class="scheme-count">
+        6 योजनाएँ
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-inner">
+
+        <div class="hero-label">
+            ✓ सरकारी जानकारी · 2026
+        </div>
+
+        <h1>
+            आपके परिवार के लिए कौन-सी सरकारी स्वास्थ्य योजना है?
+        </h1>
+
+        <p>
+            आसान भाषा में जानिए — सरकार से आपको क्या मदद मिल सकती है,
+            कौन इसका लाभ ले सकता है और आवेदन कहाँ करना है।
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- QUICK INFO -->
+<div class="quick-info">
+
+    <div class="quick-grid">
+
+        <div class="quick-item">
+            <div class="quick-icon">📋</div>
+            <strong>6</strong>
+            <span>मुख्य योजनाएँ</span>
+        </div>
+
+        <div class="quick-item">
+            <div class="quick-icon">₹</div>
+            <strong>₹0</strong>
+            <span>जानकारी देखने का खर्च</span>
+        </div>
+
+        <div class="quick-item">
+            <div class="quick-icon">⏱️</div>
+            <strong>2 मिनट</strong>
+            <span>योजना समझने में</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<main class="container">
+
+
+<!-- VOICE -->
+<div class="voice-card">
+
+    <div class="voice-icon">🔊</div>
+
+    <div>
+        <h3>पढ़ना मुश्किल लग रहा है?</h3>
+
+        <p>
+            आप बोलकर भी योजना के बारे में पूछ सकते हैं।
+        </p>
+    </div>
+
+    <button class="btn voice-btn" onclick="startVoiceAgent()">
+        🎙️ बोलकर पूछें
+    </button>
+
+</div>
+
+
+<!-- SECTION 1 -->
+<section class="section">
+
+    <div class="section-heading">
+        <h2>🏥 इलाज और दवाइयों में मदद</h2>
+
+        <p>
+            अस्पताल का इलाज और सस्ती दवाइयों के लिए सरकारी योजनाएँ
+        </p>
+    </div>
+
+
+    <!-- AYUSHMAN -->
+    <div class="scheme-card">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                🏥
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>आयुष्मान भारत – PM-JAY</h3>
+
+                <div class="scheme-subtitle">
+                    गरीब और जरूरतमंद परिवारों के लिए स्वास्थ्य कवर
+                </div>
+
+                <div class="benefit">
+                    ₹5 लाख
+                    <small>तक का इलाज / साल</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">आपको क्या मिलेगा?</div>
+                <strong>अस्पताल में इलाज का खर्च</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">कैसे मिलेगा?</div>
+                <strong>कई अस्पतालों में कैशलेस इलाज</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">किसके लिए?</div>
+                <strong>पात्र परिवार</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <button class="btn btn-primary"
+                    onclick="toggleQuiz('ayushman')">
+                ✓ क्या मैं ले सकता हूँ?
+            </button>
+
+            <a class="btn btn-secondary"
+               href="https://beneficiary.nha.gov.in/"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAN AUSHADHI -->
+    <div class="scheme-card blue">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                💊
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>प्रधानमंत्री जन औषधि योजना</h3>
+
+                <div class="scheme-subtitle">
+                    कम कीमत में जरूरी जेनेरिक दवाइयाँ
+                </div>
+
+                <div class="benefit">
+                    50–90% तक बचत
+                    <small>दवाइयों पर</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">आपको क्या मिलेगा?</div>
+                <strong>सस्ती जेनेरिक दवाइयाँ</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">कौन ले सकता है?</div>
+                <strong>जरूरतमंद लोग</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">कहाँ?</div>
+                <strong>जन औषधि केंद्र</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <a class="btn btn-primary"
+               href="https://janaushadhi.gov.in/"
+               target="_blank">
+                📍 केंद्र खोजें
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://janaushadhi.gov.in/"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MATERNITY -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>🤱 माँ और बच्चे के लिए मदद</h2>
+
+        <p>
+            गर्भवती महिलाओं और नवजात बच्चों के लिए सहायता
+        </p>
+
+    </div>
+
+
+    <!-- PMMVY -->
+    <div class="scheme-card orange">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                🤱
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>प्रधानमंत्री मातृ वंदना योजना</h3>
+
+                <div class="scheme-subtitle">
+                    गर्भवती और स्तनपान कराने वाली महिलाओं के लिए सहायता
+                </div>
+
+                <div class="benefit">
+                    ₹11,000
+                    <small>तक सहायता</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">क्या मिलेगा?</div>
+                <strong>आर्थिक सहायता</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">किसके लिए?</div>
+                <strong>पात्र गर्भवती महिलाएँ</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">कहाँ पूछें?</div>
+                <strong>आंगनवाड़ी केंद्र</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <a class="btn btn-primary"
+               href="https://pmmvy.wcd.gov.in/"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+            <a class="btn btn-secondary"
+               href="https://pmmvy.wcd.gov.in/"
+               target="_blank">
+                📍 आवेदन की जानकारी
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- JSY -->
+    <div class="scheme-card">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                👶
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>जननी सुरक्षा योजना</h3>
+
+                <div class="scheme-subtitle">
+                    संस्थागत प्रसव को बढ़ावा देने के लिए सहायता
+                </div>
+
+                <div class="benefit">
+                    ₹1,000–₹1,400
+                    <small>तक सहायता</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">क्या मिलेगा?</div>
+                <strong>प्रसव के लिए आर्थिक सहायता</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">किसके लिए?</div>
+                <strong>पात्र गर्भवती महिलाएँ</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">कहाँ पूछें?</div>
+                <strong>सरकारी स्वास्थ्य केंद्र</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <a class="btn btn-primary"
+               href="https://nhm.gov.in/index1.php?lang=1&level=3&sublinkid=841&lid=309"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- INSURANCE -->
+<section class="section">
+
+    <div class="section-heading">
+
+        <h2>🛡️ कम पैसे में बीमा</h2>
+
+        <p>
+            बैंक खाते से जुड़ी कम कीमत वाली बीमा योजनाएँ
+        </p>
+
+    </div>
+
+
+    <!-- PMSBY -->
+    <div class="scheme-card blue">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                🛡️
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>प्रधानमंत्री सुरक्षा बीमा योजना</h3>
+
+                <div class="scheme-subtitle">
+                    दुर्घटना बीमा
+                </div>
+
+                <div class="benefit">
+                    ₹2 लाख
+                    <small>तक बीमा</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">उम्र</div>
+                <strong>18–70 साल</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">सालाना खर्च</div>
+                <strong>₹20 / साल</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">जरूरी</div>
+                <strong>बैंक खाता</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <a class="btn btn-primary"
+               href="https://www.jansuraksha.gov.in/"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- PMJJBY -->
+    <div class="scheme-card">
+
+        <div class="scheme-top">
+
+            <div class="scheme-icon">
+                👨‍👩‍👧‍👦
+            </div>
+
+            <div class="scheme-content">
+
+                <h3>प्रधानमंत्री जीवन ज्योति बीमा योजना</h3>
+
+                <div class="scheme-subtitle">
+                    जीवन बीमा योजना
+                </div>
+
+                <div class="benefit">
+                    ₹2 लाख
+                    <small>तक जीवन बीमा</small>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="simple-info">
+
+            <div class="info-box">
+                <div class="info-title">उम्र</div>
+                <strong>18–50 साल</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">सालाना खर्च</div>
+                <strong>₹436 / साल</strong>
+            </div>
+
+            <div class="info-box">
+                <div class="info-title">जरूरी</div>
+                <strong>बैंक खाता</strong>
+            </div>
+
+        </div>
+
+
+        <div class="scheme-actions">
+
+            <a class="btn btn-primary"
+               href="https://www.jansuraksha.gov.in/"
+               target="_blank">
+                🌐 सरकारी वेबसाइट
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- IMPORTANT NOTE -->
+
+<div class="note">
+
+    <strong>⚠️ जरूरी बात:</strong>
+
+    योजना की पात्रता, राशि और नियम समय के साथ बदल सकते हैं।
+    ऊपर दी गई जानकारी केवल आसान समझ के लिए है।
+    आवेदन या लाभ लेने से पहले संबंधित
+    <strong>सरकारी वेबसाइट, अस्पताल, बैंक, आंगनवाड़ी या संबंधित अधिकारी</strong>
+    से पुष्टि करें।
+
+</div>
+
+</main>
+
+
+<footer>
+    © 2026 PR Harvest · सरकारी स्वास्थ्य योजनाओं की आसान जानकारी
+</footer>
+
+
+<!-- ================= QUIZ ================= -->
+
+<div class="quiz-overlay" id="quizOverlay">
+
+    <div class="quiz">
+
+        <div class="quiz-header">
+
+            <div class="quiz-header-row">
+
+                <h2>🏥 क्या आप PM-JAY के लिए पात्र हो सकते हैं?</h2>
+
+                <button class="close-btn"
+                        onclick="closeQuiz()">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar"
+                     id="progressBar"></div>
+            </div>
+
+        </div>
+
+
+        <div class="quiz-body">
+
+            <!-- QUESTIONS -->
+
+            <div id="questionArea">
+
+                <div class="question-number"
+                     id="questionNumber">
+                </div>
+
+                <div class="question"
+                     id="questionText">
+                </div>
+
+                <div class="question-help"
+                     id="questionHelp">
+                </div>
+
+                <div class="options"
+                     id="options">
+                </div>
+
+            </div>
+
+
+            <!-- RESULT -->
+
+            <div class="result"
+                 id="resultArea">
+
+                <div class="result-icon">
+                    🎉
+                </div>
+
+                <h3 id="resultTitle">
+                    आपकी जानकारी के अनुसार
+                </h3>
+
+                <p class="result-message"
+                   id="resultMessage">
+                </p>
+
+                <div class="next-step">
+
+                    <strong>👉 अब क्या करें?</strong>
+
+                    सरकारी beneficiary portal पर जाकर
+                    अपना नाम और पात्रता पक्की करें।
+
+                    <div class="scheme-actions"
+                         style="padding:12px 0 0;border:0;">
+
+                        <a class="btn btn-primary"
+                           href="https://beneficiary.nha.gov.in/"
+                           target="_blank">
+                            🌐 सरकारी पोर्टल खोलें
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="next-step">
+
+                    <strong>📄 ये चीजें पास रखें</strong>
+
+                    <div class="documents">
+
+                        <span class="document">🪪 आधार कार्ड</span>
+
+                        <span class="document">📋 राशन कार्ड</span>
+
+                        <span class="document">📱 मोबाइल नंबर</span>
+
+                    </div>
+
+                </div>
+
+                <div class="note">
+
+                    <strong>ध्यान दें:</strong>
+                    यह केवल एक आसान प्रारंभिक जांच है।
+                    इससे पात्रता की पक्की पुष्टि नहीं होती।
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="quiz-footer"
+             id="quizFooter">
+
+            <button class="btn btn-secondary"
+                    id="backBtn"
+                    onclick="previousQuestion()">
+                ← पीछे
+            </button>
+
+            <button class="btn btn-primary"
+                    id="nextBtn"
+                    onclick="nextQuestion()">
+                आगे →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="/static/js/voice-agent.js"></script>
+
+<script>
+
+/* ================= QUIZ DATA ================= */
+
+const questions = [
+
+    {
+        text:"आपकी उम्र कितनी है?",
+        help:"अगर आपकी उम्र 70 साल या उससे ज्यादा है, तो हाँ चुनें।",
+        options:[
+            ["हाँ, 70 साल या ज्यादा","yes"],
+            ["नहीं, 70 साल से कम","no"]
+        ]
+    },
+
+    {
+        text:"आपका घर कैसा है?",
+        help:"कच्चा घर मतलब मिट्टी, लकड़ी, टिन आदि से बना साधारण घर।",
+        options:[
+            ["कच्चा घर 🏠","kutcha"],
+            ["पक्का घर 🏡","pucca"],
+            ["पता नहीं 🤔","unsure"]
+        ]
+    },
+
+    {
+        text:"क्या आप इनमें से कोई काम करते हैं?",
+        help:"जैसे मजदूरी, राजमिस्त्री, प्लंबर, पेंटर, रिक्शा/ठेला, घरेलू काम आदि।",
+        options:[
+            ["हाँ, ऐसा काम करता/करती हूँ","yes"],
+            ["नहीं","no"]
+        ]
+    },
+
+    {
+        text:"क्या इनमें से कोई बात आप पर लागू होती है?",
+        help:"अगर इनमें से कुछ भी लागू नहीं होता, तो 'इनमें से कोई नहीं' चुनें।",
+        options:[
+            ["मैं Income Tax देता/देती हूँ","income"],
+            ["मेरी स्थायी सरकारी नौकरी है","govt"],
+            ["मेरे पास मोटर वाला वाहन है","vehicle"],
+            ["मेरे पास 5 एकड़ से ज्यादा जमीन है","land"],
+            ["इनमें से कोई नहीं","none"]
+        ]
+    }
+
+];
+
+let currentStep = 0;
+
+let answers = {
+    age70:null,
+    house:null,
+    occupation:null,
+    exclusion:null
+};
+
+
+/* ================= OPEN ================= */
+
+function toggleQuiz(type){
+
+    if(type !== "ayushman") return;
+
+    currentStep = 0;
+
+    answers = {
+        age70:null,
+        house:null,
+        occupation:null,
+        exclusion:null
+    };
+
+    document.getElementById("quizOverlay")
+        .classList.add("active");
+
+    document.getElementById("questionArea")
+        .style.display="block";
+
+    document.getElementById("resultArea")
+        .classList.remove("active");
+
+    document.getElementById("quizFooter")
+        .style.display="flex";
+
+    renderQuestion();
+}
+
+
+/* ================= CLOSE ================= */
+
+function closeQuiz(){
+
+    document.getElementById("quizOverlay")
+        .classList.remove("active");
+
+}
+
+
+/* ================= RENDER ================= */
+
+function renderQuestion(){
+
+    const q = questions[currentStep];
+
+    document.getElementById("questionNumber")
+        .textContent =
+        `सवाल ${currentStep+1} / ${questions.length}`;
+
+    document.getElementById("questionText")
+        .textContent = q.text;
+
+    document.getElementById("questionHelp")
+        .textContent = q.help;
+
+    const options =
+        document.getElementById("options");
+
+    options.innerHTML="";
+
+    q.options.forEach(option => {
+
+        const btn = document.createElement("button");
+
+        btn.className="option";
+
+        btn.textContent=option[0];
+
+        btn.onclick=()=>selectOption(option[1]);
+
+        options.appendChild(btn);
+
+    });
+
+
+    updateProgress();
+
+    document.getElementById("backBtn")
+        .style.visibility =
+        currentStep === 0 ? "hidden" : "visible";
+
+}
+
+
+/* ================= SELECT ================= */
+
+function selectOption(value){
+
+    const map = [
+        "age70",
+        "house",
+        "occupation",
+        "exclusion"
+    ];
+
+    answers[map[currentStep]] = value;
+
+    document
+        .querySelectorAll(".option")
+        .forEach(btn => {
+
+            btn.classList.remove("selected");
+
+            if(btn.textContent.includes(
+                getOptionLabel(value)
+            )){
+                btn.classList.add("selected");
+            }
+
+        });
+
+}
+
+
+/* ================= LABEL ================= */
+
+function getOptionLabel(value){
+
+    const q = questions[currentStep];
+
+    const found = q.options.find(
+        item => item[1] === value
+    );
+
+    return found ? found[0] : "";
+
+}
+
+
+/* ================= NEXT ================= */
+
+function nextQuestion(){
+
+    const map = [
+        "age70",
+        "house",
+        "occupation",
+        "exclusion"
+    ];
+
+    if(!answers[map[currentStep]]){
+
+        alert("कृपया पहले एक जवाब चुनें।");
+
+        return;
+    }
+
+    if(currentStep < questions.length-1){
+
+        currentStep++;
+
+        renderQuestion();
+
+    }else{
+
+        showResult();
+
+    }
+
+}
+
+
+/* ================= BACK ================= */
+
+function previousQuestion(){
+
+    if(currentStep > 0){
+
+        currentStep--;
+
+        renderQuestion();
+
+    }
+
+}
+
+
+/* ================= PROGRESS ================= */
+
+function updateProgress(){
+
+    const percentage =
+        ((currentStep+1) / questions.length) * 100;
+
+    document.getElementById("progressBar")
+        .style.width = percentage+"%";
+
+}
+
+
+/* ================= RESULT ================= */
+
+function showResult(){
+
+    const exclusions =
+        answers.exclusion !== "none";
+
+    let title="";
+    let message="";
+    let icon="ℹ️";
+
+    if(
+        answers.age70 === "yes" &&
+        !exclusions
+    ){
+
+        icon="🟢";
+
+        title="आप PM-JAY के लिए पात्र हो सकते हैं";
+
+        message=
+        "आपकी दी गई जानकारी के आधार पर आपको योजना के बारे में जरूर जांच करनी चाहिए।";
+
+    }
+
+    else if(
+        (
+            answers.house === "kutcha" ||
+            answers.occupation === "yes"
+        ) &&
+        !exclusions
+    ){
+
+        icon="🟢";
+
+        title="आप पात्र हो सकते हैं";
+
+        message=
+        "आपकी जानकारी के आधार पर PM-JAY की पात्रता जांचना आपके लिए उपयोगी रहेगा।";
+
+    }
+
+    else if(exclusions){
+
+        icon="🟠";
+
+        title="थोड़ा और जांच जरूरी है";
+
+        message=
+        "आपके जवाब में ऐसी जानकारी है जिसकी वजह से सामान्य पात्रता अलग हो सकती है। सरकारी पोर्टल पर पक्का पता करें।";
+
+    }
+
+    else{
+
+        icon="🔎";
+
+        title="सरकारी पोर्टल पर जांच करें";
+
+        message=
+        "सिर्फ इन सवालों से आपकी पात्रता पक्की नहीं बताई जा सकती। सरकारी beneficiary portal पर अपना नाम जरूर जांचें।";
+
+    }
+
+
+    document.querySelector(".result-icon")
+        .textContent=icon;
+
+    document.getElementById("resultTitle")
+        .textContent=title;
+
+    document.getElementById("resultMessage")
+        .textContent=message;
+
+    document.getElementById("questionArea")
+        .style.display="none";
+
+    document.getElementById("quizFooter")
+        .style.display="none";
+
+    document.getElementById("resultArea")
+        .classList.add("active");
+
+}
+
+
+/* ================= VOICE ================= */
+
+function startVoiceAgent(){
+
+    if(
+        typeof window.startVoiceAgent === "function"
+    ){
+        window.startVoiceAgent();
+    }
+
+}
+
+</script>
+
+</body>
+</html>

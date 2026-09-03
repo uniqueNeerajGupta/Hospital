@@ -1,0 +1,1381 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Government Health Activities – Shivir Sandesh</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f3f7f9;
+    color:#0e2430;
+    min-height:100vh;
+}
+
+/* =========================
+   TOP NAV
+========================= */
+
+.topbar{
+    height:64px;
+    background:#08222e;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    padding:0 5%;
+    gap:14px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.06);
+}
+
+.topbar a{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    text-decoration:none;
+    font-size:21px;
+    background:rgba(255,255,255,.07);
+    transition:.2s;
+}
+
+.topbar a:hover{
+    background:rgba(255,255,255,.14);
+}
+
+.topbar h1{
+    font-family:'Manrope',sans-serif;
+    font-size:15px;
+    font-weight:800;
+}
+
+.topbar-sub{
+    font-size:10.5px;
+    color:rgba(255,255,255,.5);
+    margin-top:2px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero-band{
+    background:
+        radial-gradient(circle at 90% 20%,rgba(74,201,226,.22),transparent 30%),
+        linear-gradient(135deg,#08222e 0%,#0b3040 55%,#12465a 100%);
+    color:#fff;
+    padding:58px 5% 70px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-band::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border:1px solid rgba(74,201,226,.12);
+    border-radius:50%;
+    right:-130px;
+    top:-180px;
+}
+
+.hero-band::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+    right:30px;
+    bottom:-190px;
+}
+
+.hero-inner{
+    max-width:1180px;
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:760px;
+}
+
+.hero-eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 13px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+    margin-bottom:18px;
+}
+
+.hero-dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#4ac9e2;
+    box-shadow:0 0 12px rgba(74,201,226,.8);
+}
+
+.hero-band h2{
+    font-family:'Manrope',sans-serif;
+    font-size:clamp(28px,4vw,46px);
+    font-weight:800;
+    line-height:1.15;
+    letter-spacing:-1px;
+    margin-bottom:16px;
+}
+
+.hero-band h2 span{
+    color:#4ac9e2;
+}
+
+.hero-band p{
+    max-width:680px;
+    font-size:14px;
+    line-height:1.8;
+    color:rgba(255,255,255,.68);
+}
+
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats{
+    display:flex;
+    gap:12px;
+    margin-top:30px;
+    flex-wrap:wrap;
+}
+
+.hero-stat{
+    min-width:145px;
+    padding:13px 16px;
+    border-radius:12px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.11);
+}
+
+.hero-stat strong{
+    display:block;
+    font-family:'Manrope',sans-serif;
+    color:#4ac9e2;
+    font-size:20px;
+    font-weight:800;
+}
+
+.hero-stat span{
+    display:block;
+    font-size:10px;
+    color:rgba(255,255,255,.55);
+    margin-top:3px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.wrap{
+    width:min(1180px,90%);
+    margin:0 auto;
+    padding-bottom:70px;
+}
+
+/* =========================
+   QUICK ACTION
+========================= */
+
+.local-camp-link{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+
+    margin-top:-25px;
+    position:relative;
+    z-index:5;
+
+    background:#fff;
+    color:#0e2430;
+    text-decoration:none;
+
+    padding:18px 22px;
+    border-radius:16px;
+
+    box-shadow:0 12px 35px rgba(8,34,46,.10);
+
+    font-size:13px;
+    font-weight:800;
+
+    border:1px solid #e5eef1;
+
+    transition:.2s;
+}
+
+.local-camp-link:hover{
+    transform:translateY(-2px);
+    border-color:#4ac9e2;
+}
+
+.local-camp-link span{
+    color:#1e6b7f;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:20px;
+
+    margin:38px 0 18px;
+}
+
+.section-title{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    font-family:'Manrope',sans-serif;
+    font-size:20px;
+    font-weight:800;
+}
+
+.section-title::before{
+    content:"";
+    width:7px;
+    height:27px;
+    border-radius:10px;
+    background:#4ac9e2;
+}
+
+.section-sub{
+    color:#8fa3ab;
+    font-size:11px;
+}
+
+/* =========================
+   PROGRAM GRID
+========================= */
+
+.program-grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:18px;
+}
+
+/* =========================
+   PROGRAM CARD
+========================= */
+
+.program-card{
+    background:#fff;
+    border:1px solid #e4edf0;
+    border-radius:18px;
+    padding:23px;
+    box-shadow:0 5px 20px rgba(8,34,46,.055);
+
+    position:relative;
+    overflow:hidden;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.program-card::after{
+    content:"";
+    position:absolute;
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#eaf7fa;
+    right:-55px;
+    top:-55px;
+    opacity:.65;
+}
+
+.program-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 32px rgba(8,34,46,.10);
+    border-color:#d1e8ed;
+}
+
+.program-top{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    position:relative;
+    z-index:2;
+}
+
+.program-icon{
+    width:50px;
+    height:50px;
+    flex-shrink:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:14px;
+    background:#e8f7fa;
+
+    font-size:23px;
+}
+
+.program-name{
+    font-family:'Manrope',sans-serif;
+    font-size:16px;
+    line-height:1.35;
+    font-weight:800;
+    color:#0e2430;
+}
+
+.program-tagline{
+    margin-top:4px;
+    color:#8fa3ab;
+    font-size:10.5px;
+}
+
+.program-desc{
+    margin:18px 0 17px;
+
+    color:#526d78;
+    font-size:12.5px;
+    line-height:1.75;
+}
+
+.program-facts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin-bottom:20px;
+}
+
+.fact-tag{
+    padding:6px 10px;
+    border-radius:8px;
+
+    background:#f3f7f9;
+    color:#496570;
+
+    font-size:10px;
+    font-weight:700;
+
+    border:1px solid #edf2f4;
+}
+
+.subscribe-btn{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    gap:8px;
+
+    padding:12px 14px;
+
+    border:none;
+    border-radius:11px;
+
+    background:#08222e;
+    color:#fff;
+
+    font-size:12px;
+    font-weight:800;
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.subscribe-btn:hover{
+    background:#123c4d;
+    transform:translateY(-1px);
+}
+
+/* =========================
+   BOTTOM INFO
+========================= */
+
+.info-strip{
+    margin-top:25px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+}
+
+.info-box{
+    background:#fff;
+    border:1px solid #e5eef1;
+    border-radius:13px;
+    padding:15px;
+}
+
+.info-box strong{
+    display:block;
+    font-family:'Manrope',sans-serif;
+    font-size:12px;
+    margin-bottom:4px;
+}
+
+.info-box span{
+    display:block;
+    color:#8fa3ab;
+    font-size:10.5px;
+    line-height:1.5;
+}
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer-box{
+    margin-top:22px;
+
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+
+    background:#fff6e7;
+    color:#805a12;
+
+    border:1px solid #f4dfb7;
+    border-radius:13px;
+
+    padding:15px 17px;
+
+    font-size:10.5px;
+    line-height:1.7;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal-overlay{
+    position:fixed;
+    inset:0;
+
+    background:rgba(5,20,28,.62);
+    backdrop-filter:blur(5px);
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    z-index:2000;
+
+    padding:20px;
+}
+
+.modal-overlay.open{
+    display:flex;
+}
+
+.modal{
+    width:100%;
+    max-width:440px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:27px;
+
+    position:relative;
+
+    box-shadow:0 25px 70px rgba(0,0,0,.25);
+
+    animation:modalIn .2s ease;
+}
+
+@keyframes modalIn{
+    from{
+        opacity:0;
+        transform:translateY(12px) scale(.98);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.modal h3{
+    font-family:'Manrope',sans-serif;
+    font-size:18px;
+    font-weight:800;
+    color:#0e2430;
+    margin-bottom:7px;
+    padding-right:25px;
+}
+
+.modal .modal-sub{
+    color:#6d838c;
+    font-size:11.5px;
+    line-height:1.65;
+    margin-bottom:20px;
+}
+
+.field{
+    margin-bottom:14px;
+}
+
+.field label{
+    display:block;
+
+    color:#3d5b66;
+
+    font-size:10px;
+    font-weight:800;
+
+    text-transform:uppercase;
+    letter-spacing:.5px;
+
+    margin-bottom:6px;
+}
+
+.field input{
+    width:100%;
+
+    padding:12px 14px;
+
+    border:1.5px solid #dce8eb;
+    border-radius:10px;
+
+    outline:none;
+
+    font-family:inherit;
+    font-size:13px;
+
+    transition:.2s;
+}
+
+.field input:focus{
+    border-color:#4ac9e2;
+    box-shadow:0 0 0 3px rgba(74,201,226,.10);
+}
+
+.modal-btn{
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+    border-radius:10px;
+
+    background:#4ac9e2;
+    color:#08222e;
+
+    font-size:13px;
+    font-weight:800;
+
+    cursor:pointer;
+
+    margin-top:5px;
+
+    transition:.2s;
+}
+
+.modal-btn:hover{
+    opacity:.88;
+}
+
+.modal-close{
+    position:absolute;
+    right:17px;
+    top:15px;
+
+    width:32px;
+    height:32px;
+
+    border:none;
+    border-radius:8px;
+
+    background:#f3f7f9;
+
+    color:#6d838c;
+
+    font-size:17px;
+
+    cursor:pointer;
+}
+
+.success-note{
+    text-align:center;
+    padding:8px 0;
+}
+
+.success-icon{
+    width:58px;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    margin:0 auto 14px;
+
+    border-radius:50%;
+
+    background:#eafaf0;
+    border:2px solid #c9efd8;
+
+    color:#1e8449;
+
+    font-size:26px;
+    font-weight:800;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:800px){
+
+    .hero-band{
+        padding:42px 5% 55px;
+    }
+
+    .hero-band h2{
+        font-size:30px;
+    }
+
+    .program-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-strip{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:560px){
+
+    .topbar{
+        height:58px;
+        padding:0 18px;
+    }
+
+    .hero-band{
+        padding:35px 18px 48px;
+    }
+
+    .hero-band h2{
+        font-size:25px;
+        letter-spacing:-.5px;
+    }
+
+    .hero-band p{
+        font-size:12px;
+    }
+
+    .hero-stats{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .hero-stat{
+        min-width:0;
+        padding:11px 8px;
+        text-align:center;
+    }
+
+    .hero-stat strong{
+        font-size:17px;
+    }
+
+    .hero-stat span{
+        font-size:8.5px;
+    }
+
+    .wrap{
+        width:92%;
+    }
+
+    .local-camp-link{
+        font-size:11px;
+        padding:15px;
+    }
+
+    .section-head{
+        display:block;
+        margin-top:30px;
+    }
+
+    .section-sub{
+        display:block;
+        margin:7px 0 0 16px;
+    }
+
+    .program-card{
+        padding:18px;
+    }
+
+    .program-name{
+        font-size:14.5px;
+    }
+
+    .program-desc{
+        font-size:12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<div class="topbar">
+
+    <a href="/" title="Back">←</a>
+
+    <div>
+        <h1>Government Health Activities</h1>
+        <div class="topbar-sub">
+            Shivir Sandesh · Health Awareness
+        </div>
+    </div>
+
+</div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero-band">
+
+    <div class="hero-inner">
+
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+                <span class="hero-dot"></span>
+                Government Health Programs
+            </div>
+
+            <h2>
+                Don't miss the health services
+                <span>already available near you.</span>
+            </h2>
+
+            <p>
+                Polio vaccination, child immunization, deworming,
+                health screenings and more are conducted regularly
+                across villages and communities. Get notified when
+                a verified activity is announced near your area.
+            </p>
+
+            <div class="hero-stats">
+
+                <div class="hero-stat">
+                    <strong>4+</strong>
+                    <span>Major programs</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>₹0</strong>
+                    <span>Cost to attend</span>
+                </div>
+
+                <div class="hero-stat">
+                    <strong>WhatsApp</strong>
+                    <span>Alert available</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main class="wrap">
+
+    <a href="/camps" class="local-camp-link">
+        <span>📍 See health camps already announced in your area</span>
+        <strong>→</strong>
+    </a>
+
+
+    <div class="section-head">
+
+        <div>
+            <div class="section-title">
+                Recurring National Health Programs
+            </div>
+
+            <div class="section-sub">
+                Free government initiatives conducted periodically
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PROGRAM GRID
+    ========================= -->
+
+    <div class="program-grid">
+
+
+        <!-- PULSE POLIO -->
+
+        <div class="program-card">
+
+            <div class="program-top">
+
+                <div class="program-icon">
+                    💉
+                </div>
+
+                <div>
+                    <div class="program-name">
+                        Pulse Polio Programme
+                    </div>
+
+                    <div class="program-tagline">
+                        National Immunization Day (NID)
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="program-desc">
+                Free oral polio drops for every child aged
+                0–5 years. Booths may be available at Anganwadi
+                centres, schools, railway stations and other
+                designated locations.
+            </div>
+
+            <div class="program-facts">
+                <span class="fact-tag">Ages 0–5</span>
+                <span class="fact-tag">100% Free</span>
+                <span class="fact-tag">No registration</span>
+                <span class="fact-tag">Immunization booth</span>
+            </div>
+
+            <button
+                class="subscribe-btn"
+                onclick="openSubscribe('Pulse Polio Programme')">
+
+                🔔 Notify me when it's near my village
+
+            </button>
+
+        </div>
+
+
+        <!-- MISSION INDRADHANUSH -->
+
+        <div class="program-card">
+
+            <div class="program-top">
+
+                <div class="program-icon">
+                    🩹
+                </div>
+
+                <div>
+                    <div class="program-name">
+                        Mission Indradhanush
+                    </div>
+
+                    <div class="program-tagline">
+                        Catch-up Immunization Drive
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="program-desc">
+                Special vaccination rounds for children and
+                pregnant women who may have missed routine
+                immunization doses.
+            </div>
+
+            <div class="program-facts">
+                <span class="fact-tag">Children</span>
+                <span class="fact-tag">Pregnant women</span>
+                <span class="fact-tag">Catch-up doses</span>
+                <span class="fact-tag">Free</span>
+            </div>
+
+            <button
+                class="subscribe-btn"
+                onclick="openSubscribe('Mission Indradhanush')">
+
+                🔔 Notify me when it's near my village
+
+            </button>
+
+        </div>
+
+
+        <!-- DEWORMING -->
+
+        <div class="program-card">
+
+            <div class="program-top">
+
+                <div class="program-icon">
+                    🪱
+                </div>
+
+                <div>
+                    <div class="program-name">
+                        National Deworming Day
+                    </div>
+
+                    <div class="program-tagline">
+                        School & Anganwadi Deworming
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="program-desc">
+                Free deworming medicine is provided to children
+                and adolescents through schools and Anganwadi
+                centres as part of the national deworming program.
+            </div>
+
+            <div class="program-facts">
+                <span class="fact-tag">Ages 1–19</span>
+                <span class="fact-tag">Free medicine</span>
+                <span class="fact-tag">Schools</span>
+                <span class="fact-tag">Anganwadi</span>
+            </div>
+
+            <button
+                class="subscribe-btn"
+                onclick="openSubscribe('National Deworming Day')">
+
+                🔔 Notify me when it's near my village
+
+            </button>
+
+        </div>
+
+
+        <!-- HEALTH CAMPS -->
+
+        <div class="program-card">
+
+            <div class="program-top">
+
+                <div class="program-icon">
+                    🩺
+                </div>
+
+                <div>
+                    <div class="program-name">
+                        Ayushman Bharat Health Camps
+                    </div>
+
+                    <div class="program-tagline">
+                        Free Screening & Awareness
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="program-desc">
+                Periodic health activities may include screening
+                for blood pressure, diabetes and selected common
+                health conditions at public health facilities.
+            </div>
+
+            <div class="program-facts">
+                <span class="fact-tag">BP screening</span>
+                <span class="fact-tag">Diabetes</span>
+                <span class="fact-tag">Health check</span>
+                <span class="fact-tag">Free</span>
+            </div>
+
+            <button
+                class="subscribe-btn"
+                onclick="openSubscribe('Ayushman Bharat Health Camp')">
+
+                🔔 Notify me when it's near my village
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         QUICK INFO
+    ========================= -->
+
+    <div class="info-strip">
+
+        <div class="info-box">
+            <strong>📍 Local Updates</strong>
+            <span>
+                Receive alerts when a relevant activity
+                is posted for your area.
+            </span>
+        </div>
+
+        <div class="info-box">
+            <strong>🔔 WhatsApp Alerts</strong>
+            <span>
+                Get a notification so important dates
+                are easier to remember.
+            </span>
+        </div>
+
+        <div class="info-box">
+            <strong>🏥 Public Health</strong>
+            <span>
+                Check with your ASHA worker, Anganwadi
+                or local health centre for confirmation.
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DISCLAIMER
+    ========================= -->
+
+    <div class="disclaimer-box">
+
+        <span>⚠️</span>
+
+        <span>
+            Exact dates and availability can vary by state,
+            district and local health authorities. Alerts on
+            this page are informational and do not replace
+            official government announcements. Please confirm
+            details with your local ASHA worker, Anganwadi
+            worker or health centre.
+        </span>
+
+    </div>
+
+</main>
+
+
+<!-- =========================
+     SUBSCRIBE MODAL
+========================= -->
+
+<div class="modal-overlay" id="subModalOverlay">
+
+    <div class="modal" id="subModal"></div>
+
+</div>
+
+
+<script>
+
+let currentProgram = '';
+
+/* =========================
+   OPEN MODAL
+========================= */
+
+function openSubscribe(program){
+
+    currentProgram = program;
+
+    document.getElementById('subModal').innerHTML = `
+
+        <button
+            class="modal-close"
+            onclick="closeSubModal()">
+            ✕
+        </button>
+
+        <h3>
+            Get Notified
+        </h3>
+
+        <div class="modal-sub">
+            Receive a WhatsApp alert when
+            <strong>${program}</strong>
+            is confirmed near your village.
+        </div>
+
+        <div class="field">
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                id="subName"
+                placeholder="Full name">
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="subPhone"
+                placeholder="10-digit number"
+                maxlength="10">
+
+        </div>
+
+
+        <div class="field">
+
+            <label>Your Village / Area</label>
+
+            <input
+                type="text"
+                id="subVillage"
+                placeholder="e.g. Shirdon, Raigad">
+
+        </div>
+
+
+        <button
+            class="modal-btn"
+            onclick="submitSubscribe()">
+
+            🔔 Set My Alert
+
+        </button>
+
+    `;
+
+    document
+        .getElementById('subModalOverlay')
+        .classList.add('open');
+}
+
+
+/* =========================
+   CLOSE MODAL
+========================= */
+
+function closeSubModal(){
+
+    document
+        .getElementById('subModalOverlay')
+        .classList.remove('open');
+
+}
+
+
+/* =========================
+   SUBMIT
+========================= */
+
+async function submitSubscribe(){
+
+    const name =
+        document.getElementById('subName').value.trim();
+
+    const phone =
+        document.getElementById('subPhone').value.trim();
+
+    const village =
+        document.getElementById('subVillage').value.trim();
+
+
+    if(!name || !phone || !village){
+
+        alert('Please fill in all fields.');
+
+        return;
+    }
+
+
+    if(!/^[0-9]{10}$/.test(phone)){
+
+        alert('Please enter a valid 10-digit phone number.');
+
+        return;
+    }
+
+
+    try{
+
+        const res = await fetch(
+            '/api/awareness/subscribe',
+            {
+                method:'POST',
+
+                headers:{
+                    'Content-Type':'application/json'
+                },
+
+                body:JSON.stringify({
+
+                    program:currentProgram,
+                    name:name,
+                    phone:phone,
+                    village:village
+
+                })
+            }
+        );
+
+
+        const data = await res.json();
+
+
+        if(data.error){
+
+            alert(data.error);
+
+            return;
+        }
+
+
+        document.getElementById('subModal').innerHTML = `
+
+            <button
+                class="modal-close"
+                onclick="closeSubModal()">
+                ✕
+            </button>
+
+            <div class="success-note">
+
+                <div class="success-icon">
+                    ✓
+                </div>
+
+                <h3>
+                    Alert Successfully Set
+                </h3>
+
+                <div class="modal-sub">
+
+                    You'll receive a WhatsApp message
+                    when a
+                    <strong>${currentProgram}</strong>
+                    activity is confirmed near
+                    <strong>${village}</strong>.
+
+                </div>
+
+                <button
+                    class="modal-btn"
+                    onclick="closeSubModal()">
+
+                    Done
+
+                </button>
+
+            </div>
+
+        `;
+
+    }
+
+    catch(error){
+
+        console.error(error);
+
+        alert(
+            'Something went wrong. Please try again.'
+        );
+
+    }
+
+}
+
+
+/* =========================
+   CLOSE ON BACKDROP
+========================= */
+
+document
+    .getElementById('subModalOverlay')
+    .addEventListener('click',function(e){
+
+        if(
+            e.target.id ===
+            'subModalOverlay'
+        ){
+
+            closeSubModal();
+
+        }
+
+    });
+
+
+/* =========================
+   ESC KEY
+========================= */
+
+document.addEventListener(
+    'keydown',
+    function(e){
+
+        if(e.key === 'Escape'){
+
+            closeSubModal();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
