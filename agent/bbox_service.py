@@ -16,4 +16,4 @@ def get_bbox(coordinates_json):
         max(lats)
     ]
 
-    return bbox ,,,,,,
+    return bbox 
