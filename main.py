@@ -47,6 +47,9 @@ def camps_page():
 @app.route('/government-activities')
 def government_activities_page():
     return render_template('government-activities.html')
+@app.route('/about')
+def about_page():
+    return render_template('about.html')
 
 app.register_blueprint(chat_bp)
 app.register_blueprint(whatsapp_bp)

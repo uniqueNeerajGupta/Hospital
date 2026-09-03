@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About – PR Harvest</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap');
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Inter',sans-serif;background:#f4f8fa;color:#0e2430;overflow-x:hidden;}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:999;display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:56px;background:rgba(8,34,46,0.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,0.06);
+}
+nav a{color:#fff;text-decoration:none;font-size:19px;opacity:.85;display:flex;align-items:center;}
+.nav-title{font-family:'Manrope',sans-serif;font-size:14.5px;font-weight:700;color:#fff;}
+.nav-left{display:flex;align-items:center;gap:10px;}
+
+/* ── HERO ── */
+@keyframes floatParticle{
+  0%{transform:translateY(0);opacity:0;}
+  15%{opacity:.8;}85%{opacity:.4;}
+  100%{transform:translateY(-90vh);opacity:0;}
+}
+@keyframes heroIn{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
+@keyframes pulseDot{0%,100%{box-shadow:0 0 0 0 rgba(74,201,226,.5);}50%{box-shadow:0 0 0 7px rgba(74,201,226,0);}}
+@keyframes shimmer{0%{background-position:200% center;}100%{background-position:-200% center;}}
+@keyframes numberPop{from{opacity:0;transform:scale(.7);}to{opacity:1;transform:scale(1);}}
+
+.hero{
+  position:relative;background:linear-gradient(165deg,#08222e 0%,#0c2e3d 45%,#123c50 100%);
+  color:#fff;padding:56px 24px 60px;overflow:hidden;
+}
+.hero-particles{position:absolute;inset:0;pointer-events:none;}
+.particle{position:absolute;border-radius:50%;background:rgba(74,201,226,.7);animation:floatParticle linear infinite;}
+.hero::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 88% 15%,rgba(74,201,226,.16) 0%,transparent 50%);pointer-events:none;}
+.hero-inner{max-width:620px;margin:0 auto;position:relative;z-index:2;animation:heroIn 1s ease both;}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.18);font-size:10.5px;font-weight:700;text-transform:uppercase;
+  letter-spacing:.6px;padding:6px 14px;border-radius:20px;margin-bottom:20px;
+}
+.eyebrow-dot{width:6px;height:6px;border-radius:50%;background:#4ac9e2;animation:pulseDot 2.5s infinite;}
+.hero h1{font-family:'Manrope',sans-serif;font-size:clamp(26px,5.5vw,38px);font-weight:800;line-height:1.2;margin-bottom:16px;letter-spacing:-.5px;}
+.hero h1 .shimmer{
+  background:linear-gradient(90deg,#fff 0%,#4ac9e2 30%,#fff 60%,#4ac9e2 85%,#fff 100%);
+  background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  animation:shimmer 6s linear infinite;
+}
+.hero p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.72);max-width:500px;margin-bottom:8px;}
+
+/* ── WRAP ── */
+.wrap{max-width:680px;margin:0 auto;padding:0 24px 70px;}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1);}
+.reveal.active{opacity:1;transform:translateY(0);}
+
+/* ── STAT STRIP (overlapping hero) ── */
+.stat-strip{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:-30px;position:relative;z-index:3;margin-bottom:44px;
+}
+.stat-card{
+  background:#fff;border-radius:16px;padding:20px 12px;text-align:center;box-shadow:0 10px 32px rgba(8,34,46,.12);
+  transition:transform .25s;
+}
+.stat-card:hover{transform:translateY(-4px);}
+.stat-num{font-family:'Manrope',sans-serif;font-size:26px;font-weight:800;color:#1e6b7f;}
+.stat-label{font-size:10px;color:#8fa3ab;margin-top:4px;line-height:1.4;letter-spacing:.2px;}
+
+/* ── SECTIONS ── */
+.section{margin-bottom:52px;}
+.section-label{
+  font-size:11px;font-weight:800;color:#1e6b7f;text-transform:uppercase;letter-spacing:.6px;
+  margin-bottom:12px;display:flex;align-items:center;gap:7px;
+}
+.section-label::before{content:'';width:16px;height:2px;background:#4ac9e2;border-radius:2px;}
+.section h2{font-family:'Manrope',sans-serif;font-size:clamp(20px,3vw,26px);font-weight:800;margin-bottom:14px;color:#0e2430;letter-spacing:-.3px;}
+.section p{font-size:13.5px;line-height:1.85;color:#3d5b66;}
+
+/* ── FEATURE GRID ── */
+.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px;}
+.feature-box{
+  background:#fff;border-radius:16px;padding:20px;box-shadow:0 4px 18px rgba(8,34,46,.06);
+  border:1px solid transparent;transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.feature-box:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(8,34,46,.1);border-color:#dbeef2;}
+.feature-icon{
+  width:38px;height:38px;border-radius:10px;background:#e6f6f9;display:flex;align-items:center;justify-content:center;
+  font-size:18px;margin-bottom:12px;
+}
+.feature-box h4{font-size:13.5px;font-weight:700;color:#0e2430;margin-bottom:6px;}
+.feature-box p{font-size:11.5px;color:#5c7580;line-height:1.65;}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:28px;margin-top:22px;}
+.timeline::before{content:'';position:absolute;left:7px;top:4px;bottom:4px;width:2px;background:linear-gradient(180deg,#4ac9e2,#dbe6ea);}
+.tl-item{position:relative;padding-bottom:26px;}
+.tl-item:last-child{padding-bottom:0;}
+.tl-dot{
+  position:absolute;left:-28px;top:2px;width:16px;height:16px;border-radius:50%;background:#4ac9e2;
+  border:3px solid #f4f8fa;box-shadow:0 0 0 2px #4ac9e2;
+}
+.tl-num{font-family:'Manrope',sans-serif;font-size:10px;font-weight:800;color:#4ac9e2;letter-spacing:.5px;margin-bottom:3px;}
+.tl-title{font-size:14.5px;font-weight:800;color:#0e2430;margin-bottom:4px;}
+.tl-desc{font-size:12.5px;color:#5c7580;line-height:1.7;}
+
+/* ── TEAM CARD ── */
+.team-card{
+  background:linear-gradient(160deg,#08222e,#123c50);color:#fff;border-radius:20px;padding:26px;
+  position:relative;overflow:hidden;
+}
+.team-card::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 10%,rgba(74,201,226,.15),transparent 55%);}
+.team-inner{position:relative;z-index:1;}
+.team-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(74,201,226,.15);border:1px solid rgba(74,201,226,.3);color:#4ac9e2;font-size:10px;font-weight:800;padding:5px 12px;border-radius:20px;margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px;}
+.team-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:13px;}
+.team-row:last-child{border-bottom:none;}
+.team-label{color:rgba(255,255,255,.55);font-weight:600;}
+.team-value{color:#fff;font-weight:700;}
+.team-value a{color:#4ac9e2;text-decoration:none;}
+
+/* ── DISCLAIMER ── */
+.disclaimer-box{
+  background:#fff4e0;color:#8a5a00;font-size:12px;padding:16px 18px;border-radius:14px;line-height:1.75;
+  display:flex;gap:10px;align-items:flex-start;border:1px solid #ffe4b0;
+}
+.disclaimer-box .icon{font-size:15px;flex-shrink:0;}
+
+/* ── CTA ── */
+.cta-row{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap;}
+.cta-btn{
+  flex:1;min-width:170px;text-align:center;padding:15px;border-radius:13px;font-size:13.5px;font-weight:800;
+  text-decoration:none;transition:transform .15s,box-shadow .2s;
+}
+.cta-primary{background:#4ac9e2;color:#08222e;}
+.cta-primary:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(74,201,226,.4);}
+.cta-secondary{background:#fff;color:#1e6b7f;border:1.5px solid #dbeef2;}
+.cta-secondary:hover{border-color:#4ac9e2;}
+
+@media (max-width:520px){
+  .feature-grid{grid-template-columns:1fr;}
+  .stat-strip{gap:8px;}
+  .stat-num{font-size:20px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <a href="/" title="Back">←</a>
+    <span class="nav-title">About PR Harvest</span>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-particles" id="heroParticles"></div>
+  <div class="hero-inner">
+    <div class="hero-eyebrow"><span class="eyebrow-dot"></span> NEXORA 2026 · Problem Statement PR•HARVEST</div>
+    <h1>Healthcare guidance shouldn't depend on <span class="shimmer">where you live</span>.</h1>
+    <p>PR Harvest is an AI-assisted preliminary triage platform built for rural and tier-2 India — helping people know whether to rest, visit a clinic, or seek emergency care, in their own language, without a hospital visit just to find out.</p>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <div class="stat-strip reveal">
+    <div class="stat-card"><div class="stat-num">70%</div><div class="stat-label">have no access to a specialist doctor</div></div>
+    <div class="stat-card"><div class="stat-num">80%</div><div class="stat-label">of specialists live in cities</div></div>
+    <div class="stat-card"><div class="stat-num">70%</div><div class="stat-label">of health spending is out-of-pocket</div></div>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-label">The Problem</div>
+    <h2>Access shouldn't decide your health outcome</h2>
+    <p>Over 65% of India's population lives in rural and tier-2 areas, where the nearest specialist can be hours away, language barriers make medical guidance hard to understand, and people either ignore serious symptoms or make unnecessary long trips for minor ones.</p>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-label">What We Built</div>
+    <h2>One platform, the whole journey</h2>
+    <p>From the first symptom to a booked hospital bed — PR Harvest covers the full path a rural family takes when someone falls sick.</p>
+    <div class="feature-grid">
+      <div class="feature-box"><div class="feature-icon">🩺</div><h4>Symptom Triage</h4><p>Text or voice input, instant urgency level, in 8 Indian languages.</p></div>
+      <div class="feature-box"><div class="feature-icon">🚨</div><h4>One-Tap SOS</h4><p>Auto location + WhatsApp alert to family + emergency call.</p></div>
+      <div class="feature-box"><div class="feature-icon">🏥</div><h4>Admission Assistant</h4><p>Live map, real routing, and bed booking — no paperwork on arrival.</p></div>
+      <div class="feature-box"><div class="feature-icon">💰</div><h4>Government Schemes</h4><p>Check Ayushman Bharat eligibility and other real schemes in minutes.</p></div>
+      <div class="feature-box"><div class="feature-icon">💉</div><h4>Health Camp Alerts</h4><p>Get notified about Pulse Polio and other government drives near you.</p></div>
+      <div class="feature-box"><div class="feature-icon">🤖</div><h4>AI Booking Agent</h4><p>Speak your need — it searches, matches, and books a bed for you.</p></div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-label">How It Started</div>
+    <h2>Built for NEXORA 2026</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-num">STEP 01</div>
+        <div class="tl-title">The Brief</div>
+        <div class="tl-desc">Assigned problem statement PR•HARVEST: build an AI rural primary healthcare triage platform.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-num">STEP 02</div>
+        <div class="tl-title">The Research</div>
+        <div class="tl-desc">Studied real gaps in India's rural healthcare system — access, language, cost, and awareness.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-num">STEP 03</div>
+        <div class="tl-title">The Build</div>
+        <div class="tl-desc">A working prototype covering triage, emergency response, hospital booking, and government scheme awareness.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="section-label">Team</div>
+    <div class="team-card">
+      <div class="team-inner">
+        <div class="team-badge">🏆 Team Goku</div>
+        <div class="team-row"><span class="team-label">Team ID</span><span class="team-value">NXH037</span></div>
+        <div class="team-row"><span class="team-label">College</span><span class="team-value">Nirmala Memorial Foundation College</span></div>
+        <div class="team-row"><span class="team-label">Team Leader</span><span class="team-value">Neeraj Gupta</span></div>
+        <div class="team-row"><span class="team-label">Contact</span><span class="team-value"><a href="tel:+919987003075">+91 99870 03075</a></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section reveal">
+    <div class="disclaimer-box">
+      <span class="icon">⚠</span>
+      <span>PR Harvest is a hackathon prototype. Symptom triage offers preliminary guidance only — not a medical diagnosis. Bed availability and some features are simulated for demo purposes. Always consult a qualified doctor for medical decisions.</span>
+    </div>
+    <div class="cta-row">
+      <a href="/triage" class="cta-btn cta-primary">Check My Symptoms</a>
+      <a href="/" class="cta-btn cta-secondary">Back to Home</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const container = document.getElementById('heroParticles');
+for(let i=0;i<20;i++){
+  const p = document.createElement('div');
+  p.className = 'particle';
+  const size = Math.random()*3+2;
+  p.style.cssText = `width:${size}px;height:${size}px;left:${Math.random()*100}%;bottom:${Math.random()*20}%;opacity:${Math.random()*0.5+0.2};animation-duration:${Math.random()*14+10}s;animation-delay:-${Math.random()*10}s;box-shadow:0 0 ${size*3}px rgba(74,201,226,.7);`;
+  container.appendChild(p);
+}
+
+const revealObs = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('active'); });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObs.observe(el));
+</script>
+
+</body>
+</html>

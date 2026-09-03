@@ -309,20 +309,19 @@ nav{
   .ai-bot{width:100px;height:100px;right:14px;bottom:14px;}
 }
 </style>
-<script src="/static/js/voice-agent.js"></script>
 </head>
 <body>
 
 <nav>
   <div class="nav-left">
     <div class="logo">
-      <span class="logo-text">PR Harvest</span>
+      <span class="logo-text">Health-E Care</span>
     </div>
     <ul class="nav-links">
       <li><a href="/" data-i18n="nav_home">Home</a></li>
       <li><a href="/triage" data-i18n="nav_triage">Check Symptoms</a></li>
-      <!-- <li><a href="/find-clinic" data-i18n="nav_clinic">Find a Clinic</a></li> -->
       <li><a href="/scheme-checker" data-i18n="nav_scheme">Government Schemes</a></li>
+      <li><a href="/government-activities" data-i18n="nav_govt">Health Camps</a></li>
       <li><a href="/about" data-i18n="nav_about">About</a></li>
     </ul>
   </div>
@@ -1159,16 +1158,30 @@ nav{
         <h3 data-i18n="feat1_title">Symptom Triage</h3>
         <p data-i18n="feat1_desc">Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.</p>
       </div>
-      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/government-activities'">
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/language'">
         <div class="feat-icon">🗣️</div>
-        <h3 data-i18n="feat2_title">Government Activities</h3>
-        <p data-i18n="feat2_desc">Stay updated on local government health initiatives and community programs.</p>
+        <h3 data-i18n="feat2_title">Rural area campaign</h3>
+        <p data-i18n="feat2_desc">Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.</p>
       </div>
-
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/find-clinic'">
+        <div class="feat-icon">📍</div>
+        <h3 data-i18n="feat3_title">Nearby Clinic Locator</h3>
+        <p data-i18n="feat3_desc">Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.</p>
+      </div>
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/history'">
+        <div class="feat-icon">📋</div>
+        <h3 data-i18n="feat4_title">Symptom History</h3>
+        <p data-i18n="feat4_desc">Keep a simple record of past checks so you and any doctor you visit later have useful context.</p>
+      </div>
       <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/scheme-checker'">
         <div class="feat-icon">💰</div>
         <h3 data-i18n="feat5_title">Government Schemes</h3>
         <p data-i18n="feat5_desc">Find out in 4 quick questions if your family qualifies for Ayushman Bharat — up to ₹5 lakh in free hospital treatment.</p>
+      </div>
+      <div class="feat-item reveal" style="cursor:pointer;" onclick="window.location.href='/government-activities'">
+        <div class="feat-icon">💉</div>
+        <h3 data-i18n="feat6_title">Government Health Camps</h3>
+        <p data-i18n="feat6_desc">Know what's already happening — Pulse Polio, free immunization drives, and screening camps. Get a WhatsApp alert when one's near your village.</p>
       </div>
     </div>
   </div>
@@ -1284,11 +1297,13 @@ const translations = {
     feat_tag:"Core Features",
     feat_heading:"Practical Tools Built for Rural and Tier-2 Healthcare Access",
     feat1_title:"Symptom Triage", feat1_desc:"Describe symptoms by text or voice and get an instant urgency level — low, medium, or high — with clear next steps.",
-    feat2_title:"Local Language Support", feat2_desc:"Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.",
+    feat2_title:"Rural area campaign", feat2_desc:"Speak or type in Hindi, Marathi, or other regional languages so nothing gets lost in translation.",
     feat3_title:"Nearby Clinic Locator", feat3_desc:"Find the closest clinic or hospital based on your triage result, reducing unnecessary long-distance travel.",
     feat4_title:"Symptom History", feat4_desc:"Keep a simple record of past checks so you and any doctor you visit later have useful context.",
-    feat5_title:"Free Treatment Checker", feat5_desc:"Find out in 4 quick questions if your family qualifies for Ayushman Bharat — up to ₹5 lakh in free hospital treatment.",
-    nav_scheme:"Free Treatment",
+    feat5_title:"Government Schemes", feat5_desc:"Find out in 4 quick questions if your family qualifies for Ayushman Bharat — up to ₹5 lakh in free hospital treatment.",
+    feat6_title:"Government Health Camps", feat6_desc:"Know what's already happening — Pulse Polio, free immunization drives, and screening camps. Get a WhatsApp alert when one's near your village.",
+    nav_scheme:"Government Schemes",
+    nav_govt:"Health Camps",
     footer_heading:"Bringing fast, reliable, first-step medical guidance to every village — because a two-hour journey shouldn't decide whether someone gets help in time.",
     footer_cta:"Check Symptoms Now"
   },
@@ -1310,11 +1325,13 @@ const translations = {
     feat_tag:"मुख्य सुविधाएं",
     feat_heading:"ग्रामीण और छोटे शहरों के लिए बनाए गए व्यावहारिक उपकरण",
     feat1_title:"लक्षण त्रिआज", feat1_desc:"टेक्स्ट या आवाज़ से लक्षण बताएं और तुरंत गंभीरता स्तर जानें — कम, मध्यम, या अधिक — स्पष्ट अगले कदम के साथ।",
-    feat2_title:"स्थानीय भाषा सहायता", feat2_desc:"हिंदी, मराठी या अन्य क्षेत्रीय भाषाओं में बोलें या टाइप करें ताकि कुछ भी छूट न जाए।",
+    feat2_title:"ग्रामीण क्षेत्र अभियान", feat2_desc:"हिंदी, मराठी या अन्य क्षेत्रीय भाषाओं में बोलें या टाइप करें ताकि कुछ भी छूट न जाए।",
     feat3_title:"नज़दीकी क्लिनिक खोजें", feat3_desc:"अपने त्रिआज परिणाम के आधार पर नज़दीकी क्लिनिक या अस्पताल खोजें, लंबी यात्रा से बचें।",
     feat4_title:"लक्षण इतिहास", feat4_desc:"पिछली जांचों का रिकॉर्ड रखें ताकि आपको और डॉक्टर को उपयोगी जानकारी मिले।",
-    feat5_title:"मुफ्त इलाज चेकर", feat5_desc:"4 सवालों में जानें कि क्या आपका परिवार आयुष्मान भारत के तहत ₹5 लाख तक के मुफ्त इलाज के लिए योग्य है।",
-    nav_scheme:"मुफ्त इलाज",
+    feat5_title:"सरकारी योजनाएं", feat5_desc:"4 सवालों में जानें कि क्या आपका परिवार आयुष्मान भारत के तहत ₹5 लाख तक के मुफ्त इलाज के लिए योग्य है।",
+    feat6_title:"सरकारी स्वास्थ्य शिविर", feat6_desc:"जानें क्या पहले से हो रहा है — पल्स पोलियो, मुफ्त टीकाकरण अभियान और जांच शिविर। जब आपके गांव के पास कोई शिविर हो, तो WhatsApp पर सूचना पाएं।",
+    nav_scheme:"सरकारी योजनाएं",
+    nav_govt:"स्वास्थ्य शिविर",
     footer_heading:"हर गांव तक तेज़, भरोसेमंद, पहला-कदम चिकित्सा मार्गदर्शन पहुंचाना — क्योंकि दो घंटे की यात्रा किसी की मदद में देरी की वजह नहीं बननी चाहिए।",
     footer_cta:"अभी लक्षण जांचें"
   },
@@ -1500,6 +1517,7 @@ function startCall(doctorName, specialty, type){
 </script>
 
 <script src="/static/js/sos-widget.js"></script>
+<script src="/static/js/voice-agent.js"></script>
 <script>
 if('serviceWorker' in navigator){
   window.addEventListener('load', () => {
